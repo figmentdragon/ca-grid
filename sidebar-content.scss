@@ -1,33 +1,58 @@
-/* STYLESHEET: Left SideBar
+/* #*STYLESHEET:# Left SideBar*
 /* =STRUCTURE: Sidebar-Content (Sidebar Over Footer)
 ----------------------------------------------- */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /* ## Blocks */
 html,
-body {
+body,
+body .site {
+  overflow: hidden;
   padding-top: 1px;
   padding-bottom: 1px;
   margin-right: 1px;
-  padding-left: 0;
-
+  margin-left: 1px;
+  align-items: left;
+  float: left;
+  justify-content: flex-start;
+  width: $col16;
+  max-width: 100%;
+  height: $row6;
+  max-height: 100%;
 }
 
-header,
-.site-header{ /* The container for the entire header area */
+body .site {
+  position: relative;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+header .site-header,  /* The container for the entire header area */
+header .site-header {
+  &.navbar {
   position: fixed;
   top: 0;
   left: 0;
-  bottom: 0;
-  right: var(--col15);
+  bottom: $rows15;
+  right: $col15;
   overflow: visible;
-  box-shadow: 5px 6px 5px rgba(var(--secondary-rgb), .5);
-  background-image: var(--gradient-header);
+  box-shadow: 5px 6px 5px $box-shadow-rgba, .5;
+  background-image: $gradient-header;
+  padding: 0;
 }
 
-footer,
-.footer,
-.site-footer {
+footer .footer,
+footer .site-footer {
   position: fixed;
-  left: var(--col1);
+  left: $col1;
   bottom: 0;
   right: 0;
 
@@ -49,9 +74,9 @@ main {
 	display: flex;
 	flex-direction: column;
 	min-width: 0;
-  	word-wrap: break-word;
+  word-wrap: break-word;
 
-  	margin-top: 3rem;
+  margin-top: 3rem;
 	margin-bottom: 2.75rem;
 	margin-left: var(--padding-left);
 	margin-right: var(---padding-right);
@@ -146,7 +171,7 @@ main {
 
 
 
-PART 3: STYLIZATION
+/* PART 3: STYLIZATION */
 .site-info {
 clear: both;
 width: 100%;
@@ -156,9 +181,9 @@ nav ul {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
-		}
 
-nav ul a {
+  & a {
 	color: darkgreen;
 	text-decoration: none;
+  }
 }
