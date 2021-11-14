@@ -1,0 +1,71 @@
+// Grid system
+//
+// Generate semantic grid columns with these mixins.
+
+@mixin make-grid() {
+  $gutter-x: $spacer;
+  $gutter-y: 0;
+  display: grid;
+  float:left;
+  width: 100%;
+  grid-template-rows: repeat(var(--#{$variable-prefix}rows), 1fr);
+  grid-template-columns: repeat(var(--#{$variable-prefix}columns), 1fr);
+  gap: $grid-gutter;
+  grid-gap: $grid-gutter;
+}
+
+@mixin make-row($gutter: $grid-gutter-width) {
+  $gutter-x: $gutter;
+  $gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * $gutter-y);
+  margin-right: calc(-.5 * $gutter-x);
+  margin-left: -$grid-gutter;
+  list-style: none;
+}
+
+@mixin make-col-ready() {
+  // Add box sizing if only the grid is loaded
+  box-sizing: if(variable-exists(include-column-box-sizing) and $include-column-box-sizing, border-box, null);
+  /* Prevent columns from becoming too narrow when at smaller grid tiers by always setting `width: 100%;`. This works because we set the width later on to override this initial width.*/
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+  padding-right: calc($gutter-x * .5);
+  padding-left: calc($gutter-x * .5);
+  margin-top: $gutter-y;
+}
+
+@mixin make-col($size: false, $columns: $grid-columns) {
+  @if $size {
+    flex: 0 0 auto;
+    width: percentage(divide($size, $columns));
+
+  } @else {
+    flex: 1 1 0;
+    max-width: 100%;
+  }
+}
+
+@mixin make-col-auto() {
+  flex: 0 0 auto;
+  width: auto;
+}
+
+@mixin make-col-offset($size, $columns: $grid-columns) {
+  $num: divide($size, $columns);
+  margin-left: if($num == 0, 0, percentage($num));
+}
+
+// Row columns
+//
+// Specify on a parent element(e.g., .row) to force immediate children into NN
+// numberof columns. Supports wrapping to new lines, but does not do a Masonry
+// style grid.
+@mixin row-cols($count) {
+  > * {
+    flex: 0 0 auto;
+    width: divide(100%, $count);
+  }
+}

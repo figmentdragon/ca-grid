@@ -1,0 +1,29 @@
+@use 'sass:math';
+/* ##Grid scaffolding## */
+
+.grid
+{
+  @include make-grid();
+  @include resp-max($breakpoint-sm)
+  {
+    grid-gap: math.div($base-unit, 2);
+    }
+
+  @each $breakpoint in $breakpoints
+  {
+    $name: nth($breakpoint, 1);
+    $declaration: nth($breakpoint, 2);
+
+    @media only screen and #{$declaration}
+    {
+      @for $i from 1 through 6
+      {
+        &.grid--#{$name}-#{$i}xs
+        {
+          grid-template-columns: repeat(#{$i}, minmax(0, 1fr));
+                }
+            }
+        }
+    }
+      @include make-cssgrid();
+}

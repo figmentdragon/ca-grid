@@ -1,0 +1,12 @@
+// container mixins
+
+@mixin make-container() {
+  $gutter-x: $spacer;
+  $gutter-y: 0;
+  width: 100%;
+  height: 100%;
+  padding-right: $gutter-x;
+  padding-left: $gutter-x;
+  margin-right: auto;
+  margin-left: auto;
+}

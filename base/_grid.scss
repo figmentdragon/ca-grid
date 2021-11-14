@@ -1,0 +1,40 @@
+// grid widths
+//
+// Set the grid width, and override it for fixed navbars in media queries.
+
+// Single grid class with breakpoint max-widths
+.grid
+{
+  @include make-grid();
+  @include grid-loop();
+
+}
+
+// Responsive grids that are 100% wide until a breakpoint
+@each $breakpoint, $grid-max-width in $grid-max-widths {
+  .grid-#{$breakpoint} {
+    @extend .grid-fluid;
+  }
+
+  @include media-breakpoint-up($breakpoint, $grid-breakpoints) {
+    %responsive-grid-#{$breakpoint} {
+      max-width: $grid-max-width;
+    }
+
+    // Extend each breakpoint which is smaller or equal to the current breakpoint
+    $extend-breakpoint: true;
+
+    @each $name, $width in $grid-breakpoints {
+      @if ($extend-breakpoint) {
+        .grid#{breakpoint-infix($name, $grid-breakpoints)} {
+          @extend %responsive-grid-#{$breakpoint};
+        }
+
+        // Once the current breakpoint is reached, stop extending
+        @if ($breakpoint == $name) {
+          $extend-breakpoint: false;
+        }
+      }
+    }
+  }
+}
