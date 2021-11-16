@@ -1,0 +1,69 @@
+// scss-docs-start gray-color-variables
+$white: #e4edf4;
+$gray-100: #c0c0c0;
+$gray-200: #9a9a9a;
+$gray-300: #7b7b7b;
+$gray-400: #626262;
+$gray-500: #4e4e4e;
+$gray-600: #3e3e3e;
+$gray-700: #323232;
+$gray-800: #282828;
+$gray-900: #1a1a1a;
+$black: #000100;
+// scss-docs-end gray-color-variables
+
+// fusv-disable
+// scss-docs-start gray-colors-map
+$grays: (
+  100: $gray-100,
+  200: $gray-200,
+  300: $gray-300,
+  400: $gray-400,
+  500: $gray-500,
+  600: $gray-600,
+  700: $gray-700,
+  800: $gray-800,
+  900: $gray-900
+);
+// scss-docs-end gray-colors-map
+// fusv-enable
+
+// scss-docs-start color-variables
+$blue: #4169e1;
+$indigo: #60f;
+$purple: #510bda;
+$pink: #c39;
+$red: #dc3545;
+$orange: #f96;
+$yellow: #ffe41e;
+$green: #0bda51;
+$teal: #caffff;
+$cyan: #0abab5;
+$silver: #a8a9ad;
+$brown: #623412;
+$gray: $gray-600;
+$dark:            $gray-900;
+$light:           $gray-100;
+// scss-docs-end color-variables
+
+// scss-docs-start colors-map
+$colors: (
+  'blue':       $blue,
+  'indigo':     $indigo,
+  'purple':     $purple,
+  'pink':       $pink,
+  'red':        $red,
+  'orange':     $orange,
+  'yellow':     $yellow,
+  'green':      $green,
+  'teal':       $teal,
+  'cyan':       $cyan,
+  'silver':     $silver,
+  'brown':      $brown,
+  'white':      $white,
+  'black':      $black,
+  'gray':       $gray,
+  'dark':       $dark,
+  'light':      $light
+);
+// scss-docs-end colors-map

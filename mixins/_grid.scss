@@ -36,39 +36,6 @@
     @each $breakpoint in $breakpoints
     {
         $infix: breakpoint-infix($breakpoint, $breakpoints);
-        @include media-breakpoint-up($breakpoint, $breakpoints)
-        {
-            // Provide basic `.col-{bp}` classes for equal-width flexbox columns
-            .col#{$infix}
-            {
-                flex: 1 0 0;
-
-                @include grid-loop($name);
-            }
-
-            .row-cols#{$infix}-auto > *
-            {
-                @include make-col-auto();
-            }
-
-            // Gutters
-            //
-            // Make use of `.g-*`, `.gx-*` or `.gy-*` utilities to change spacing between the columns.
-            @each $key, $value in $gutters
-            {
-                .g#{$infix}-#{$key},
-                .gx#{$infix}-#{$key}
-                {
-                    -#{$variable-prefix}gutter-x: #{$value};
-                }
-
-                .g#{$infix}-#{$key},
-                .gy#{$infix}-#{$key}
-                {
-                    -#{$variable-prefix}gutter-y: #{$value};
-                }
-            }
-        }
     }
 }
 
@@ -93,6 +60,31 @@ style grid.*/
     {
         flex: 0 0 auto;
 
-        width: divide(100%, $count);
+        width: divide(100, $grid-columns);
+    }
+}
+@mixin grid-loop($name)
+{
+    @for $i from 0 through $grid-columns
+    {
+        @if $i != 0
+        {
+            .col--#{$name}-#{$i}
+            {
+                width: percentage(divide($i, $grid-columns));
+                .row--flex &
+                {
+                    float: none;
+                    flex-basis: percentage(divide($i, $grid-columns));
+
+                    width: auto;
+                    max-width: percentage(divide($i, $grid-columns));
+                }
+            }
+        }
+        .col--#{$name}-offset-#{$i}
+        {
+            margin-left: percentage(divide($i, $grid-columns));
+        }
     }
 }

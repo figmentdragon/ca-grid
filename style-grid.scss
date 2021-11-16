@@ -37,7 +37,11 @@ $include-column-box-sizing: true;
   'functions/sass-maps';
 
 @import
-    'variables-grid';
+  'base/spacing',
+  'base/colors';
+
+@import
+  'variables-grid';
 
 @import
   'mixins/clearfix',
@@ -45,16 +49,12 @@ $include-column-box-sizing: true;
   'mixins/grid',
   'mixins/lists',
   'mixins/responsive-style',
-  'mixins/utilities';
+  'mixins/utilities',
+  'base/grid/breakpoints';
 
 @import
-  'base/grid/breakpoints',
-  'base/grid/cols',
-  'base/grid/rows',
-  'base/grid/span';
-
-@import
-  'utils/rfs';
+  'utils/rfs',
+  'utils/utilities';
 
 @import 'utils/api';
 
@@ -94,7 +94,6 @@ body
 .container-fluid
 {
     @include make-container;
-    @include make-grid-container;
 }
 
 .grid
@@ -110,10 +109,9 @@ body
     $gutter-y: 0;
     gap: $grid-gutter-width;
     grid-gap: $grid-gutter-width;
-    @include make-grid-columns($grid-gutter-width, $breakpoints: $grid-breakpoint, $columns: $grid-columns);
-    @include res-max($breakpoint-sm)
+    @include resp-min($breakpoint-sm)
     {
-        grid-gap: math.div($base-unit, 2);
+        grid-gap: div($base-unit, 2);
     }
 
     @each $breakpoint in $breakpoints
@@ -123,7 +121,7 @@ body
 
         @media only screen and ($declaration)
         {
-            grid-template-columns: repeat($columns, minmax(0, 1fr));
+            grid-template-columns: repeat($grid-columns, minmax(0, 1fr));
         }
     }
     > *

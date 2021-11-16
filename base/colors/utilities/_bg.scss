@@ -1,0 +1,30 @@
+/* Utilities Bg */
+$active-bg:     $active-bg-hover;
+$danger-bg:     $red-100;
+$disabled-bg:   $gray-100;
+$hover-bg:      $active-bg-hover;
+$info-bg:       $blue-100;
+$nav-bg:        $brown-100;
+$success-bg:    $green-100;
+$table-bg:      $teal-100;
+$warning-bg:    $orange-100;
+$widget-bg:     $silver-100;
+$visited-bg:    $purple-100;
+$invalid-bg:    $red-100;
+$valid-bg:      $green-100;
+
+$utilities-bg-colors:(
+active-bg:     $active-bg,
+danger-bg:     $danger-bg,
+disabled-bg:   $disabled-bg,
+hover-bg:      $hover-bg,
+info-bg:       $info-bg,
+nav-bg:        $nav-bg,
+success-bg:    $success-bg,
+table-bg:      $table-bg,
+warning-bg:    $warning-bg,
+widget-bg:     $widget-bg,
+visited-bg:    $visited-bg,
+invalid-bg:    $invalid-bg,
+valid-bg:      $valid-bg
+);

@@ -1,0 +1,19 @@
+$framework-primary:   $cyan;
+$framework-secondary: $yellow;
+$framework-accent:    $silver;
+
+$framework-colors:(
+framework-primary:  $framework-primary,
+framework-secondary: $framework-secondary,
+framework-accent: $framework-accent
+);
+
+$framework-primary-rgba: rgba(202,255,255);
+$framework-secondary-color-rgba: rgba(255,228,30);
+$framework-accent-color-rgba: rgba(168,169,173);
+
+$framework-colors-rgba: (
+framework-primary-rgba: $framework-primary-rgba,
+framework-secondary-color-rgba: $framework-secondary-color-rgba,
+framework-accent-color-rgba: $framework-accent-color-rgba
+);

@@ -1,0 +1,23 @@
+$padding-xs: calc($spacer-xs * .75);
+$padding-sm: calc($spacer-sm * .875);
+$padding-md: calc($spacer-md * 1.05);
+$padding-lg: calc($spacer-lg * 1.25);
+$padding-xl: calc($spacer-xl * 1.50);
+$padding-xxl: calc($spacer-xxl * 2.50);
+
+$padding-y-xs: $padding-xs;
+$padding-y-sm: $padding-sm;
+$padding-y-md: $padding-md;
+$padding-y-lg: $padding-lg;
+$padding-y-xl: $padding-xl;
+$padding-y-xxl: $padding-xxl;
+$padding-y: $padding-md;
+
+
+$padding-x-xs: $padding-xs;
+$padding-x-sm: $padding-sm;
+$padding-x-md: $padding-md;
+$padding-x-lg: $padding-lg;
+$padding-x-xl: $padding-xl;
+$padding-x-xxl: $padding-xxl;
+$padding-x: $padding-md;

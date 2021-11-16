@@ -1,0 +1,16 @@
+$base-unit: 1.15;
+$xs: $base-unit * .75;
+$sm: $base-unit * .875;
+$md: $base-unit * 1.05;
+$lg: $base-unit * 1.25;
+$xl: $base-unit * 2.25; /* 1.7525 = 26-29px */
+$xxl: $base-unit * 2.75; /* 2.5875 = 40-42px */
+
+$unit-sizes: (
+xs: $xs,
+sm: $sm,
+md: $md,
+lg: $lg,
+xl: $xl,
+xxl: xxl
+);
