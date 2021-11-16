@@ -70,26 +70,6 @@ GENERAL STYLES
     border-radius: $border-radius;
 }
 
-*,
-::after,
-::before
-{
-    box-sizing: border-box;
-}
-html,
-body
-{
-    font-family: sans-serif;
-    font-size: 100%;
-    line-height: 1.5;
-
-    color: $text;
-    background-color: $gray;
-
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
 .container,
 .container-fluid
 {

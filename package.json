@@ -48,6 +48,7 @@
     "postcss-cli": "^9.0.2",
     "prettier": "2.4.1",
     "purgecss": "^4.0.3",
+    "purgecss-with-wordpress": "^4.0.3",
     "scss": "^0.2.4",
     "serve": "^13.0.2",
     "simple-grid": "^1.0.1",
