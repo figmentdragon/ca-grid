@@ -54,7 +54,6 @@
     "stylelint": "^14.1.0"
   },
   "dependencies": {
-    "check": "^1.0.0",
     "jquery": "^3.6.0",
     "npm-check": "^5.9.2"
   }

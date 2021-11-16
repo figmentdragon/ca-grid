@@ -30,8 +30,8 @@ $enable-important-utilities: true;
 $include-column-box-sizing: true;
 
 @import
-  'functions/assert-ascending.scss',
-  'functions/assert-at-zero.scss',
+  'functions/assert-ascending',
+  'functions/assert-at-zero',
   'functions/breakpoint',
   'functions/negativify-map',
   'functions/sass-maps';
