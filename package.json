@@ -1,0 +1,47 @@
+{
+  "name": "grid",
+  "version": "1.0.0",
+  "description": "css grid framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/figmentdragon/grid.git"
+  },
+  "keywords": [
+    "css",
+    "grid",
+    "scss",
+    "framework"
+  ],
+  "author": "cjmt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/figmentdragon/grid/issues"
+  },
+  "homepage": "https://github.com/figmentdragon/grid#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.0",
+    "bootstrap": "^5.1.3",
+    "css-purge": "^3.1.8",
+    "csscomb": "^4.3.0",
+    "csslint": "^1.0.5",
+    "dart-sass": "^1.25.0",
+    "eslint": "^8.2.0",
+    "eslint-config-prettier": "^8.3.0",
+    "npm-run-all": "^4.1.5",
+    "popper.js": "^1.16.1",
+    "postcss": "^8.3.11",
+    "postcss-cli": "^9.0.2",
+    "prettier": "2.4.1",
+    "scss": "^0.2.4",
+    "serve": "^13.0.2",
+    "simple-grid": "^1.0.1"
+  },
+  "dependencies": {
+    "check": "^1.0.0",
+    "npm-check": "^5.9.2"
+  }
+}

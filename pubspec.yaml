@@ -1,0 +1,6 @@
+name: cjmt_grid
+dev_dependences:
+  sass: ^1.43.4
+
+environment:
+  sdk: '>=2.10.0 <3.0.0'

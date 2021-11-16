@@ -1,0 +1,16 @@
+"gradient": (
+  property: background-image,
+  class: bg,
+  values: (gradient: var(--#{$variable-prefix}gradient))
+),
+// scss-docs-start utils-interaction
+"user-select": (
+  property: user-select,
+  values: all auto none
+),
+"pointer-events": (
+  property: pointer-events,
+  class: pe,
+  values: none auto,
+),
+// scss-docs-end utils-interaction

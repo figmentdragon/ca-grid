@@ -1,0 +1,31 @@
+/* Error: Undefined mixin.
+ *    ,
+ * 5  | /     @include media-breakpoint-up($breakpoint)
+ * 6  | |     {
+ * 7  | |         $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+ * 8  | | 
+ * 9  | |         // Loop over each utility property
+ * 10 | |         @each $key, $utility in $utilities
+ * 11 | |         {
+ * 12 | |             // The utility can be disabled with `false`, thus check if the utility is a map first
+ * 13 | |             // Only proceed if responsive media queries are enabled or if it's the base media query
+ * 14 | |             @if type-of($utility) == 'map' and (map-get($utility, responsive) or $infix == '')
+ * 15 | |             {
+ * 16 | |                 @include generate-utility($utility, $infix);
+ * 17 | |             }
+ * 18 | |         }
+ * 19 | \     }
+ *    '
+ *   utils/_api.scss 5:5   @import
+ *   style-grid.scss 59:9  root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined mixin.\a    \2577 \a 5  \2502  \250c      @include media-breakpoint-up($breakpoint)\a 6  \2502  \2502      {\a 7  \2502  \2502          $infix: breakpoint-infix($breakpoint, $grid-breakpoints);\a 8  \2502  \2502  \a 9  \2502  \2502          // Loop over each utility property\a 10 \2502  \2502          @each $key, $utility in $utilities\a 11 \2502  \2502          {\a 12 \2502  \2502              // The utility can be disabled with `false`, thus check if the utility is a map first\a 13 \2502  \2502              // Only proceed if responsive media queries are enabled or if it's the base media query\a 14 \2502  \2502              @if type-of($utility) == 'map' and (map-get($utility, responsive) or $infix == '')\a 15 \2502  \2502              {\a 16 \2502  \2502                  @include generate-utility($utility, $infix);\a 17 \2502  \2502              }\a 18 \2502  \2502          }\a 19 \2502  \2514      }\a    \2575 \a   utils/_api.scss 5:5   @import\a   style-grid.scss 59:9  root stylesheet";
+}

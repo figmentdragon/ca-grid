@@ -1,0 +1,26 @@
+// scss-docs-start utils-bg-color
+"background-color": (
+  property: background-color,
+  class: bg,
+  local-vars: (
+    "bg-opacity": 1
+  ),
+  values: map-merge(
+    $utilities-bg-colors,
+    (
+      "transparent": transparent
+    )
+  )
+),
+"bg-opacity": (
+  css-var: true,
+  class: bg-opacity,
+  values: (
+    10: .1,
+    25: .25,
+    50: .5,
+    75: .75,
+    100: 1
+  )
+),
+// scss-docs-end utils-bg-color
