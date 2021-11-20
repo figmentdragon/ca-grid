@@ -1,6 +1,8 @@
+@use 'sass:map';
+
 /* Grid breakpoints */
 /* Define the minimum dimensions at which your layout will change, adapting to different screen sizes, for use in media queries. */
-$breakpoints: (
+$grid-breakpoints: (
 xs: 0,
 sm: 576px,
 md: 768px,

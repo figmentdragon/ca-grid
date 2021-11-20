@@ -1,0 +1,20 @@
+grid-white
+$shadow: $grid-gray-700;
+$shadow-active: $grid-gray-500;
+$shadow-hover: $grid-gray-300;
+$shadow-focus: $grid-gray-100;
+$shadow-inset: $grid-white;
+
+$shadow-rgba: $grid-gray-700-rgba;
+$shadow-active-rgba: $grid-gray-500-rgba;
+$shadow-hover-rgba: $grid-gray-300-rgba;
+$shadow-focus-rgba: $grid-gray-100-rgba;
+$shadow-inset-rgba: $white-rgba;
+
+/* BOX SHADOW */
+$box-shadow: 1.75rem 1.5rem 1.75rem $shadow-rgba;
+$box-shadow-sm: 1.25rem 1rem 1.25rem rgba($shadow-rgba, .075);
+$box-shadow-lg: 2.25rem 2rem 2.25rem rgba($shadow-rgba, .175);
+$box-shadow-active: 1.75rem 1.5rem 1.75rem rgba($shadow-active-rgba, .25);
+$box-shadow-hover: inset .25rem .50rem .75rem rgba($shadow-hover-rgba, .075);
+$box-shadow-focus: inset .25rem .50rem .75rem rgba($shadow-focus-rgba, .075) 25%;

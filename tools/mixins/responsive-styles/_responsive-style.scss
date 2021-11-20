@@ -1,0 +1,83 @@
+$grid-breakpoint-xs: 0;
+$grid-breakpoint-sm: 576px;
+$grid-breakpoint-md: 768px;
+$grid-breakpoint-lg: 992px;
+$grid-breakpoint-xl: 1200px;
+$grid-breakpoint-xxl: 1400px;
+
+$tablet: 1224px;
+$desktop: 1824px;
+
+@mixin media($res)
+{
+    @if mobile-only == $res
+    {
+        @media only screen and (max-width: #{$grid-breakpoint-sm - 1})
+        {
+            @content;
+        }
+    }
+    @if mobile == $res
+    {
+        @media only screen and (min-width: #{$grid-breakpoint-sm})
+        {
+            @content;
+        }
+    }
+    @if tablet-only == $res
+    {
+        @media only screen and (max-width: #{$grid-breakpoint-md - 1})
+        {
+            @content;
+        }
+    }
+    @if tablet == $res
+    {
+        @media only screen and (min-width: #{$grid-breakpoint-md})
+        {
+            @content;
+        }
+    }
+    @if laptop-only == $res
+    {
+        @media only screen and (max-width: #{$grid-breakpoint-lg - 1})
+        {
+            @content;
+        }
+    }
+    @if laptop == $res
+    {
+        @media only screen and (min-width: #{$grid-breakpoint-lg})
+        {
+            @content;
+        }
+    }
+    @if desktop-only == $res
+    {
+        @media only screen and (max-width: #{$grid-breakpoint-xl - 1})
+        {
+            @content;
+        }
+    }
+    @if desktop == $res
+    {
+        @media only screen and (min-width: #{$grid-breakpoint-xl})
+        {
+            @content;
+        }
+    }
+    @if wide-only == $res
+    {
+        @media only screen and (max-width: #{$grid-breakpoint-xxl - 1})
+        {
+            @content;
+        }
+    }
+    @if wide == $res
+    {
+        @media only screen and (min-width: #{$grid-breakpoint-xxl})
+        {
+            @content;
+        }
+    }
+}

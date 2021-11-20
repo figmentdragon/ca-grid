@@ -4,29 +4,30 @@
 
 $default-width: 38.125rem;
 $max-content-width: 1240px;
-$responsive-base: 33;
-$responsive-aligndefault-width: min(calc(100vw - 8 * $responsive-base)), #{$default-width};
-$responsive-alignwide-width: min(calc(100vw - 8 * $responsive-base)), #{$max-content-width};
+$responsive-horizontal-spacing: 1.05vw;
+$responsive-aligndefault-width: subtract(100vw - $responsive-horizontal-spacing);
+$responsive-alignwide-width: subtract(100vw - $responsive-horizontal-spacing);
+$responsive-alignfull-width: 100vw;
 
 :root
 {
-    $responsive-base: 33;
-    $responsive-aligndefault-width: calc(100vw - $responsive-base);
-    $responsive-alignwide-width: calc(100vw - $responsive-base);
-    $responsive-alignfull-width: 100%;
-    $responsive-alignright-margin: $responsive-base;
-    $responsive-alignleft-margin: $responsive-base;
+    $responsive-horizontal-spacing: 1.05vw;
+    $responsive-aligndefault-width: subtract(100vw - $responsive-horizontal-spacing);
+    $responsive-alignwide-width: subtract(100vw - $responsive-horizontal-spacing);
+    $responsive-alignfull-width: 100vw;
+    $responsive-alignright-margin: $responsive-horizontal-spacing;
+    $responsive-alignleft-margin: $responsive-horizontal-spacing;
 }
 
 @include media(mobile)
 {
     :root
     {
-        $responsive-base: 33;
-        $responsive-aligndefault-width: min(calc(100vw - 4vw) * $responsive-base), #{$default-width};
-        $responsive-alignwide-width: calc(100vw - 4vw) * $responsive-base;
-        $responsive-alignright-margin: min(calc(.5 * 100vw) - $responsive-base);
-        $responsive-alignleft-margin: calc(.5 * (100vw - $responsive-base));
+        $responsive-horizontal-spacing: 1.05vw;
+        $responsive-aligndefault-width: min(calc(100vw - 4vw) * $responsive-horizontal-spacing), #{$default-width};
+        $responsive-alignwide-width: calc(100vw - 4vw) * $responsive-horizontal-spacing;
+        $responsive-alignright-margin: min(calc(.5 * 100vw) - $responsive-horizontal-spacing);
+        $responsive-alignleft-margin: calc(.5 * (100vw - $responsive-horizontal-spacing));
     }
 }
 
@@ -34,9 +35,9 @@ $responsive-alignwide-width: min(calc(100vw - 8 * $responsive-base)), #{$max-con
 {
     :root
     {
-        $responsive-base: 33;
-        $responsive-aligndefault-width: min(calc(100vw - 8 * $responsive-base)), #{$default-width};
-        $responsive-alignwide-width: min(calc(100vw - 8 * $responsive-base)), #{$max-content-width};
+        $responsive-horizontal-spacing: 1.05vw;
+        $responsive-aligndefault-width: min(calc(100vw - 8 * $responsive-horizontal-spacing)), #{$default-width};
+        $responsive-alignwide-width: min(calc(100vw - 8 * $responsive-horizontal-spacing)), #{$max-content-width};
     }
 }
 
@@ -89,7 +90,7 @@ $responsive-alignwide-width: min(calc(100vw - 8 * $responsive-base)), #{$max-con
 
 %responsive-alignfull-width-nested
 {
-    width: calc($responsive-alignfull-width) - calc(2 * $responsive-base);
+    width: calc($responsive-alignfull-width) - calc(2 * $responsive-horizontal-spacing);
     max-width: $responsive-alignfull-width;
     margin-right: auto;
     margin-left: auto;
@@ -99,7 +100,7 @@ $responsive-alignwide-width: min(calc(100vw - 8 * $responsive-base)), #{$max-con
 {
     %responsive-alignfull-width-nested
     {
-        width: calc($responsive-alignfull-width) - calc(4 * $responsive-base);
+        width: calc($responsive-alignfull-width) - calc(4 * $responsive-horizontal-spacing);
         max-width: $responsive-alignfull-width;
         margin-right: auto;
         margin-left: auto;
@@ -110,18 +111,18 @@ $responsive-alignwide-width: min(calc(100vw - 8 * $responsive-base)), #{$max-con
 %responsive-alignleft-mobile
 {
     /*rtl:ignore*/
-    margin-right: $responsive-base;
+    margin-right: $responsive-horizontal-spacing;
     /*rtl:ignore*/
     margin-left: 0;
 }
 
 @include media(mobile)
 {
-    $responsive-alignleft-margin: calc(.5 * (100vw - $responsive-base));
+    $responsive-alignleft-margin: calc(.5 * (100vw - $responsive-horizontal-spacing));
     %responsive-alignleft
     {
         /*rtl:ignore*/
-        margin-right: $responsive-base;
+        margin-right: $responsive-horizontal-spacing;
         /*rtl:ignore*/
         margin-left: $responsive-alignleft-margin;
     }
@@ -132,18 +133,18 @@ $responsive-alignwide-width: min(calc(100vw - 8 * $responsive-base)), #{$max-con
     /*rtl:ignore*/
     margin-right: 0;
     /*rtl:ignore*/
-    margin-left: $responsive-base;
+    margin-left: $responsive-horizontal-spacing;
 }
 
 @include media(mobile)
 {
-    $responsive-alignright-margin: min(calc(.5 * 100vw) - $responsive-base);
+    $responsive-alignright-margin: min(calc(.5 * 100vw) - $responsive-horizontal-spacing);
     %responsive-alignright
     {
         /*rtl:ignore*/
         margin-right: $responsive-alignright-margin;
         /*rtl:ignore*/
-        margin-left: $responsive-base;
+        margin-left: $responsive-horizontal-spacing;
     }
 }
 // Output

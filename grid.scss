@@ -1,3 +1,5 @@
+@use 'sass:map';
+
 /******************************************************************
 Site Name: The Creativity Architect
 Author: CJM Termini
@@ -28,31 +30,16 @@ $enable-deprecation-messages: true;
 $enable-important-utilities: true;
 
 $include-column-box-sizing: true;
+$variable-prefix: grid;
 
-@import
-  'tools/functions/assert-ascending',
-  'tools/functions/assert-at-zero',
-  'tools/functions/breakpoint',
-  'tools/functions/negativify-map';
+@import 'tools/grid-functions';
 
-@import
-  'tools/mixins/border-radius',
-  'tools/mixins/breakpoints',
-  'tools/mixins/clearfix',
-  'tools/mixins/container',
-  'tools/mixins/grid-breakpoints',
-  'tools/mixins/grid',
-  'tools/mixins/lists',
-  'tools/mixins/media-breakpoint',
-  'tools/mixins/media-query',
-  'tools/mixins/responsive-breakpoints',
-  'tools/mixins/responsive-style',
-  'tools/mixins/responsiveness',
-  'tools/mixins/utilities';
 
-@import 'variables/cjmt-grid';
+@import 'tools/grid-mixins';
 
-@import 'variables/cjmt-colors';
+@import 'variables/grid-variables';
+
+@import 'tools/grid-helpers';
 
 @import
   'tools/utils/rfs',
@@ -72,11 +59,29 @@ GENERAL STYLES
     border-radius: $border-radius;
 }
 
-.container,
-.container-fluid
+.container
 {
     @include make-container($gutter: $container-padding-x);
 }
+
+.container-fluid {
+  @include make-container($gutter: $container-padding-x);
+  padding-right: 20px;
+  padding-left: 20px;
+  *zoom: 1;
+
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+    line-height: 0;
+  }
+  &:after{
+      clear: both;
+  }
+
+}
+
 
 .grid
 {
@@ -177,7 +182,6 @@ GENERAL STYLES
   }
 
 
-
 .col
 {
     float: left;
@@ -210,22 +214,4 @@ GENERAL STYLES
     {
         @include grid-loop($name);
     }
-}
-
-
-.container-fluid {
-  padding-right: 20px;
-  padding-left: 20px;
-  *zoom: 1;
-
-  &:before,
-  &:after {
-    display: table;
-    content: "";
-    line-height: 0;
-  }
-  &:after{
-      clear: both;
-  }
-
 }

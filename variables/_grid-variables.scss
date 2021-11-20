@@ -1,0 +1,29 @@
+@import
+  'colors/theme-colors',
+  'colors/box-shadows',
+  'spacings/spacer',
+  'spacings/aspect-ratios',
+  'spacings/zindex',
+  'grid/breakpoints',
+  'grid/grid-variables',
+  'grid/containers';
+
+/* -------------------------------------------------------------------------- */
+
+$gutters: $spacers;
+$grid-breakpoint: $breakpoint;
+$grid-rows: $grid-row-columns;
+
+$size: nth($grid-breakpoints, 1);
+$name: nth($grid-breakpoints, 1);
+$declaration: nth($grid-breakpoint, 2);
+$infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+$map: $grid-breakpoints;
+$map-name: $breakpoint;
+
+@include assert-ascending($map, $map-name);
+@include assert-starts-at-zero($map, $map-name);
+@include assert-ascending($container-max-widths, "$container-max-widths");
+
+/* -------------------------------------------------------------------------- */

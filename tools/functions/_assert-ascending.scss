@@ -16,7 +16,3 @@
     $prev-num: $num;
   }
 }
-
-@mixin assert-ascending($grid-breakpoints, $grid-breakpoint) {
-  @include assert-ascending($grid-breakpoints, $grid-breakpoint);
-}
