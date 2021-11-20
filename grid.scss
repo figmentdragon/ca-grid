@@ -50,22 +50,9 @@ $include-column-box-sizing: true;
   'tools/mixins/responsiveness',
   'tools/mixins/utilities';
 
-@import
-  'variables/spacings/spacer',
-  'variables/spacings/grid-breakpoints',
-  'variables/spacings/containers',
-  'variables/spacings/grid-variables',
-  'variables/spacings/container-padding',
-  'variables/spacings/breakpoints';
+@import 'variables/cjmt-grid';
 
-/* -------------------------------------------------------------------------- */
-
-  $size: nth($grid-breakpoints, 1);
-  $name: nth($grid-breakpoints, 1);
-  $declaration: nth($grid-breakpoint, 2);
-  $infix: breakpoint-infix($breakpoint, $grid-breakpoint);
-
-/* -------------------------------------------------------------------------- */
+@import 'variables/cjmt-colors';
 
 @import
   'tools/utils/rfs',

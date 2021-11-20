@@ -6,13 +6,10 @@ $grid-gutter: 5px;
 $grid-row-columns: 16;
 $grid-rows: $grid-row-columns;
 
-$grid-gutter-width: $grid-gutter;
-$gutter-x: $grid-gutter-width * 2.5;
-$gutter-y: $grid-gutter-width;
+$gutter-x: $grid-gutter * 2.5;
+$gutter-y: $grid-gutter;
 
 $grid-max-width: 1320px + ($grid-gutter * 2);
-
-$gutters: $spacers;
 
 $default-width: 610px;
 $max-content-width: 1320px;

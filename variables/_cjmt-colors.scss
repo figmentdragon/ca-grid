@@ -1,17 +1,17 @@
 // Color system
 
 // scss-docs-start gray-color-variables
-$white: #e4edf4;
-$gray-100: #c0c0c0;
-$gray-200: #9a9a9a;
-$gray-300: #7b7b7b;
-$gray-400: #626262;
-$gray-500: #4e4e4e;
-$gray-600: #3e3e3e;
-$gray-700: #323232;
-$gray-800: #282828;
-$gray-900: #1a1a1a;
-$black: #000100;
+$white: #e4edf4 !default;
+$gray-100: #c0c0c0 !default;
+$gray-200: #9a9a9a !default;
+$gray-300: #7b7b7b !default;
+$gray-400: #626262 !default;
+$gray-500: #4e4e4e !default;
+$gray-600: #3e3e3e !default;
+$gray-700: #323232 !default;
+$gray-800: #282828 !default;
+$gray-900: #1a1a1a !default;
+$black: #000100 !default;
 // scss-docs-end gray-color-variables
 
 // fusv-disable
@@ -26,7 +26,7 @@ $grays: (
   700: $gray-700,
   800: $gray-800,
   900: $gray-900
-);
+) !default;
 // scss-docs-end gray-colors-map
 // fusv-enable
 
@@ -41,10 +41,10 @@ $yellow: #ffc107 !default;
 $green: #198754 !default;
 $teal: #20c997 !default;
 $cyan: #00FFFF !default;
-$brown: #623412;
-$gray: $gray-600;
-$dark: $gray-900;
-$light: $gray-100;
+$brown: #623412 !dfault !default;
+$gray: $gray-600 !default;
+$dark: $gray-900 !default;
+$light: $gray-100 !default;
 // scss-docs-end color-variables
 
 // scss-docs-start colors-map
@@ -60,19 +60,19 @@ $colors: (
   'teal':       #20c997,
   'cyan':       #00FFFF,
   'brown':      #623412
-);
+) !default;
 // scss-docs-end colors-map
 
 // scss-docs-start theme-color-variables
-$primary-color: $cyan;
-$secondary-color: $yellow;
-$accent-color: $teal;
-$success: $green;
-$warning: $orange;
-$danger: $red;
-$info: $blue;
-$light: $gray-100;
-$dark: $gray-900;
+$primary-color: $cyan !default;
+$secondary-color: $yellow !default;
+$accent-color: $teal !default;
+$success: $green !default;
+$warning: $orange !default;
+$danger: $red !default;
+$info: $blue !default;
+$light: $gray-100 !default;
+$dark: $gray-900 !default;
 // scss-docs-end theme-color-variables
 
 // scss-docs-start theme-colors-map
@@ -84,7 +84,7 @@ success:         $success,
 warning:         $warning,
 danger:          $danger,
 info:            $info
-);
+) !default;
 // scss-docs-end theme-colors-map
 
 // scss-docs-start theme-colors-rgb

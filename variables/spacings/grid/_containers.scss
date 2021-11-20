@@ -8,4 +8,6 @@ xl: 1140px,
 xxl: 1320px
 );
 
-@include assert-ascending($container-max-widths, "$container-max-widths");
+/* Container padding */
+$container-padding-x: $grid-gutter * .5;
+$container-padding-y: $grid-gutter;

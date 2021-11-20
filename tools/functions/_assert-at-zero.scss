@@ -11,6 +11,6 @@
   }
 }
 
-@mixin assert-starts-at-zero($map: $grid-breakpoints, $map-name: "$grid-breakpoints") {
+@mixin assert-starts-at-zero($map: $grid-breakpoints, $map-name: "$grid-breakpoint") {
   @include assert-starts-at-zero($map, $map-name);
 }

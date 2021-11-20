@@ -1,15 +1,9 @@
-/* Error: Only 1 argument allowed, but 2 were passed.
- *    ,--> variables/spacings/_grid-breakpoints.scss
- * 13 | @include assert-starts-at-zero($grid-breakpoints, "$grid-breakpoints");
- *    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ invocation
+/* Error: Undefined variable.
+ *    ,
+ * 66 |   $size: nth($grid-breakpoints, 1);
+ *    |              ^^^^^^^^^^^^^^^^^
  *    '
- *    ,--> tools/functions/_assert-at-zero.scss
- * 14 | @mixin assert-starts-at-zero($grid-breakpoints) {
- *    |        ======================================== declaration
- *    '
- *   variables/spacings/_grid-breakpoints.scss 13:1  assert-starts-at-zero()
- *   variables/spacings/_grid-breakpoints.scss 13:1  @import
- *   grid.scss 55:3                                  root stylesheet */
+ *   grid.scss 66:14  root stylesheet */
 
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
@@ -19,5 +13,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: 'Error: Only 1 argument allowed, but 2 were passed.\a    \250c \2500 \2500 > variables/spacings/_grid-breakpoints.scss\a 13 \2502  @include assert-starts-at-zero($grid-breakpoints, "$grid-breakpoints");\a    \2502  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ invocation\a    \2575 \a    \250c \2500 \2500 > tools/functions/_assert-at-zero.scss\a 14 \2502  @mixin assert-starts-at-zero($grid-breakpoints) {\a    \2502         \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501  declaration\a    \2575 \a   variables/spacings/_grid-breakpoints.scss 13:1  assert-starts-at-zero()\a   variables/spacings/_grid-breakpoints.scss 13:1  @import\a   grid.scss 55:3                                  root stylesheet';
+  content: "Error: Undefined variable.\a    \2577 \a 66 \2502    $size: nth($grid-breakpoints, 1);\a    \2502               ^^^^^^^^^^^^^^^^^\a    \2575 \a   grid.scss 66:14  root stylesheet";
 }
