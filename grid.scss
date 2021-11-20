@@ -1,0 +1,244 @@
+/******************************************************************
+Site Name: The Creativity Architect
+Author: CJM Termini
+
+Stylesheet: CJMT Grid Stylesheet
+
+Be light and don't over style since everything here will be
+loaded by mobile devices. You want to keep it as minimal as
+possible. This is called at the top of the main stylsheet
+and will be used across all viewports.
+
+******************************************************************/
+$enable-caret: true;
+$enable-rounded: true;
+$enable-shadows: true;
+$enable-gradients: true;
+$enable-transitions: true;
+$enable-reduced-motion: true;
+$enable-smooth-scroll: true;
+$enable-grid-classes: true;
+$enable-container-classes: true;
+$enable-cssgrid: true;
+$enable-button-pointers: true;
+$enable-rfs: true;
+$enable-validation-icons: true;
+$enable-negative-margins: true;
+$enable-deprecation-messages: true;
+$enable-important-utilities: true;
+
+$include-column-box-sizing: true;
+
+@import
+  'tools/functions/assert-ascending',
+  'tools/functions/assert-at-zero',
+  'tools/functions/breakpoint',
+  'tools/functions/negativify-map';
+
+@import
+  'tools/mixins/border-radius',
+  'tools/mixins/breakpoints',
+  'tools/mixins/clearfix',
+  'tools/mixins/container',
+  'tools/mixins/grid-breakpoints',
+  'tools/mixins/grid',
+  'tools/mixins/lists',
+  'tools/mixins/media-breakpoint',
+  'tools/mixins/media-query',
+  'tools/mixins/responsive-breakpoints',
+  'tools/mixins/responsive-style',
+  'tools/mixins/responsiveness',
+  'tools/mixins/utilities';
+
+@import
+  'variables/spacings/spacer',
+  'variables/spacings/grid-breakpoints',
+  'variables/spacings/containers',
+  'variables/spacings/grid-variables',
+  'variables/spacings/container-padding',
+  'variables/spacings/breakpoints';
+
+/* -------------------------------------------------------------------------- */
+
+  $size: nth($grid-breakpoints, 1);
+  $name: nth($grid-breakpoints, 1);
+  $declaration: nth($grid-breakpoint, 2);
+  $infix: breakpoint-infix($breakpoint, $grid-breakpoint);
+
+/* -------------------------------------------------------------------------- */
+
+@import
+  'tools/utils/rfs',
+  'tools/utils/utilities',
+  'tools/utils/api';
+
+
+/*********************
+GENERAL STYLES
+*********************/
+
+[class^='container-']
+{
+    border-width: medium;
+    border-style: solid;
+    border-color: $active;
+    border-radius: $border-radius;
+}
+
+.container,
+.container-fluid
+{
+    @include make-container($gutter: $container-padding-x);
+}
+
+.grid
+{
+    display: inline-grid;
+
+    box-sizing: if(variable-exists(include-column-box-sizing) and $include-column-box-sizing, border-box, null);
+    width: 100%;
+    height: 100%;
+
+    grid-template-rows: repeat($grid-row-columns, 1fr);
+    grid-template-columns: repeat($grid-columns, 1fr);
+    $gutter-x: $spacer;
+    $gutter-y: 0;
+    gap: $grid-gutter-width;
+    grid-gap: $grid-gutter-width;
+    @include resp-min($breakpoint-sm)
+    {
+        grid-gap: div($base-unit, 2);
+    }
+
+    @each $breakpoint in $breakpoints
+    {
+        $name: nth($breakpoint, 1);
+        $declaration: nth($breakpoint, 2);
+
+        @media only screen and ($declaration)
+        {
+            grid-template-columns: repeat($grid-columns,  1fr);
+        }
+    }
+    > *{
+    @include make-container($gutter: $container-padding-x);
+    border-width: $border-width-md;
+    border-style: solid;
+    border-color: $gray-200;
+    }
+}
+
+.grid-item
+{
+    grid-row: $row1;
+    grid-column: $col1;
+}
+
+.row
+{
+    list-style: none;
+
+    @include make-row;
+    $gutter-x: $grid-gutter-width;
+    $gutter-y: 0;
+
+    &:not(.row-flex)
+    {
+        @include clearfix;
+    }
+    &.row-gutterless
+    {
+        margin-left: 0;
+    }
+    &.row-flex
+    {
+        display: inline-flex;
+        flex-wrap: wrap;
+    }
+}
+
+.row-fluid {
+    width: 100%;
+    *zoom: 1;
+
+    &:before,
+    &:after {
+      display: table;
+      line-height: 0;
+      content: "";
+    }
+    &:after {
+      clear:both;
+    }
+    .row-fluid [class*="span"] {
+      display: block;
+      float: left;
+      width: 100%;
+      min-height: 30px;
+      margin-left: 2.564102564102564%;
+      *margin-left: 2.5109110747408616%;
+      -webkit-box-sizing: border-box;
+         -moz-box-sizing: border-box;
+              box-sizing: border-box;
+    }
+    .row-fluid [class*="span"]:first-child {
+      margin-left: 0;
+    }
+    .row-fluid .controls-row [class*="span"] + [class*="span"] {
+      margin-left: 2.564102564102564%;
+    }
+  }
+
+
+
+.col
+{
+    float: left;
+
+    box-sizing: border-box;
+    padding-left: $grid-gutter;
+
+    @include make-col();
+    .row-gutterless &
+    {
+        padding-left: 0;
+    }
+}
+
+.row-cols-
+{
+    @include row-cols;
+}
+
+/**
+ * Columns generator
+ */
+
+@each $breakpoint in $breakpoints
+{
+    $name: nth($breakpoint, 1);
+    $declaration: nth($breakpoint, 2);
+
+    @media only screen and #{$declaration}
+    {
+        @include grid-loop($name);
+    }
+}
+
+
+.container-fluid {
+  padding-right: 20px;
+  padding-left: 20px;
+  *zoom: 1;
+
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+    line-height: 0;
+  }
+  &:after{
+      clear: both;
+  }
+
+}

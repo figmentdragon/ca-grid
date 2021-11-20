@@ -1,0 +1,18 @@
+/* Grid columns */
+/* Set the number of columns and specify the width of the gutters. */
+/* @see https://getbootstrap.com/docs/5.1/layout/grid/#variables */
+$grid-columns: 16;
+$grid-gutter: 5px;
+$grid-row-columns: 16;
+$grid-rows: $grid-row-columns;
+
+$grid-gutter-width: $grid-gutter;
+$gutter-x: $grid-gutter-width * 2.5;
+$gutter-y: $grid-gutter-width;
+
+$grid-max-width: 1320px + ($grid-gutter * 2);
+
+$gutters: $spacers;
+
+$default-width: 610px;
+$max-content-width: 1320px;

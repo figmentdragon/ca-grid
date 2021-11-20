@@ -1,0 +1,63 @@
+$theme-color-primary: #0abab5;
+$theme-color-secondary: #a8a9ad;
+$theme-color-accent: #ffe41e;
+
+$theme-color-rgba-primary: rgba(202,255,255);
+$theme-color-rgba-secondary: rgba(255,228,30);
+$theme-color-rgba-accent: rgba(168,169,173);
+
+$theme-color: (
+primary:  #0abab5,
+secondary: #a8a9ad,
+accent: #ffe41e
+);
+
+$theme-color-rgba: (
+primary-rgba: rgba(202,255,255),
+secondary-rgba: rgba(255,228,30),
+accent-rgba: rgba(168,169,173)
+);
+
+$theme-color-secondary-100: tint-color($theme-color-secondary, 80%);
+$theme-color-secondary-200: tint-color($theme-color-secondary, 60%);
+$theme-color-secondary-300: tint-color($theme-color-secondary, 40%);
+$theme-color-secondary-400: tint-color($theme-color-secondary, 20%);
+$theme-color-secondary-500: $theme-color-secondary;
+$theme-color-secondary-600: shade-color($theme-color-secondary, 20%);
+$theme-color-secondary-700: shade-color($theme-color-secondary, 40%);
+$theme-color-secondary-800: shade-color($theme-color-secondary, 60%);
+$theme-color-secondary-900: shade-color($theme-color-secondary, 80%);
+
+$theme-color-primary-100: tint-color($theme-color-primary, 80%);
+$theme-color-primary-200: tint-color($theme-color-primary, 60%);
+$theme-color-primary-300: tint-color($theme-color-primary, 40%);
+$theme-color-primary-400: tint-color($theme-color-primary, 20%);
+$theme-color-primary-500: $theme-color-primary;
+$theme-color-primary-600: shade-color($theme-color-primary, 20%);
+$theme-color-primary-700: shade-color($theme-color-primary, 40%);
+$theme-color-primary-800: shade-color($theme-color-primary, 60%);
+$theme-color-primary-900: shade-color($theme-color-primary, 80%);
+
+$theme-color-secondarys: (
+  'theme-color-secondary-100': $theme-color-secondary-100,
+  'theme-color-secondary-200': $theme-color-secondary-200,
+  'theme-color-secondary-300': $theme-color-secondary-300,
+  'theme-color-secondary-400': $theme-color-secondary-400,
+  'theme-color-secondary-500': $theme-color-secondary-500,
+  'theme-color-secondary-600': $theme-color-secondary-600,
+  'theme-color-secondary-700': $theme-color-secondary-700,
+  'theme-color-secondary-800': $theme-color-secondary-800,
+  'theme-color-secondary-900': $theme-color-secondary-900
+);
+
+$theme-color-primarys: (
+  'theme-color-primary-100': $theme-color-primary-100,
+  'theme-color-primary-200': $theme-color-primary-200,
+  'theme-color-primary-300': $theme-color-primary-300,
+  'theme-color-primary-400': $theme-color-primary-400,
+  'theme-color-primary-500': $theme-color-primary-500,
+  'theme-color-primary-600': $theme-color-primary-600,
+  'theme-color-primary-700': $theme-color-primary-700,
+  'theme-color-primary-800': $theme-color-primary-800,
+  'theme-color-primary-900': $theme-color-primary-900
+);

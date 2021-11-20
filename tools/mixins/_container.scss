@@ -1,0 +1,34 @@
+// container mixins
+
+@mixin make-container($gutter: $container-padding-x)
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: grid-inline;
+    float: left;
+    align-items: left;
+    justify-content: flex-start;
+
+    width: 100%;
+    height: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: $gutter-y * 2;
+    padding-bottom: $gutter-y;
+
+    $gutter-x: $spacer;
+    $gutter-y: $spacer;
+}
+
+@mixin make-container-style()
+{
+    border-width: $border-width-focus;
+    border-style: solid;
+    border-style: hidden;
+    border-color: $border-color;
+    border-radius: $border-radius;
+}

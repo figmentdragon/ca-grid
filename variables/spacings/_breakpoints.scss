@@ -1,0 +1,15 @@
+$breakpoint-xs: 0;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+$breakpoint-xxl: 1400px;
+
+$breakpoint: (
+    'xxl' '(min-width: ' + ($breakpoint-xl + 1) + ') and (max-width: ' + $breakpoint-xxl + ')',
+    'xl' '(min-width: ' + ($breakpoint-lg + 1) + ') and (max-width: ' + $breakpoint-xl + ')',
+    'lg' '(min-width: ' + ($breakpoint-md + 1) + ') and (max-width: ' + $breakpoint-lg + ')',
+    'md' '(min-width: ' + ($breakpoint-sm + 1) + ') and (max-width: ' + $breakpoint-md + ')',
+    'sm' '(min-width: ' + ($breakpoint-xs + 1) + ') and (max-width:'  + $breakpoint-sm + ')',
+    'xs' '(max-width: ' + $breakpoint-xs + ')'
+);

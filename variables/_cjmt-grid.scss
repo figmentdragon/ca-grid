@@ -1,0 +1,14 @@
+@import
+  'spacings/spacer',
+  'spacings/grid-breakpoints',
+  'spacings/containers',
+  'spacings/grid-variables',
+  'spacings/container-padding',
+  'spacings/breakpoints',
+
+/* -------------------------------------------------------------------------- */
+
+$size: nth($grid-breakpoints, 1);
+$name: nth($grid-breakpoints, 1);
+$declaration: nth($grid-breakpoint, 2);
+$infix: breakpoint-infix($breakpoint, $grid-breakpoint);

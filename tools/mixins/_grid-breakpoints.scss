@@ -1,0 +1,36 @@
+@mixin grid-breakpoint
+{
+    @each $grid-breakpoint, $container-max-width in $container-max-widths
+    {
+        @include media-grid-breakpoint-up($grid-breakpoint, $grid-breakpoint)
+        {
+            // Extend each grid-breakpoint which is smaller or equal to the current grid-breakpoint
+            $extend-grid-breakpoint: true;
+            %responsive-container-#{$grid-breakpoint}
+            {
+                max-width: $container-max-width;
+            }
+
+            @each $name, $width in $grid-breakpoint
+            {
+                @if ($extend-grid-breakpoint)
+                {
+                    .container#{grid-breakpoint-infix($name, $grid-breakpoint)}
+                    {
+                        @extend %responsive-container-#{$grid-breakpoint};
+                    }
+
+                    // Once the current grid-breakpoint is reached, stop extending
+                    @if ($grid-breakpoint == $name)
+                    {
+                        $extend-grid-breakpoint: false;
+                    }
+                }
+            }
+        }
+        .container-#{$grid-breakpoint}
+        {
+            @extend .container-fluid;
+        }
+    }
+}
