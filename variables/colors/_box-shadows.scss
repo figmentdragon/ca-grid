@@ -1,4 +1,4 @@
-grid-white
+
 $shadow: $grid-gray-700;
 $shadow-active: $grid-gray-500;
 $shadow-hover: $grid-gray-300;
@@ -9,7 +9,7 @@ $shadow-rgba: $grid-gray-700-rgba;
 $shadow-active-rgba: $grid-gray-500-rgba;
 $shadow-hover-rgba: $grid-gray-300-rgba;
 $shadow-focus-rgba: $grid-gray-100-rgba;
-$shadow-inset-rgba: $white-rgba;
+$shadow-inset-rgba: $grid-white-rgba;
 
 /* BOX SHADOW */
 $box-shadow: 1.75rem 1.5rem 1.75rem $shadow-rgba;

@@ -1,0 +1,23 @@
+
+$grid-gray-100-rgba: rgba(192,192,192);
+$grid-gray-200-rgba: rgba(154 154 154);
+$grid-gray-300-rgba: rgba(123, 123, 123);
+$grid-gray-400-rgba: rgba(98 98 98);
+$grid-gray-500-rgba: rgba(78,78,78);
+$grid-gray-600-rgba: rgba(62,62,62);
+$grid-gray-700-rgba: rgba(50,50,50);
+$grid-gray-800-rgba: rgba(40,40,40);
+$grid-gray-900-rgba: rgba(26,26,26);
+$grid-white-rgba: rgba(228,237,244);
+
+$grid-gray-rgba: (
+grid-gray-100-rgba: $grid-gray-100-rgba,
+grid-gray-200-rgba: $grid-gray-200-rgba,
+grid-gray-300-rgba: $grid-gray-300-rgba,
+grid-gray-400-rgba: $grid-gray-400-rgba,
+grid-gray-500-rgba: $grid-gray-500-rgba,
+grid-gray-600-rgba: $grid-gray-600-rgba,
+grid-gray-700-rgba: $grid-gray-700-rgba,
+grid-gray-800-rgba: $grid-gray-800-rgba,
+grid-gray-900-rgba: $grid-gray-900-rgba
+);

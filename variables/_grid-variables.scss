@@ -1,9 +1,27 @@
 @import
-  'colors/theme-colors',
-  'colors/box-shadows',
+  'grid-colors';
+
+/* -------------------------------------------------------------------------- */
+
+  $theme-colors: $grid-colors;
+  $white: $grid-white;
+  $utilities-colors: $grid-utilities-colors;
+
+/* -------------------------------------------------------------------------- */
+
+@import
   'spacings/spacer',
   'spacings/aspect-ratios',
-  'spacings/zindex',
+  'spacings/position-value',
+  'spacings/zindex';
+
+/* -------------------------------------------------------------------------- */
+
+
+
+/* -------------------------------------------------------------------------- */
+
+@import
   'grid/breakpoints',
   'grid/grid-variables',
   'grid/containers';
@@ -27,3 +45,54 @@ $map-name: $breakpoint;
 @include assert-ascending($container-max-widths, "$container-max-widths");
 
 /* -------------------------------------------------------------------------- */
+
+$border-width:                1px;
+$border-widths: (
+  1: 1px,
+  2: 2px,
+  3: 3px,
+  4: 4px,
+  5: 5px
+);
+
+$border-color:                $grid-gray-300;
+
+$font-size-base:              1rem; // Assumes the browser default, typically
+
+$font-weight-lighter:         lighter;
+$font-weight-light:           300;
+$font-weight-normal:          400;
+$font-weight-bold:            700;
+$font-weight-bolder:          bolder;
+
+$font-weight-base:            $font-weight-normal;
+
+$line-height-base:            1.5;
+$line-height-sm:              1.25;
+$line-height-lg:              2;
+
+$h1-font-size:                $font-size-base * 2.5;
+$h2-font-size:                $font-size-base * 2;
+$h3-font-size:                $font-size-base * 1.75;
+$h4-font-size:                $font-size-base * 1.5;
+$h5-font-size:                $font-size-base * 1.25;
+$h6-font-size:                $font-size-base;
+
+$font-sizes: (
+  1: $h1-font-size,
+  2: $h2-font-size,
+  3: $h3-font-size,
+  4: $h4-font-size,
+  5: $h5-font-size,
+  6: $h6-font-size
+);
+
+$utilities-text: map-merge(
+  $utilities-colors,
+  (
+    "black": to-rgb($black),
+    "white": to-rgb($white),
+    "body": to-rgb($body-color)
+  )
+);
+$utilities-text-colors: map-loop($utilities-text, rgba-css-var, "$key", "text");

@@ -1,63 +1,75 @@
-$theme-color-primary: #0abab5;
-$theme-color-secondary: #a8a9ad;
-$theme-color-accent: #ffe41e;
+$grid-white: #e4edf4;
+$grid-gray-100: #c0c0c0;
+$grid-gray-200: #9a9a9a;
+$grid-gray-300: #7b7b7b;
+$grid-gray-400: #626262;
+$grid-gray-500: #4e4e4e;
+$grid-gray-600: #3e3e3e;
+$grid-gray-700: #323232;
+$grid-gray-800: #282828;
+$grid-gray-900: #1a1a1a;
+$grid-black: #000100;
 
-$theme-color-rgba-primary: rgba(202,255,255);
-$theme-color-rgba-secondary: rgba(255,228,30);
-$theme-color-rgba-accent: rgba(168,169,173);
-
-$theme-color: (
-primary:  #0abab5,
-secondary: #a8a9ad,
-accent: #ffe41e
+$grid-grays: (
+  100: $grid-gray-100,
+  200: $grid-gray-200,
+  300: $grid-gray-300,
+  400: $grid-gray-400,
+  500: $grid-gray-500,
+  600: $grid-gray-600,
+  700: $grid-gray-700,
+  800: $grid-gray-800,
+  900: $grid-gray-900
 );
 
-$theme-color-rgba: (
-primary-rgba: rgba(202,255,255),
-secondary-rgba: rgba(255,228,30),
-accent-rgba: rgba(168,169,173)
+$grid-blue: #4169e1;
+$grid-indigo: #60f;
+$grid-purple: #510bda;
+$grid-pink: #c39;
+$grid-red: #dc3545;
+$grid-orange: #f96;
+$grid-yellow: #ffe41e;
+$grid-green: #0bda51;
+$grid-teal: #caffff;
+$grid-cyan: #0abab5;
+$grid-silver: #a8a9ad;
+$grid-brown: #623412;
+$grid-gray: $grid-gray-600;
+$grid-dark: $grid-gray-900;
+$grid-light: $grid-gray-100;
+
+$grid-colors:(
+grid-blue: $grid-blue,
+grid-indigo: $grid-indigo,
+grid-purple: $grid-purple,
+grid-pink: $grid-pink,
+grid-red: $grid-red,
+grid-orange: $grid-orange,
+grid-yellow: $grid-yellow,
+grid-green: $grid-green,
+grid-teal: $grid-teal,
+grid-cyan: $grid-cyan,
+grid-silver: $grid-silver,
+grid-brown: $grid-brown,
+grid-gray: $grid-gray,
+grid-dark: $grid-dark,
+grid-light: $grid-light
 );
 
-$theme-color-secondary-100: tint-color($theme-color-secondary, 80%);
-$theme-color-secondary-200: tint-color($theme-color-secondary, 60%);
-$theme-color-secondary-300: tint-color($theme-color-secondary, 40%);
-$theme-color-secondary-400: tint-color($theme-color-secondary, 20%);
-$theme-color-secondary-500: $theme-color-secondary;
-$theme-color-secondary-600: shade-color($theme-color-secondary, 20%);
-$theme-color-secondary-700: shade-color($theme-color-secondary, 40%);
-$theme-color-secondary-800: shade-color($theme-color-secondary, 60%);
-$theme-color-secondary-900: shade-color($theme-color-secondary, 80%);
 
-$theme-color-primary-100: tint-color($theme-color-primary, 80%);
-$theme-color-primary-200: tint-color($theme-color-primary, 60%);
-$theme-color-primary-300: tint-color($theme-color-primary, 40%);
-$theme-color-primary-400: tint-color($theme-color-primary, 20%);
-$theme-color-primary-500: $theme-color-primary;
-$theme-color-primary-600: shade-color($theme-color-primary, 20%);
-$theme-color-primary-700: shade-color($theme-color-primary, 40%);
-$theme-color-primary-800: shade-color($theme-color-primary, 60%);
-$theme-color-primary-900: shade-color($theme-color-primary, 80%);
+$success:    $grid-green;
+$info:       $grid-blue;
+$warning:    $grid-orange;
+$danger:     $grid-red;
+$light:      $grid-light;
+$dark:       $grid-dark;
 
-$theme-color-secondarys: (
-  'theme-color-secondary-100': $theme-color-secondary-100,
-  'theme-color-secondary-200': $theme-color-secondary-200,
-  'theme-color-secondary-300': $theme-color-secondary-300,
-  'theme-color-secondary-400': $theme-color-secondary-400,
-  'theme-color-secondary-500': $theme-color-secondary-500,
-  'theme-color-secondary-600': $theme-color-secondary-600,
-  'theme-color-secondary-700': $theme-color-secondary-700,
-  'theme-color-secondary-800': $theme-color-secondary-800,
-  'theme-color-secondary-900': $theme-color-secondary-900
-);
 
-$theme-color-primarys: (
-  'theme-color-primary-100': $theme-color-primary-100,
-  'theme-color-primary-200': $theme-color-primary-200,
-  'theme-color-primary-300': $theme-color-primary-300,
-  'theme-color-primary-400': $theme-color-primary-400,
-  'theme-color-primary-500': $theme-color-primary-500,
-  'theme-color-primary-600': $theme-color-primary-600,
-  'theme-color-primary-700': $theme-color-primary-700,
-  'theme-color-primary-800': $theme-color-primary-800,
-  'theme-color-primary-900': $theme-color-primary-900
+$grid-utilities-colors: (
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark
 );
