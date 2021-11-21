@@ -42,6 +42,7 @@ $size: nth($grid-breakpoints, 1);
 $name: nth($grid-breakpoints, 1);
 $declaration: nth($breakpoint, 2);
 $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+$i: 100;
 
 $map: $grid-breakpoints;
 $map-name: $breakpoint;

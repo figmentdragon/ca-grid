@@ -1,0 +1,1460 @@
+/******************************************************************
+Site Name: The Creativity Architect
+Author: CJM Termini
+
+Stylesheet: CJMT Grid Stylesheet
+
+Be light and don't over style since everything here will be
+loaded by mobile devices. You want to keep it as minimal as
+possible. This is called at the top of the main stylsheet
+and will be used across all viewports.
+
+******************************************************************/
+/*Ascending*/
+/*Used to evaluate Sass maps like our grid breakpoints.*/
+/* You can also use a <br class="clear" /> to clear columns */
+.clear {
+  display: block;
+  visibility: hidden;
+  clear: both;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+}
+
+/* MEDIA QUERY */
+/*
+ * Media query to respond to a minimum size (mobile first)
+ */
+/* Grid system */
+/* Generate semantic grid columns with these mixins. */
+/* ##Columns generator## */
+/* Row columns*/
+/* Specify on a parent element(e.g., .row) to force immediate children into NN numberof columns. Supports wrapping to new lines, but does not do a Masonry
+style grid.*/
+/* MEDIA QUERY */
+/*
+ * Media query to respond to a minimum size (mobile first)
+ */
+/* RESPONSIVE STYLES */
+/**
+ * Required Variables
+ */
+/* BOX SHADOW */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/* Spacing */
+/* @see https://getbootstrap.com/docs/5.1/customize/options/ */
+/* 1.7525 = 26-29px */
+/* 2.5875 = 40-42px */
+/**
+ * ## Z-Index
+ =========================*/
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/* Grid breakpoints */
+/* Define the minimum dimensions at which your layout will change, adapting to different screen sizes, for use in media queries. */
+/* Grid columns */
+/* Set the number of columns and specify the width of the gutters. */
+/* @see https://getbootstrap.com/docs/5.1/layout/grid/#variables */
+/* Grid containers */
+/* Define the maximum width of `.container` for different screen sizes. */
+/* Container padding */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+:root {
+  --gridblue: #0d6efd;
+  --gridindigo: #6610f2;
+  --gridpurple: #6f42c1;
+  --gridpink: #d63384;
+  --gridred: #dc3545;
+  --gridorange: #fd7e14;
+  --gridyellow: #ffc107;
+  --gridgreen: #198754;
+  --gridteal: #20c997;
+  --gridcyan: #0dcaf0;
+  --gridbrown: #623412;
+  --gridprimary: #0dcaf0;
+  --gridsecondary: #ffc107;
+  --gridaccent: #20c997;
+  --gridsuccess: #198754;
+  --gridinfo: #0d6efd;
+  --gridwarning: #fd7e14;
+  --griddanger: #dc3545;
+  --gridlight: #c0c0c0;
+  --griddark: #1a1a1a;
+  --grid#0dcaf0100: #c0c0c0;
+  --grid#0dcaf0200: #9a9a9a;
+  --grid#0dcaf0300: #7b7b7b;
+  --grid#0dcaf0400: #626262;
+  --grid#0dcaf0500: #4e4e4e;
+  --grid#0dcaf0600: #3e3e3e;
+  --grid#0dcaf0700: #323232;
+  --grid#0dcaf0800: #282828;
+  --grid#0dcaf0900: #1a1a1a;
+  --gridprimary: #0dcaf0;
+  --gridsecondary: #ffc107;
+  --gridaccent: #20c997;
+  --gridsuccess: #198754;
+  --gridinfo: #0d6efd;
+  --gridwarning: #fd7e14;
+  --griddanger: #dc3545;
+  --gridlight: #c0c0c0;
+  --griddark: #1a1a1a;
+  --gridprimary-rgb-rgb: #0dcaf0;
+  --gridsecondary-rgb-rgb: #ffc107;
+  --gridaccent-rgb-rgb: #20c997;
+  --gridsuccess-rgb-rgb: #198754;
+  --gridinfo-rgb-rgb: #0d6efd;
+  --gridwarning-rgb-rgb: #fd7e14;
+  --griddanger-rgb-rgb: #dc3545;
+  --gridwhite-rgb: to-rgb(#e4edf4);
+  --gridblack-rgb: to-rgb(#000100);
+  --gridtext-rgb: to-rgb(#c0c0c0);
+  --gridbody-bg-rgb: to-rgb(#c0c0c0);
+  --gridfont-sans-serif: Euphorigenic, "Hand Typewriter", "Enjoy Writing", Avdira, Wanda "Glass Antiqua", "Love Ya Likes A Sister", Pompiere, "Hadley";
+  --gridfont-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --gridgradient: linear-gradient(-310deg, rgba(13, 202, 240, 0.55) 35%, rgba(255, 193, 7, 0.45) 45%, rgba(32, 201, 151, 0.35) 85%, transparent);
+  --gridbody-font-family: Euphorigenic, Hand Typewriter, Enjoy Writing, Avdira, Wanda Glass Antiqua, Love Ya Likes A Sister, Pompiere, Hadley;
+  --gridbody-font-size: 1.15;
+  --gridbody-font-weight: 400;
+  --gridline-height-body: line-height-md;
+  --gridtext: #c0c0c0;
+  --gridbody-bg: #c0c0c0;
+}
+
+/* You can also use a <br class="clear" /> to clear columns */
+.clear {
+  display: block;
+  visibility: hidden;
+  clear: both;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+}
+
+/* MEDIA QUERY */
+/*
+ * Media query to respond to a minimum size (mobile first)
+ */
+/* Grid system */
+/* Generate semantic grid columns with these mixins. */
+/* ##Columns generator## */
+/* Row columns*/
+/* Specify on a parent element(e.g., .row) to force immediate children into NN numberof columns. Supports wrapping to new lines, but does not do a Masonry
+style grid.*/
+/* MEDIA QUERY */
+/*
+ * Media query to respond to a minimum size (mobile first)
+ */
+/* RESPONSIVE STYLES */
+/**
+ * Required Variables
+ */
+.clearfix .row,
+.clearfix .clearfix {
+  zoom: 1;
+}
+.clearfix .row .clearfix:before,
+.clearfix .row .clearfix:after,
+.clearfix .row .row:before,
+.clearfix .row .row:after,
+.clearfix .clearfix .clearfix:before,
+.clearfix .clearfix .clearfix:after,
+.clearfix .clearfix .row:before,
+.clearfix .clearfix .row:after {
+  display: block;
+  visibility: hidden;
+  clear: both;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  table-layout: fixed;
+  content: " ";
+}
+.clearfix .row .clearfix::after,
+.clearfix .row .row::after,
+.clearfix .clearfix .clearfix::after,
+.clearfix .clearfix .row::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+/**
+ * Root Media Query Variables
+ */
+/**
+ * Root Media Query Variables
+ */
+/**
+ * Extends
+ */
+.default-max-width {
+  max-width: calc(100vw - 33vh);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.wide-max-width {
+  max-width: calc(100vw - 4vh);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media only screen and (min-width: 576px) {
+  .full-max-width {
+    width: auto;
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+.fixed-top {
+  position: fixed;
+  z-index: 1030;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+.fixed-bottom {
+  position: fixed;
+  z-index: 1030;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.ratio {
+  position: relative;
+  width: 100%;
+}
+.ratio::before {
+  display: block;
+  padding-top: var(--gridaspect-ratio);
+  content: "";
+}
+.ratio > * {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.ratio-1x1 {
+  --gridaspect-ratio: 100%;
+}
+
+.ratio-4x3 {
+  --gridaspect-ratio: 75%;
+}
+
+.ratio-16x9 {
+  --gridaspect-ratio: 56.25%;
+}
+
+.ratio-21x9 {
+  --gridaspect-ratio: 42.8571428571%;
+}
+
+/* @media (min-width: $rfs-mq-value)
+{
+    @each $breakpoint in map-keys($grid-breakpoints)
+    {
+        $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+        @if (map-get($grid-breakpoints, $breakpoint) < $rfs-breakpoint)
+        {
+            // Loop over each utility property
+            @each $key, $utility in $utilities
+            {
+                // The utility can be disabled with `false`, thus check if the utility is a map first
+                // Only proceed if responsive media queries are enabled or if it's the base media query
+                @if type-of($utility) == 'map' and map-get($utility, rfs) and (map-get($utility, responsive) or $infix == '')
+                {
+                    @include generate-utility($utility, $infix, true);
+                }
+            }
+        }
+    }
+}
+*/
+@media print {
+  .d-print-inline {
+    display: inline !important;
+  }
+
+  .d-print-inline-block {
+    display: inline-block !important;
+  }
+
+  .d-print-block {
+    display: block !important;
+  }
+
+  .d-print-grid {
+    display: grid !important;
+  }
+
+  .d-print-table {
+    display: table !important;
+  }
+
+  .d-print-table-row {
+    display: table-row !important;
+  }
+
+  .d-print-table-cell {
+    display: table-cell !important;
+  }
+
+  .d-print-flex {
+    display: flex !important;
+  }
+
+  .d-print-inline-flex {
+    display: inline-flex !important;
+  }
+
+  .d-print-none {
+    display: none !important;
+  }
+}
+/*********************
+GENERAL STYLES
+*********************/
+html,
+body {
+  font-size: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+[class^=container-] {
+  border-width: medium;
+  border-style: solid;
+  border-color: #0dcaf0;
+  border-radius: 0.95rem;
+}
+
+.container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: grid-inline;
+  float: left;
+  align-items: left;
+  justify-content: flex-start;
+  width: 98%;
+  height: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+
+.container-fluid {
+  zoom: 1;
+  padding-right: 20px;
+  padding-left: 20px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: grid-inline;
+  float: left;
+  align-items: left;
+  justify-content: flex-start;
+  width: 98%;
+  height: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+.container-fluid .container-fluid:before,
+.container-fluid .container-fluid:after {
+  line-height: 0;
+  display: table;
+  content: "";
+}
+.container-fluid:after {
+  clear: both;
+}
+
+.grid {
+  display: inline-grid;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  grid-template-rows: repeat(16, 1fr);
+  grid-template-columns: repeat(16, 1fr);
+  gap: 5px;
+  grid-gap: 5px;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+}
+.grid .row-flex {
+  float: none;
+  flex-basis: 6.25%;
+  width: auto;
+  max-width: 6.25%;
+}
+.grid .row-flex {
+  float: none;
+  flex-basis: 12.5%;
+  width: auto;
+  max-width: 12.5%;
+}
+.grid .row-flex {
+  float: none;
+  flex-basis: 18.75%;
+  width: auto;
+  max-width: 18.75%;
+}
+.grid .row-flex {
+  float: none;
+  flex-basis: 25%;
+  width: auto;
+  max-width: 25%;
+}
+.grid .row-flex {
+  float: none;
+  flex-basis: 31.25%;
+  width: auto;
+  max-width: 31.25%;
+}
+.grid .row-flex {
+  float: none;
+  flex-basis: 37.5%;
+  width: auto;
+  max-width: 37.5%;
+}
+.grid .row-flex {
+  float: none;
+  flex-basis: 43.75%;
+  width: auto;
+  max-width: 43.75%;
+}
+.grid .row-flex {
+  float: none;
+  flex-basis: 50%;
+  width: auto;
+  max-width: 50%;
+}
+.grid .row-flex {
+  float: none;
+  flex-basis: 56.25%;
+  width: auto;
+  max-width: 56.25%;
+}
+.grid .row-flex {
+  float: none;
+  flex-basis: 62.5%;
+  width: auto;
+  max-width: 62.5%;
+}
+.grid .row-flex {
+  float: none;
+  flex-basis: 68.75%;
+  width: auto;
+  max-width: 68.75%;
+}
+.grid .row-flex {
+  float: none;
+  flex-basis: 75%;
+  width: auto;
+  max-width: 75%;
+}
+.grid .row-flex {
+  float: none;
+  flex-basis: 81.25%;
+  width: auto;
+  max-width: 81.25%;
+}
+.grid .row-flex {
+  float: none;
+  flex-basis: 87.5%;
+  width: auto;
+  max-width: 87.5%;
+}
+.grid .row-flex {
+  float: none;
+  flex-basis: 93.75%;
+  width: auto;
+  max-width: 93.75%;
+}
+.grid .row-flex {
+  float: none;
+  flex-basis: 100%;
+  width: auto;
+  max-width: 100%;
+}
+@media screen and (min-width: 576px) {
+  .grid {
+    grid-gap: div(1.15, 2);
+  }
+}
+@media only screen and (0) {
+  .grid {
+    grid-template-columns: repeat(16, 1fr);
+  }
+}
+@media only screen and (576px) {
+  .grid {
+    grid-template-columns: repeat(16, 1fr);
+  }
+}
+@media only screen and (768px) {
+  .grid {
+    grid-template-columns: repeat(16, 1fr);
+  }
+}
+@media only screen and (992px) {
+  .grid {
+    grid-template-columns: repeat(16, 1fr);
+  }
+}
+@media only screen and (1200px) {
+  .grid {
+    grid-template-columns: repeat(16, 1fr);
+  }
+}
+@media only screen and (1400px) {
+  .grid {
+    grid-template-columns: repeat(16, 1fr);
+  }
+}
+.grid > * {
+  border-width: 2;
+  border-style: solid;
+  border-color: #9a9a9a;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: grid-inline;
+  float: left;
+  align-items: left;
+  justify-content: flex-start;
+  width: 98%;
+  height: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+
+.row {
+  list-style: none;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 10px;
+  margin-right: -6.25px;
+  margin-left: -6.25px;
+}
+.row:not(.row-flex) .row,
+.row:not(.row-flex) .clearfix {
+  zoom: 1;
+}
+.row:not(.row-flex) .row .clearfix:before,
+.row:not(.row-flex) .row .clearfix:after,
+.row:not(.row-flex) .row .row:before,
+.row:not(.row-flex) .row .row:after,
+.row:not(.row-flex) .clearfix .clearfix:before,
+.row:not(.row-flex) .clearfix .clearfix:after,
+.row:not(.row-flex) .clearfix .row:before,
+.row:not(.row-flex) .clearfix .row:after {
+  display: block;
+  visibility: hidden;
+  clear: both;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  table-layout: fixed;
+  content: " ";
+}
+.row:not(.row-flex) .row .clearfix::after,
+.row:not(.row-flex) .row .row::after,
+.row:not(.row-flex) .clearfix .clearfix::after,
+.row:not(.row-flex) .clearfix .row::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+.row.row-gutterless {
+  margin-left: 0;
+}
+.row.row-flex {
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+.row::after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.row-fluid {
+  zoom: 1;
+  width: 100%;
+}
+.row-fluid:before, .row-fluid:after {
+  line-height: 0;
+  display: table;
+  content: "";
+}
+.row-fluid:after {
+  clear: both;
+}
+[class^=col] .row-fluid {
+  float: left;
+  min-height: 0.125rem;
+  margin: 0.5rem 2%;
+}
+[class*=span] .row-fluid {
+  display: block;
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 30px;
+  margin-left: 2.5641025641%;
+  margin-left: 2.5109110747%;
+}
+[class*=span] .row-fluid:first-child {
+  margin-left: 0;
+}
+.row-fluid .controls-row [class*=span] + [class*=span] {
+  margin-left: 2.5641025641%;
+}
+
+.col {
+  float: left;
+  box-sizing: border-box;
+  padding-left: 5px;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+  width: 625%;
+  margin-left: 6.25;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 6.25%;
+  width: auto;
+  max-width: 6.25%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 12.5%;
+  width: auto;
+  max-width: 12.5%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 18.75%;
+  width: auto;
+  max-width: 18.75%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 25%;
+  width: auto;
+  max-width: 25%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 31.25%;
+  width: auto;
+  max-width: 31.25%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 37.5%;
+  width: auto;
+  max-width: 37.5%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 43.75%;
+  width: auto;
+  max-width: 43.75%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 50%;
+  width: auto;
+  max-width: 50%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 56.25%;
+  width: auto;
+  max-width: 56.25%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 62.5%;
+  width: auto;
+  max-width: 62.5%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 68.75%;
+  width: auto;
+  max-width: 68.75%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 75%;
+  width: auto;
+  max-width: 75%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 81.25%;
+  width: auto;
+  max-width: 81.25%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 87.5%;
+  width: auto;
+  max-width: 87.5%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 93.75%;
+  width: auto;
+  max-width: 93.75%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 100%;
+  width: auto;
+  max-width: 100%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 6.25%;
+  width: auto;
+  max-width: 6.25%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 12.5%;
+  width: auto;
+  max-width: 12.5%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 18.75%;
+  width: auto;
+  max-width: 18.75%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 25%;
+  width: auto;
+  max-width: 25%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 31.25%;
+  width: auto;
+  max-width: 31.25%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 37.5%;
+  width: auto;
+  max-width: 37.5%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 43.75%;
+  width: auto;
+  max-width: 43.75%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 50%;
+  width: auto;
+  max-width: 50%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 56.25%;
+  width: auto;
+  max-width: 56.25%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 62.5%;
+  width: auto;
+  max-width: 62.5%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 68.75%;
+  width: auto;
+  max-width: 68.75%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 75%;
+  width: auto;
+  max-width: 75%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 81.25%;
+  width: auto;
+  max-width: 81.25%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 87.5%;
+  width: auto;
+  max-width: 87.5%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 93.75%;
+  width: auto;
+  max-width: 93.75%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 100%;
+  width: auto;
+  max-width: 100%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 6.25%;
+  width: auto;
+  max-width: 6.25%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 12.5%;
+  width: auto;
+  max-width: 12.5%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 18.75%;
+  width: auto;
+  max-width: 18.75%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 25%;
+  width: auto;
+  max-width: 25%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 31.25%;
+  width: auto;
+  max-width: 31.25%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 37.5%;
+  width: auto;
+  max-width: 37.5%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 43.75%;
+  width: auto;
+  max-width: 43.75%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 50%;
+  width: auto;
+  max-width: 50%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 56.25%;
+  width: auto;
+  max-width: 56.25%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 62.5%;
+  width: auto;
+  max-width: 62.5%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 68.75%;
+  width: auto;
+  max-width: 68.75%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 75%;
+  width: auto;
+  max-width: 75%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 81.25%;
+  width: auto;
+  max-width: 81.25%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 87.5%;
+  width: auto;
+  max-width: 87.5%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 93.75%;
+  width: auto;
+  max-width: 93.75%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 100%;
+  width: auto;
+  max-width: 100%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 6.25%;
+  width: auto;
+  max-width: 6.25%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 12.5%;
+  width: auto;
+  max-width: 12.5%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 18.75%;
+  width: auto;
+  max-width: 18.75%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 25%;
+  width: auto;
+  max-width: 25%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 31.25%;
+  width: auto;
+  max-width: 31.25%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 37.5%;
+  width: auto;
+  max-width: 37.5%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 43.75%;
+  width: auto;
+  max-width: 43.75%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 50%;
+  width: auto;
+  max-width: 50%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 56.25%;
+  width: auto;
+  max-width: 56.25%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 62.5%;
+  width: auto;
+  max-width: 62.5%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 68.75%;
+  width: auto;
+  max-width: 68.75%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 75%;
+  width: auto;
+  max-width: 75%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 81.25%;
+  width: auto;
+  max-width: 81.25%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 87.5%;
+  width: auto;
+  max-width: 87.5%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 93.75%;
+  width: auto;
+  max-width: 93.75%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 100%;
+  width: auto;
+  max-width: 100%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 6.25%;
+  width: auto;
+  max-width: 6.25%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 12.5%;
+  width: auto;
+  max-width: 12.5%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 18.75%;
+  width: auto;
+  max-width: 18.75%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 25%;
+  width: auto;
+  max-width: 25%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 31.25%;
+  width: auto;
+  max-width: 31.25%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 37.5%;
+  width: auto;
+  max-width: 37.5%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 43.75%;
+  width: auto;
+  max-width: 43.75%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 50%;
+  width: auto;
+  max-width: 50%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 56.25%;
+  width: auto;
+  max-width: 56.25%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 62.5%;
+  width: auto;
+  max-width: 62.5%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 68.75%;
+  width: auto;
+  max-width: 68.75%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 75%;
+  width: auto;
+  max-width: 75%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 81.25%;
+  width: auto;
+  max-width: 81.25%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 87.5%;
+  width: auto;
+  max-width: 87.5%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 93.75%;
+  width: auto;
+  max-width: 93.75%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 100%;
+  width: auto;
+  max-width: 100%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 6.25%;
+  width: auto;
+  max-width: 6.25%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 12.5%;
+  width: auto;
+  max-width: 12.5%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 18.75%;
+  width: auto;
+  max-width: 18.75%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 25%;
+  width: auto;
+  max-width: 25%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 31.25%;
+  width: auto;
+  max-width: 31.25%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 37.5%;
+  width: auto;
+  max-width: 37.5%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 43.75%;
+  width: auto;
+  max-width: 43.75%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 50%;
+  width: auto;
+  max-width: 50%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 56.25%;
+  width: auto;
+  max-width: 56.25%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 62.5%;
+  width: auto;
+  max-width: 62.5%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 68.75%;
+  width: auto;
+  max-width: 68.75%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 75%;
+  width: auto;
+  max-width: 75%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 81.25%;
+  width: auto;
+  max-width: 81.25%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 87.5%;
+  width: auto;
+  max-width: 87.5%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 93.75%;
+  width: auto;
+  max-width: 93.75%;
+}
+.col .row-flex {
+  float: none;
+  flex-basis: 100%;
+  width: auto;
+  max-width: 100%;
+}
+.row-gutterless .col {
+  padding-left: 0;
+}
+.col .row-cols- {
+  float: left;
+  padding-right: 0.75em;
+}
+.col .row-cols- > * {
+  flex: 0 0 auto;
+  width: divide(100, 16);
+}
+
+/*# sourceMappingURL=grid.css.map */

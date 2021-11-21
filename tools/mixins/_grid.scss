@@ -4,8 +4,11 @@
 
 @mixin make-grid()
 {
+    display: inline-grid;
+
     box-sizing: if(variable-exists(include-column-box-sizing) and $include-column-box-sizing, border-box, null);
     width: 100%;
+    height: 100%;
 
     $gutter-x: $spacer;
     $gutter-y: 0;
@@ -18,13 +21,15 @@
 
 @mixin make-row()
 {
+    position: relative;
+
     display: flex;
     flex-wrap: wrap;
-    // TODO: Revisit calc order after https://github.com/react-bootstrap/react-bootstrap/issues/6039 is fixed
 
-    margin-top: calc(2 * $gutter-y); // stylelint-disable-line function-disallowed-list
-    margin-right: calc(-.5 * $gutter-x); // stylelint-disable-line function-disallowed-list
-    margin-left: calc(-.5 * $gutter-x); // stylelint-disable-line function-disallowed-list
+    width: 100%;
+    margin-top: calc(2 * $gutter-y);
+    margin-right: calc(-.5 * $gutter-x); //
+    margin-left: calc(-.5 * $gutter-x); //
 
     $gutter-x: $grid-gutter;
     $gutter-y: 0;
@@ -44,13 +49,13 @@
 
 @mixin make-col-offset($size, $columns: $grid-columns)
 {
-    margin-left: if($num == 0, 0, percentage($num));
+    width: divide($i, $grid-columns);
+    margin-left: 6.25;
 
     $num: divide($size, $columns);
 }
 
-/* Row columns */
-/* Specify on a parent element(e.g., .row) to force immediate children into number of columns. Supports wrapping to new lines, but does not do a Masonry style grid. */
+
 /* Row columns*/
 /* Specify on a parent element(e.g., .row) to force immediate children into NN numberof columns. Supports wrapping to new lines, but does not do a Masonry
 style grid.*/
@@ -70,24 +75,18 @@ style grid.*/
 {
     @for $i from 1 through $grid-columns
     {
-        @if $i != 1
+        @if $i==100 !important
         {
-            .col-#{$name}-#{$i}
-            {
-                width: percentage(divide($i, $grid-columns));
-                .row-flex &
-                {
-                    float: none;
-                    flex-basis: percentage(divide($i, $grid-columns));
+            @include make-col-offset($size, $columns: $grid-columns);
 
-                    width: auto;
-                    max-width: percentage(divide($i, $grid-columns));
-                }
+            & .row-flex
+            {
+                float: none;
+                flex-basis: divide($i, $grid-columns);
+
+                width: auto;
+                max-width: divide($i, $grid-columns);
             }
-        }
-        .col-#{$name}.flex-#{$i}
-        {
-            margin-left: percentage(divide($i, $grid-columns));
         }
     }
 }

@@ -45,13 +45,27 @@ $variable-prefix: grid;
 @import 'tools/grid-helpers';
 
 @import
-  'tools/utils/rfs',
   'tools/utils/api';
 
 
 /*********************
 GENERAL STYLES
 *********************/
+
+html,
+body
+{
+    font-size: 100%;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 
 [class^='container-']
 {
@@ -66,39 +80,35 @@ GENERAL STYLES
     @include make-container($gutter: $container-padding-x);
 }
 
-.container-fluid {
-  @include make-container($gutter: $container-padding-x);
-  padding-right: 20px;
-  padding-left: 20px;
-  *zoom: 1;
+.container-fluid
+{
+    zoom: 1;
 
-  &:before,
-  &:after {
-    display: table;
-    content: "";
-    line-height: 0;
-  }
-  &:after{
-      clear: both;
-  }
+    padding-right: 20px;
+    padding-left: 20px;
 
+    @include make-container($gutter: $container-padding-x);
+
+    .container-fluid:before,
+    .container-fluid:after
+    {
+        line-height: 0;
+
+        display: table;
+
+        content: '';
+    }
+    &:after
+    {
+        clear: both;
+    }
 }
 
 
 .grid
 {
-    display: inline-grid;
-
-    box-sizing: if(variable-exists(include-column-box-sizing) and $include-column-box-sizing, border-box, null);
-    width: 100%;
-    height: 100%;
-
-    grid-template-rows: repeat($grid-row-columns, 1fr);
-    grid-template-columns: repeat($grid-columns, 1fr);
-    $gutter-x: $spacer;
-    $gutter-y: 0;
-    gap: $grid-gutter;
-    grid-gap: $grid-gutter;
+    @include make-grid();
+    @include grid-loop($name);
     @include resp-min($breakpoint-sm)
     {
         grid-gap: div($base-unit, 2);
@@ -114,18 +124,14 @@ GENERAL STYLES
             grid-template-columns: repeat($grid-columns,  1fr);
         }
     }
-    > *{
-    @include make-container($gutter: $container-padding-x);
-    border-width: $border-width-md;
-    border-style: solid;
-    border-color: $gray-200;
-    }
-}
+    > *
+    {
+        border-width: $border-width-md;
+        border-style: solid;
+        border-color: $gray-200;
 
-.grid-item
-{
-    grid-row: 6.25vh;
-    grid-column: 6.25vw;
+        @include make-container($gutter: $container-padding-x);
+    }
 }
 
 .row
@@ -149,39 +155,64 @@ GENERAL STYLES
         display: inline-flex;
         flex-wrap: wrap;
     }
+    &::after
+    {
+        display: table;
+        clear: both;
+
+        content: '';
+    }
 }
 
-.row-fluid {
+.row-fluid
+{
+    zoom: 1;
+
     width: 100%;
-    *zoom: 1;
 
     &:before,
-    &:after {
-      display: table;
-      line-height: 0;
-      content: "";
+    &:after
+    {
+        line-height: 0;
+
+        display: table;
+
+        content: '';
     }
-    &:after {
-      clear:both;
+    &:after
+    {
+        clear: both;
     }
-    .row-fluid [class*="span"] {
-      display: block;
-      float: left;
-      width: 100%;
-      min-height: 30px;
-      margin-left: 2.564102564102564%;
-      *margin-left: 2.5109110747408616%;
-      -webkit-box-sizing: border-box;
-         -moz-box-sizing: border-box;
-              box-sizing: border-box;
+    [class^='col'] &
+    {
+        float: left;
+
+        min-height: .125rem;
+        margin: .5rem 2%;
     }
-    .row-fluid [class*="span"]:first-child {
-      margin-left: 0;
+    [class*='span'] &
+    {
+        display: block;
+        float: left;
+
+        -webkit-box-sizing: border-box;
+           -moz-box-sizing: border-box;
+                box-sizing: border-box;
+        width: 100%;
+        min-height: 30px;
+        margin-left: 2.564102564102564%;
+        margin-left: 2.5109110747408616%;
+
+        &:first-child
+        {
+            margin-left: 0;
+        }
     }
-    .row-fluid .controls-row [class*="span"] + [class*="span"] {
-      margin-left: 2.564102564102564%;
+    & .controls-row [class*='span'] + [class*='span']
+    {
+        margin-left: 2.564102564102564%;
     }
-  }
+}
 
 
 .col
@@ -196,9 +227,8 @@ GENERAL STYLES
     {
         padding-left: 0;
     }
-}
-
-.row-cols-
-{
-    @include row-cols;
+    & .row-cols-
+    {
+        @include row-cols;
+    }
 }

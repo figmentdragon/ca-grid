@@ -8,10 +8,11 @@
         @content;
     }
 }
-@mixin from($device)
+@mixin from($device-screen-size)
 {
-    @media screen and (min-width: $device)
+    @media screen and (min-width: $device-screen-size)
     {
+        width: 88%;
         @content;
     }
 }
@@ -20,48 +21,50 @@
     @media screen and (max-width: $device - 1px)
     {
         @content;
+        width: 83%;
+        max-width: 85rem;
     }
 }
 @mixin mobile
 {
-    @media screen and (max-width: $tablet - 1px)
+    @media screen and (max-width: $device-breakpoint-small)
     {
         @content;
     }
 }
 @mixin tablet
 {
-    @media screen and (min-width: $tablet), print
+    @media screen and (min-width: $device-breakpoint-small + 1), print
     {
         @content;
     }
 }
 @mixin tablet-only
 {
-    @media screen and (min-width: $tablet) and (max-width: $desktop - 1px)
+    @media screen and ($device-breakpoint-medium)
     {
         @content;
     }
 }
-@mixin touch
+@mixin laptop-only
 {
-    @media screen and (max-width: $desktop - 1px)
-    {
-        @content;
-    }
+  @media screen and ($device-breakpoint-large)
+  {
+      @content;
+  }
 }
 @mixin desktop
 {
-    @media screen and (min-width: $desktop)
-    {
-        @content;
-    }
+  @media screen and ($device-breakpoint-xl)
+  {
+      @content;
+  }
 }
 @mixin desktop-only
 {
     @if $widescreen-enabled
     {
-        @media screen and (min-width: $desktop) and (max-width: $widescreen - 1px)
+        @media screen and ($device-breakpoint-large)
         {
             @content;
         }
