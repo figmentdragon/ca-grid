@@ -23,10 +23,10 @@
 {
     position: relative;
 
-    display: flex;
+    display: inline-grid;
     flex-wrap: wrap;
 
-    width: 100%;
+    width: 100vw;
     margin-top: calc(2 * $gutter-y);
     margin-right: calc(-.5 * $gutter-x); //
     margin-left: calc(-.5 * $gutter-x); //
@@ -38,6 +38,7 @@
 /* ##Columns generator## */
 @mixin make-col()
 {
+    width: divide(100%, $grid-columns);
     $name: nth($breakpoint, 1);
     $declaration: nth($breakpoint, 2);
     @each $breakpoint in $grid-breakpoints

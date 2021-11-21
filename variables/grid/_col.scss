@@ -1,0 +1,36 @@
+.span-1,
+.span-2,
+.span-3,
+.span-4,
+.span-5,
+.span-6,
+.span-7,
+.span-8,
+.span-9,
+.span-10,
+.span-11,
+.span-12,
+.span-13,
+.span-14,
+.span-15,
+.span-16 {
+  width: $width;
+}
+
+
+.col-1 { width:($width / 16) - ($gutter * 15 / 16); }
+.col-2 { width: ($width / 2) - ($gutter * 14 / 16); }
+.col-3 { width: ($width / (16 / 3))- ($gutter * 13 / 16); }
+.col-4 { width: ($width / 4) - ($gutter * 12 / 16); }
+.col-5 { width: ($width / (16 / 5)) - ($gutter * 11 / 16); }
+.col-6 { width: ($width / (16 / 6)) - ($gutter * 10 / 16); }
+.col-7 { width: ($width / (16 / 7)) - ($gutter * 9 / 16); }
+.col-8 { width: ($width / (16 / 8)) - ($gutter * 8 / 16); }
+.col-9 { width: ($width / (16 / 9)) - ($gutter * 7 / 16); }
+.col-10 { width: ($width / (16 / 10)) - ($gutter * 6 / 16); }
+.col-11 { width: ($width / (16 / 11)) - ($gutter * 5 / 16); }
+.col-12 { width: ($width / (16 / 12)) - ($gutter * 4 / 16); }
+.col-13 { width: ($width / (16 / 13)) - ($gutter * 4 / 16); }
+.col-14 { width: ($width / (16 / 14)) - ($gutter * 4 / 16); }
+.col-15 { width: ($width / (16 / 15)) - ($gutter * 4 / 16); }
+.col-16 { width: $width; }

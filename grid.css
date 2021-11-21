@@ -60,6 +60,89 @@ style grid.*/
 /* Grid containers */
 /* Define the maximum width of `.container` for different screen sizes. */
 /* Container padding */
+.span-1,
+.span-2,
+.span-3,
+.span-4,
+.span-5,
+.span-6,
+.span-7,
+.span-8,
+.span-9,
+.span-10,
+.span-11,
+.span-12,
+.span-13,
+.span-14,
+.span-15,
+.span-16 {
+  width: 98%;
+}
+
+.col-1 {
+  width: 4.25%;
+}
+
+.col-2 {
+  width: 47.25%;
+}
+
+.col-3 {
+  width: 16.75%;
+}
+
+.col-4 {
+  width: 23%;
+}
+
+.col-5 {
+  width: 29.25%;
+}
+
+.col-6 {
+  width: 35.5%;
+}
+
+.col-7 {
+  width: 41.75%;
+}
+
+.col-8 {
+  width: 48%;
+}
+
+.col-9 {
+  width: 54.25%;
+}
+
+.col-10 {
+  width: 60.5%;
+}
+
+.col-11 {
+  width: 66.75%;
+}
+
+.col-12 {
+  width: 73%;
+}
+
+.col-13 {
+  width: 79.125%;
+}
+
+.col-14 {
+  width: 85.25%;
+}
+
+.col-15 {
+  width: 91.375%;
+}
+
+.col-16 {
+  width: 98%;
+}
+
 /* -------------------------------------------------------------------------- */
 /* -------------------------------------------------------------------------- */
 :root {
@@ -328,12 +411,16 @@ GENERAL STYLES
 html,
 body {
   font-size: 100%;
+  position: absolute;
   top: 0;
+  right: 0;
+  bottom: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
 
 [class^=container-] {
@@ -344,7 +431,7 @@ body {
 }
 
 .container {
-  position: absolute;
+  position: relative;
   top: 0;
   right: 0;
   bottom: 0;
@@ -365,7 +452,7 @@ body {
   zoom: 1;
   padding-right: 20px;
   padding-left: 20px;
-  position: absolute;
+  position: relative;
   top: 0;
   right: 0;
   bottom: 0;
@@ -400,134 +487,134 @@ body {
   grid-template-columns: repeat(16, 1fr);
   gap: 5px;
   grid-gap: 5px;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
 }
 .grid .row-flex {
   float: none;
-  flex-basis: 6.25%;
+  flex-basis: divide(1, 16);
   width: auto;
-  max-width: 6.25%;
+  max-width: divide(1, 16);
 }
 .grid .row-flex {
   float: none;
-  flex-basis: 12.5%;
+  flex-basis: divide(2, 16);
   width: auto;
-  max-width: 12.5%;
+  max-width: divide(2, 16);
 }
 .grid .row-flex {
   float: none;
-  flex-basis: 18.75%;
+  flex-basis: divide(3, 16);
   width: auto;
-  max-width: 18.75%;
+  max-width: divide(3, 16);
 }
 .grid .row-flex {
   float: none;
-  flex-basis: 25%;
+  flex-basis: divide(4, 16);
   width: auto;
-  max-width: 25%;
+  max-width: divide(4, 16);
 }
 .grid .row-flex {
   float: none;
-  flex-basis: 31.25%;
+  flex-basis: divide(5, 16);
   width: auto;
-  max-width: 31.25%;
+  max-width: divide(5, 16);
 }
 .grid .row-flex {
   float: none;
-  flex-basis: 37.5%;
+  flex-basis: divide(6, 16);
   width: auto;
-  max-width: 37.5%;
+  max-width: divide(6, 16);
 }
 .grid .row-flex {
   float: none;
-  flex-basis: 43.75%;
+  flex-basis: divide(7, 16);
   width: auto;
-  max-width: 43.75%;
+  max-width: divide(7, 16);
 }
 .grid .row-flex {
   float: none;
-  flex-basis: 50%;
+  flex-basis: divide(8, 16);
   width: auto;
-  max-width: 50%;
+  max-width: divide(8, 16);
 }
 .grid .row-flex {
   float: none;
-  flex-basis: 56.25%;
+  flex-basis: divide(9, 16);
   width: auto;
-  max-width: 56.25%;
+  max-width: divide(9, 16);
 }
 .grid .row-flex {
   float: none;
-  flex-basis: 62.5%;
+  flex-basis: divide(10, 16);
   width: auto;
-  max-width: 62.5%;
+  max-width: divide(10, 16);
 }
 .grid .row-flex {
   float: none;
-  flex-basis: 68.75%;
+  flex-basis: divide(11, 16);
   width: auto;
-  max-width: 68.75%;
+  max-width: divide(11, 16);
 }
 .grid .row-flex {
   float: none;
-  flex-basis: 75%;
+  flex-basis: divide(12, 16);
   width: auto;
-  max-width: 75%;
+  max-width: divide(12, 16);
 }
 .grid .row-flex {
   float: none;
-  flex-basis: 81.25%;
+  flex-basis: divide(13, 16);
   width: auto;
-  max-width: 81.25%;
+  max-width: divide(13, 16);
 }
 .grid .row-flex {
   float: none;
-  flex-basis: 87.5%;
+  flex-basis: divide(14, 16);
   width: auto;
-  max-width: 87.5%;
+  max-width: divide(14, 16);
 }
 .grid .row-flex {
   float: none;
-  flex-basis: 93.75%;
+  flex-basis: divide(15, 16);
   width: auto;
-  max-width: 93.75%;
+  max-width: divide(15, 16);
 }
 .grid .row-flex {
   float: none;
-  flex-basis: 100%;
+  flex-basis: divide(16, 16);
   width: auto;
-  max-width: 100%;
+  max-width: divide(16, 16);
 }
 @media screen and (min-width: 576px) {
   .grid {
@@ -568,7 +655,7 @@ body {
   border-width: 2;
   border-style: solid;
   border-color: #9a9a9a;
-  position: absolute;
+  position: relative;
   top: 0;
   right: 0;
   bottom: 0;
@@ -587,10 +674,11 @@ body {
 
 .row {
   list-style: none;
+  height: divide(100%, 16);
   position: relative;
-  display: flex;
+  display: inline-grid;
   flex-wrap: wrap;
-  width: 100%;
+  width: 100vw;
   margin-top: 10px;
   margin-right: -6.25px;
   margin-left: -6.25px;
@@ -639,6 +727,7 @@ body {
 
 .row-fluid {
   zoom: 1;
+  display: grid;
   width: 100%;
 }
 .row-fluid:before, .row-fluid:after {
@@ -653,6 +742,10 @@ body {
   float: left;
   min-height: 0.125rem;
   margin: 0.5rem 2%;
+  padding: 10px 50px;
+}
+.row-fluid [class^=col] h2 {
+  text-align: left;
 }
 [class*=span] .row-fluid {
   display: block;
@@ -674,776 +767,778 @@ body {
 
 .col {
   float: left;
+  width: divide(100%, 16);
   box-sizing: border-box;
   padding-left: 5px;
-  width: 625%;
+  width: divide(100%, 16);
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
-  width: 625%;
+  width: divide(100, 16);
   margin-left: 6.25;
 }
 .col .row-flex {
   float: none;
-  flex-basis: 6.25%;
+  flex-basis: divide(1, 16);
   width: auto;
-  max-width: 6.25%;
+  max-width: divide(1, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 12.5%;
+  flex-basis: divide(2, 16);
   width: auto;
-  max-width: 12.5%;
+  max-width: divide(2, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 18.75%;
+  flex-basis: divide(3, 16);
   width: auto;
-  max-width: 18.75%;
+  max-width: divide(3, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 25%;
+  flex-basis: divide(4, 16);
   width: auto;
-  max-width: 25%;
+  max-width: divide(4, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 31.25%;
+  flex-basis: divide(5, 16);
   width: auto;
-  max-width: 31.25%;
+  max-width: divide(5, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 37.5%;
+  flex-basis: divide(6, 16);
   width: auto;
-  max-width: 37.5%;
+  max-width: divide(6, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 43.75%;
+  flex-basis: divide(7, 16);
   width: auto;
-  max-width: 43.75%;
+  max-width: divide(7, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 50%;
+  flex-basis: divide(8, 16);
   width: auto;
-  max-width: 50%;
+  max-width: divide(8, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 56.25%;
+  flex-basis: divide(9, 16);
   width: auto;
-  max-width: 56.25%;
+  max-width: divide(9, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 62.5%;
+  flex-basis: divide(10, 16);
   width: auto;
-  max-width: 62.5%;
+  max-width: divide(10, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 68.75%;
+  flex-basis: divide(11, 16);
   width: auto;
-  max-width: 68.75%;
+  max-width: divide(11, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 75%;
+  flex-basis: divide(12, 16);
   width: auto;
-  max-width: 75%;
+  max-width: divide(12, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 81.25%;
+  flex-basis: divide(13, 16);
   width: auto;
-  max-width: 81.25%;
+  max-width: divide(13, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 87.5%;
+  flex-basis: divide(14, 16);
   width: auto;
-  max-width: 87.5%;
+  max-width: divide(14, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 93.75%;
+  flex-basis: divide(15, 16);
   width: auto;
-  max-width: 93.75%;
+  max-width: divide(15, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 100%;
+  flex-basis: divide(16, 16);
   width: auto;
-  max-width: 100%;
+  max-width: divide(16, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 6.25%;
+  flex-basis: divide(1, 16);
   width: auto;
-  max-width: 6.25%;
+  max-width: divide(1, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 12.5%;
+  flex-basis: divide(2, 16);
   width: auto;
-  max-width: 12.5%;
+  max-width: divide(2, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 18.75%;
+  flex-basis: divide(3, 16);
   width: auto;
-  max-width: 18.75%;
+  max-width: divide(3, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 25%;
+  flex-basis: divide(4, 16);
   width: auto;
-  max-width: 25%;
+  max-width: divide(4, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 31.25%;
+  flex-basis: divide(5, 16);
   width: auto;
-  max-width: 31.25%;
+  max-width: divide(5, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 37.5%;
+  flex-basis: divide(6, 16);
   width: auto;
-  max-width: 37.5%;
+  max-width: divide(6, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 43.75%;
+  flex-basis: divide(7, 16);
   width: auto;
-  max-width: 43.75%;
+  max-width: divide(7, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 50%;
+  flex-basis: divide(8, 16);
   width: auto;
-  max-width: 50%;
+  max-width: divide(8, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 56.25%;
+  flex-basis: divide(9, 16);
   width: auto;
-  max-width: 56.25%;
+  max-width: divide(9, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 62.5%;
+  flex-basis: divide(10, 16);
   width: auto;
-  max-width: 62.5%;
+  max-width: divide(10, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 68.75%;
+  flex-basis: divide(11, 16);
   width: auto;
-  max-width: 68.75%;
+  max-width: divide(11, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 75%;
+  flex-basis: divide(12, 16);
   width: auto;
-  max-width: 75%;
+  max-width: divide(12, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 81.25%;
+  flex-basis: divide(13, 16);
   width: auto;
-  max-width: 81.25%;
+  max-width: divide(13, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 87.5%;
+  flex-basis: divide(14, 16);
   width: auto;
-  max-width: 87.5%;
+  max-width: divide(14, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 93.75%;
+  flex-basis: divide(15, 16);
   width: auto;
-  max-width: 93.75%;
+  max-width: divide(15, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 100%;
+  flex-basis: divide(16, 16);
   width: auto;
-  max-width: 100%;
+  max-width: divide(16, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 6.25%;
+  flex-basis: divide(1, 16);
   width: auto;
-  max-width: 6.25%;
+  max-width: divide(1, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 12.5%;
+  flex-basis: divide(2, 16);
   width: auto;
-  max-width: 12.5%;
+  max-width: divide(2, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 18.75%;
+  flex-basis: divide(3, 16);
   width: auto;
-  max-width: 18.75%;
+  max-width: divide(3, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 25%;
+  flex-basis: divide(4, 16);
   width: auto;
-  max-width: 25%;
+  max-width: divide(4, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 31.25%;
+  flex-basis: divide(5, 16);
   width: auto;
-  max-width: 31.25%;
+  max-width: divide(5, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 37.5%;
+  flex-basis: divide(6, 16);
   width: auto;
-  max-width: 37.5%;
+  max-width: divide(6, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 43.75%;
+  flex-basis: divide(7, 16);
   width: auto;
-  max-width: 43.75%;
+  max-width: divide(7, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 50%;
+  flex-basis: divide(8, 16);
   width: auto;
-  max-width: 50%;
+  max-width: divide(8, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 56.25%;
+  flex-basis: divide(9, 16);
   width: auto;
-  max-width: 56.25%;
+  max-width: divide(9, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 62.5%;
+  flex-basis: divide(10, 16);
   width: auto;
-  max-width: 62.5%;
+  max-width: divide(10, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 68.75%;
+  flex-basis: divide(11, 16);
   width: auto;
-  max-width: 68.75%;
+  max-width: divide(11, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 75%;
+  flex-basis: divide(12, 16);
   width: auto;
-  max-width: 75%;
+  max-width: divide(12, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 81.25%;
+  flex-basis: divide(13, 16);
   width: auto;
-  max-width: 81.25%;
+  max-width: divide(13, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 87.5%;
+  flex-basis: divide(14, 16);
   width: auto;
-  max-width: 87.5%;
+  max-width: divide(14, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 93.75%;
+  flex-basis: divide(15, 16);
   width: auto;
-  max-width: 93.75%;
+  max-width: divide(15, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 100%;
+  flex-basis: divide(16, 16);
   width: auto;
-  max-width: 100%;
+  max-width: divide(16, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 6.25%;
+  flex-basis: divide(1, 16);
   width: auto;
-  max-width: 6.25%;
+  max-width: divide(1, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 12.5%;
+  flex-basis: divide(2, 16);
   width: auto;
-  max-width: 12.5%;
+  max-width: divide(2, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 18.75%;
+  flex-basis: divide(3, 16);
   width: auto;
-  max-width: 18.75%;
+  max-width: divide(3, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 25%;
+  flex-basis: divide(4, 16);
   width: auto;
-  max-width: 25%;
+  max-width: divide(4, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 31.25%;
+  flex-basis: divide(5, 16);
   width: auto;
-  max-width: 31.25%;
+  max-width: divide(5, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 37.5%;
+  flex-basis: divide(6, 16);
   width: auto;
-  max-width: 37.5%;
+  max-width: divide(6, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 43.75%;
+  flex-basis: divide(7, 16);
   width: auto;
-  max-width: 43.75%;
+  max-width: divide(7, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 50%;
+  flex-basis: divide(8, 16);
   width: auto;
-  max-width: 50%;
+  max-width: divide(8, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 56.25%;
+  flex-basis: divide(9, 16);
   width: auto;
-  max-width: 56.25%;
+  max-width: divide(9, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 62.5%;
+  flex-basis: divide(10, 16);
   width: auto;
-  max-width: 62.5%;
+  max-width: divide(10, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 68.75%;
+  flex-basis: divide(11, 16);
   width: auto;
-  max-width: 68.75%;
+  max-width: divide(11, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 75%;
+  flex-basis: divide(12, 16);
   width: auto;
-  max-width: 75%;
+  max-width: divide(12, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 81.25%;
+  flex-basis: divide(13, 16);
   width: auto;
-  max-width: 81.25%;
+  max-width: divide(13, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 87.5%;
+  flex-basis: divide(14, 16);
   width: auto;
-  max-width: 87.5%;
+  max-width: divide(14, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 93.75%;
+  flex-basis: divide(15, 16);
   width: auto;
-  max-width: 93.75%;
+  max-width: divide(15, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 100%;
+  flex-basis: divide(16, 16);
   width: auto;
-  max-width: 100%;
+  max-width: divide(16, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 6.25%;
+  flex-basis: divide(1, 16);
   width: auto;
-  max-width: 6.25%;
+  max-width: divide(1, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 12.5%;
+  flex-basis: divide(2, 16);
   width: auto;
-  max-width: 12.5%;
+  max-width: divide(2, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 18.75%;
+  flex-basis: divide(3, 16);
   width: auto;
-  max-width: 18.75%;
+  max-width: divide(3, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 25%;
+  flex-basis: divide(4, 16);
   width: auto;
-  max-width: 25%;
+  max-width: divide(4, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 31.25%;
+  flex-basis: divide(5, 16);
   width: auto;
-  max-width: 31.25%;
+  max-width: divide(5, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 37.5%;
+  flex-basis: divide(6, 16);
   width: auto;
-  max-width: 37.5%;
+  max-width: divide(6, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 43.75%;
+  flex-basis: divide(7, 16);
   width: auto;
-  max-width: 43.75%;
+  max-width: divide(7, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 50%;
+  flex-basis: divide(8, 16);
   width: auto;
-  max-width: 50%;
+  max-width: divide(8, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 56.25%;
+  flex-basis: divide(9, 16);
   width: auto;
-  max-width: 56.25%;
+  max-width: divide(9, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 62.5%;
+  flex-basis: divide(10, 16);
   width: auto;
-  max-width: 62.5%;
+  max-width: divide(10, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 68.75%;
+  flex-basis: divide(11, 16);
   width: auto;
-  max-width: 68.75%;
+  max-width: divide(11, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 75%;
+  flex-basis: divide(12, 16);
   width: auto;
-  max-width: 75%;
+  max-width: divide(12, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 81.25%;
+  flex-basis: divide(13, 16);
   width: auto;
-  max-width: 81.25%;
+  max-width: divide(13, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 87.5%;
+  flex-basis: divide(14, 16);
   width: auto;
-  max-width: 87.5%;
+  max-width: divide(14, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 93.75%;
+  flex-basis: divide(15, 16);
   width: auto;
-  max-width: 93.75%;
+  max-width: divide(15, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 100%;
+  flex-basis: divide(16, 16);
   width: auto;
-  max-width: 100%;
+  max-width: divide(16, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 6.25%;
+  flex-basis: divide(1, 16);
   width: auto;
-  max-width: 6.25%;
+  max-width: divide(1, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 12.5%;
+  flex-basis: divide(2, 16);
   width: auto;
-  max-width: 12.5%;
+  max-width: divide(2, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 18.75%;
+  flex-basis: divide(3, 16);
   width: auto;
-  max-width: 18.75%;
+  max-width: divide(3, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 25%;
+  flex-basis: divide(4, 16);
   width: auto;
-  max-width: 25%;
+  max-width: divide(4, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 31.25%;
+  flex-basis: divide(5, 16);
   width: auto;
-  max-width: 31.25%;
+  max-width: divide(5, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 37.5%;
+  flex-basis: divide(6, 16);
   width: auto;
-  max-width: 37.5%;
+  max-width: divide(6, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 43.75%;
+  flex-basis: divide(7, 16);
   width: auto;
-  max-width: 43.75%;
+  max-width: divide(7, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 50%;
+  flex-basis: divide(8, 16);
   width: auto;
-  max-width: 50%;
+  max-width: divide(8, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 56.25%;
+  flex-basis: divide(9, 16);
   width: auto;
-  max-width: 56.25%;
+  max-width: divide(9, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 62.5%;
+  flex-basis: divide(10, 16);
   width: auto;
-  max-width: 62.5%;
+  max-width: divide(10, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 68.75%;
+  flex-basis: divide(11, 16);
   width: auto;
-  max-width: 68.75%;
+  max-width: divide(11, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 75%;
+  flex-basis: divide(12, 16);
   width: auto;
-  max-width: 75%;
+  max-width: divide(12, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 81.25%;
+  flex-basis: divide(13, 16);
   width: auto;
-  max-width: 81.25%;
+  max-width: divide(13, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 87.5%;
+  flex-basis: divide(14, 16);
   width: auto;
-  max-width: 87.5%;
+  max-width: divide(14, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 93.75%;
+  flex-basis: divide(15, 16);
   width: auto;
-  max-width: 93.75%;
+  max-width: divide(15, 16);
 }
 .col .row-flex {
   float: none;
-  flex-basis: 100%;
+  flex-basis: divide(16, 16);
   width: auto;
-  max-width: 100%;
+  max-width: divide(16, 16);
 }
 .row-gutterless .col {
   padding-left: 0;

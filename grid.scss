@@ -56,14 +56,17 @@ html,
 body
 {
     font-size: 100%;
-
+position: absolute;
     top: 0;
+    right: 0;
+    bottom: 0;
     left: 0;
 
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     margin: 0;
     padding: 0;
+    overflow: hidden;
 }
 
 
@@ -137,7 +140,7 @@ body
 .row
 {
     list-style: none;
-
+    height: divide(100%, $grid-row-columns);
     @include make-row;
     $gutter-x: $grid-gutter;
     $gutter-y: 0;
@@ -167,7 +170,7 @@ body
 .row-fluid
 {
     zoom: 1;
-
+    display: grid;
     width: 100%;
 
     &:before,
@@ -189,6 +192,11 @@ body
 
         min-height: .125rem;
         margin: .5rem 2%;
+        padding: 10px 50px;
+    }
+    [class^='col'] h2
+    {
+        text-align: left;
     }
     [class*='span'] &
     {
@@ -218,7 +226,7 @@ body
 .col
 {
     float: left;
-
+    width: divide(100%, $grid-columns);
     box-sizing: border-box;
     padding-left: $grid-gutter;
 
