@@ -202,18 +202,3 @@ GENERAL STYLES
 {
     @include row-cols;
 }
-
-/**
- * Columns generator
- */
-
-@each $breakpoint in $grid-breakpoints
-{
-    $name: nth($breakpoint, 1);
-    $declaration: nth($breakpoint, 2);
-
-    @include media($res)
-    {
-        @include grid-loop($name);
-    }
-}

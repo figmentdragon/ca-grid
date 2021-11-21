@@ -33,9 +33,12 @@
 /* ##Columns generator## */
 @mixin make-col()
 {
+    $name: nth($breakpoint, 1);
+    $declaration: nth($breakpoint, 2);
     @each $breakpoint in $grid-breakpoints
     {
         $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+        @include grid-loop($name);
     }
 }
 
@@ -65,14 +68,14 @@ style grid.*/
 }
 @mixin grid-loop($name)
 {
-    @for $i from 0 through $grid-columns
+    @for $i from 1 through $grid-columns
     {
-        @if $i != 0
+        @if $i != 1
         {
-            .col--#{$name}-#{$i}
+            .col-#{$name}-#{$i}
             {
                 width: percentage(divide($i, $grid-columns));
-                .row--flex &
+                .row-flex &
                 {
                     float: none;
                     flex-basis: percentage(divide($i, $grid-columns));
@@ -82,7 +85,7 @@ style grid.*/
                 }
             }
         }
-        .col--#{$name}-offset-#{$i}
+        .col-#{$name}.flex-#{$i}
         {
             margin-left: percentage(divide($i, $grid-columns));
         }
