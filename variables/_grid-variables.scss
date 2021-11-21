@@ -1,16 +1,22 @@
+@use 'sass:map';
+
 @import
-  'grid-colors';
+  'colors/grid-colors',
+  'colors/grid-rgb',
+  'colors/gradient',
+  'colors/box-shadows';
+
 
 /* -------------------------------------------------------------------------- */
 
-  $theme-colors: $grid-colors;
-  $white: $grid-white;
-  $utilities-colors: $grid-utilities-colors;
+  $utilities-bg-colors: $theme-colors;
+  $utilities-colors: $colors;
 
 /* -------------------------------------------------------------------------- */
 
 @import
   'spacings/spacer',
+  'spacings/base-unit',
   'spacings/aspect-ratios',
   'spacings/position-value',
   'spacings/zindex';
@@ -23,18 +29,18 @@
 
 @import
   'grid/breakpoints',
-  'grid/grid-variables',
+  'grid/variables',
   'grid/containers';
 
 /* -------------------------------------------------------------------------- */
 
 $gutters: $spacers;
 $grid-breakpoint: $breakpoint;
-$grid-rows: $grid-row-columns;
+$rows: $grid-row-columns;
 
 $size: nth($grid-breakpoints, 1);
 $name: nth($grid-breakpoints, 1);
-$declaration: nth($grid-breakpoint, 2);
+$declaration: nth($breakpoint, 2);
 $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
 $map: $grid-breakpoints;
@@ -45,18 +51,17 @@ $map-name: $breakpoint;
 @include assert-ascending($container-max-widths, "$container-max-widths");
 
 /* -------------------------------------------------------------------------- */
+@import 'components';
+$cjmt-font-sans-serif: Euphorigenic, 'Hand Typewriter', 'Enjoy Writing', Avdira, Wanda 'Glass Antiqua', 'Love Ya Likes A Sister', Pompiere, 'Hadley';
+$font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+$font-sans-serif: $cjmt-font-sans-serif;
+$base-font-family: $cjmt-font-sans-serif;
+$body-bg:                     $gray-100;
+$body-color:                  $gray-800;
+$text:                        $body-color;
+$body-text-align: null;
 
-$border-width:                1px;
-$border-widths: (
-  1: 1px,
-  2: 2px,
-  3: 3px,
-  4: 4px,
-  5: 5px
-);
-
-$border-color:                $grid-gray-300;
-
+$font-size-root:              null;
 $font-size-base:              1rem; // Assumes the browser default, typically
 
 $font-weight-lighter:         lighter;
@@ -87,12 +92,15 @@ $font-sizes: (
   6: $h6-font-size
 );
 
-$utilities-text: map-merge(
+$colors: map-merge($colors, $theme-colors);
+
+$utilities-colors: map-merge(
   $utilities-colors,
   (
-    "black": to-rgb($black),
-    "white": to-rgb($white),
     "body": to-rgb($body-color)
   )
 );
-$utilities-text-colors: map-loop($utilities-text, rgba-css-var, "$key", "text");
+
+$utilities-text-colors: $utilities-colors;
+
+$utilities-text-colors: map-merge($utilities-colors, $utilities-text-colors);

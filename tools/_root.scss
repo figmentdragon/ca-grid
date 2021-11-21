@@ -17,14 +17,14 @@
     --#{$variable-prefix}#{$color}: #{$value};
   }
 
-  @each $color, $value in $theme-colors-rgba {
-    --#{$variable-prefix}#{$color}-rgba: #{$value};
+  @each $color, $value in $theme-colors-rgb {
+    --#{$variable-prefix}#{$color}-rgb: #{$value};
   }
 
-  --#{$variable-prefix}white-rgba: #{to-rgba($white)};
-  --#{$variable-prefix}black-rgba: #{to-rgba($black)};
-  --#{$variable-prefix}text-rgba: #{to-rgba($body-bg)};
-  --#{$variable-prefix}body-bg-rgba: #{to-rgba($body-bg)};
+  --#{$variable-prefix}white-rgb: #{to-rgb($white)};
+  --#{$variable-prefix}black-rgb: #{to-rgb($black)};
+  --#{$variable-prefix}text-rgb: #{to-rgb($body-bg)};
+  --#{$variable-prefix}body-bg-rgb: #{to-rgb($body-bg)};
 
   // Fonts
 

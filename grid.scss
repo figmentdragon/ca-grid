@@ -34,16 +34,18 @@ $variable-prefix: grid;
 
 @import 'tools/grid-functions';
 
-
 @import 'tools/grid-mixins';
 
 @import 'variables/grid-variables';
+
+@import 'tools/root';
+
+@import 'tools/utils/utilities';
 
 @import 'tools/grid-helpers';
 
 @import
   'tools/utils/rfs',
-  'tools/utils/utilities',
   'tools/utils/api';
 
 
@@ -95,14 +97,14 @@ GENERAL STYLES
     grid-template-columns: repeat($grid-columns, 1fr);
     $gutter-x: $spacer;
     $gutter-y: 0;
-    gap: $grid-gutter-width;
-    grid-gap: $grid-gutter-width;
+    gap: $grid-gutter;
+    grid-gap: $grid-gutter;
     @include resp-min($breakpoint-sm)
     {
         grid-gap: div($base-unit, 2);
     }
 
-    @each $breakpoint in $breakpoints
+    @each $breakpoint in $grid-breakpoints
     {
         $name: nth($breakpoint, 1);
         $declaration: nth($breakpoint, 2);
@@ -122,8 +124,8 @@ GENERAL STYLES
 
 .grid-item
 {
-    grid-row: $row1;
-    grid-column: $col1;
+    grid-row: 6.25vh;
+    grid-column: 6.25vw;
 }
 
 .row
@@ -131,7 +133,7 @@ GENERAL STYLES
     list-style: none;
 
     @include make-row;
-    $gutter-x: $grid-gutter-width;
+    $gutter-x: $grid-gutter;
     $gutter-y: 0;
 
     &:not(.row-flex)
@@ -205,12 +207,12 @@ GENERAL STYLES
  * Columns generator
  */
 
-@each $breakpoint in $breakpoints
+@each $breakpoint in $grid-breakpoints
 {
     $name: nth($breakpoint, 1);
     $declaration: nth($breakpoint, 2);
 
-    @media only screen and #{$declaration}
+    @include media($res)
     {
         @include grid-loop($name);
     }

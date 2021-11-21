@@ -8,8 +8,9 @@ $max-content-width: 1240px;
 $tablet: 1224px;
 $desktop: 1824px;
 
-$breakpoint-sm: 482px;
-$breakpoint-md: 592px;
-$breakpoint-lg: 652px;
-$breakpoint-xl: 822px;
-$breakpoint-xxl: 1024px;
+$grid-breakpoint-xs: 0;
+$grid-breakpoint-sm: 576px;
+$grid-breakpoint-md: 768px;
+$grid-breakpoint-lg: 992px;
+$grid-breakpoint-xl: 1200px;
+$grid-breakpoint-xxl: 1400px;

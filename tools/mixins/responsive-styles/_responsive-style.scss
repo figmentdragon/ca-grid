@@ -1,12 +1,3 @@
-$grid-breakpoint-xs: 0;
-$grid-breakpoint-sm: 576px;
-$grid-breakpoint-md: 768px;
-$grid-breakpoint-lg: 992px;
-$grid-breakpoint-xl: 1200px;
-$grid-breakpoint-xxl: 1400px;
-
-$tablet: 1224px;
-$desktop: 1824px;
 
 @mixin media($res)
 {

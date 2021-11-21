@@ -1,71 +1,72 @@
-$grid-white: #e4edf4;
-$grid-gray-100: #c0c0c0;
-$grid-gray-200: #9a9a9a;
-$grid-gray-300: #7b7b7b;
-$grid-gray-400: #626262;
-$grid-gray-500: #4e4e4e;
-$grid-gray-600: #3e3e3e;
-$grid-gray-700: #323232;
-$grid-gray-800: #282828;
-$grid-gray-900: #1a1a1a;
-$grid-black: #000100;
+$white: #e4edf4;
+$gray-100: #c0c0c0;
+$gray-200: #9a9a9a;
+$gray-300: #7b7b7b;
+$gray-400: #626262;
+$gray-500: #4e4e4e;
+$gray-600: #3e3e3e;
+$gray-700: #323232;
+$gray-800: #282828;
+$gray-900: #1a1a1a;
+$black: #000100;
 
-$grid-grays: (
-  100: $grid-gray-100,
-  200: $grid-gray-200,
-  300: $grid-gray-300,
-  400: $grid-gray-400,
-  500: $grid-gray-500,
-  600: $grid-gray-600,
-  700: $grid-gray-700,
-  800: $grid-gray-800,
-  900: $grid-gray-900
+$grays: (
+  100: $gray-100,
+  200: $gray-200,
+  300: $gray-300,
+  400: $gray-400,
+  500: $gray-500,
+  600: $gray-600,
+  700: $gray-700,
+  800: $gray-800,
+  900: $gray-900
 );
 
-$grid-blue: #4169e1;
-$grid-indigo: #60f;
-$grid-purple: #510bda;
-$grid-pink: #c39;
-$grid-red: #dc3545;
-$grid-orange: #f96;
-$grid-yellow: #ffe41e;
-$grid-green: #0bda51;
-$grid-teal: #caffff;
-$grid-cyan: #0abab5;
-$grid-silver: #a8a9ad;
-$grid-brown: #623412;
-$grid-gray: $grid-gray-600;
-$grid-dark: $grid-gray-900;
-$grid-light: $grid-gray-100;
+$blue:    #0d6efd;
+$indigo:  #6610f2;
+$purple:  #6f42c1;
+$pink:    #d63384;
+$red:     #dc3545;
+$orange:  #fd7e14;
+$yellow:  #ffc107;
+$green:   #198754;
+$teal:    #20c997;
+$cyan:    #0dcaf0;
+$brown: #623412;
+$gray: $gray-600;
+$dark: $gray-900;
+$light: $gray-100;
 
-$grid-colors:(
-grid-blue: $grid-blue,
-grid-indigo: $grid-indigo,
-grid-purple: $grid-purple,
-grid-pink: $grid-pink,
-grid-red: $grid-red,
-grid-orange: $grid-orange,
-grid-yellow: $grid-yellow,
-grid-green: $grid-green,
-grid-teal: $grid-teal,
-grid-cyan: $grid-cyan,
-grid-silver: $grid-silver,
-grid-brown: $grid-brown,
-grid-gray: $grid-gray,
-grid-dark: $grid-dark,
-grid-light: $grid-light
+$colors: (
+'blue': $blue,
+'indigo': $indigo,
+'purple': $purple,
+'pink': $pink,
+'red': $red,
+'orange': $orange,
+'yellow': $yellow,
+'green': $green,
+'teal': $teal,
+'cyan': $cyan,
+'brown': $brown,
 );
 
+$primary-color: $cyan;
+$secondary-color: $yellow;
+$accent-color: $teal;
+$success:    $green;
+$info:       $blue;
+$warning:    $orange;
+$danger:     $red;
+$light:      $light;
+$dark:       $dark;
+$text-muted: $gray-500;
 
-$success:    $grid-green;
-$info:       $grid-blue;
-$warning:    $grid-orange;
-$danger:     $grid-red;
-$light:      $grid-light;
-$dark:       $grid-dark;
 
-
-$grid-utilities-colors: (
+$theme-colors: (
+  "primary":    $primary-color,
+  "secondary":  $secondary-color,
+  "accent":     $accent-color,
   "success":    $success,
   "info":       $info,
   "warning":    $warning,
@@ -73,3 +74,7 @@ $grid-utilities-colors: (
   "light":      $light,
   "dark":       $dark
 );
+
+
+$active: $primary-color;
+//$theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value");

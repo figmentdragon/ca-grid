@@ -26,16 +26,16 @@
     margin-right: calc(-.5 * $gutter-x); // stylelint-disable-line function-disallowed-list
     margin-left: calc(-.5 * $gutter-x); // stylelint-disable-line function-disallowed-list
 
-    $gutter-x: $grid-gutter-width;
+    $gutter-x: $grid-gutter;
     $gutter-y: 0;
 }
 
 /* ##Columns generator## */
 @mixin make-col()
 {
-    @each $breakpoint in $breakpoints
+    @each $breakpoint in $grid-breakpoints
     {
-        $infix: breakpoint-infix($breakpoint, $breakpoints);
+        $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
     }
 }
 

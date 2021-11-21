@@ -1,0 +1,65 @@
+
+$gray-100-rgb: rgb(192,192,192);
+$gray-200-rgb: rgb(154, 154, 154);
+$gray-300-rgb: rgb(123, 123, 123);
+$gray-400-rgb: rgb(98, 98, 98);
+$gray-500-rgb: rgb(78,78,78);
+$gray-600-rgb: rgb(62,62,62);
+$gray-700-rgb: rgb(50,50,50);
+$gray-800-rgb: rgb(40,40,40);
+$gray-900-rgb: rgb(26,26,26);
+$white-rgb: rgb(228,237,244);
+
+$gray-rgb: (
+gray-100-rgb: $gray-100-rgb,
+gray-200-rgb: $gray-200-rgb,
+gray-300-rgb: $gray-300-rgb,
+gray-400-rgb: $gray-400-rgb,
+gray-500-rgb: $gray-500-rgb,
+gray-600-rgb: $gray-600-rgb,
+gray-700-rgb: $gray-700-rgb,
+gray-800-rgb: $gray-800-rgb,
+gray-900-rgb: $gray-900-rgb
+);
+
+$blue-rgb:   rgb(13, 110, 253);
+$indigo-rgb:  rgb(102, 16, 242);
+$purple-rgb:  rgb(111, 66, 193);
+$pink-rgb:   rgb(214, 51, 132);
+$red-rgb:  rgb(220, 53, 69);
+$orange-rgb:  rgb(253, 126, 20);
+$yellow-rgb:  rgb(255, 193, 7);
+$green-rgb:  rgb(25, 135, 84);
+$teal-rgb:  rgb(32, 201, 151);
+$cyan-rgb:   rgb(13, 202, 240);
+
+$colors-rgb: (
+blue-rgb:   $blue-rgb,
+indigo-rgb:  $indigo-rgb,
+purple-rgb:  $purple-rgb,
+pink-rgb:   $pink-rgb,
+red-rgb:  $red-rgb,
+orange-rgb:  $orange-rgb,
+yellow-rgb:  $yellow-rgb,
+green-rgb:  $green-rgb,
+teal-rgb:  $teal-rgb,
+cyan-rgb:   $cyan-rgb
+);
+
+$primary-color-rgb: rgb(13, 202, 240);
+$secondary-color-rgb: rgb(255, 193, 7);
+$accent-color-rgb: rgb(32, 201, 151);
+$success-rgb: rgb(25, 135, 84);
+$info-rgb: rgb(13, 110, 253);
+$warning-rgb: rgb(253, 126, 20);
+$danger-rgb: rgb(220, 53, 69);
+
+$theme-colors-rgb: (
+  "primary-rgb":    $primary-color-rgb,
+  "secondary-rgb":  $secondary-color-rgb,
+  "accent-rgb":     $accent-color-rgb,
+  "success-rgb":    $success-rgb,
+  "info-rgb":       $info-rgb,
+  "warning-rgb":    $warning-rgb,
+  "danger-rgb":     $danger-rgb
+);

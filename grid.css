@@ -1,10 +1,9 @@
 /* Error: Undefined variable.
- *    ,
- * 72 |   @include assert-ascending($map, $map-name);
- *    |                             ^^^^
- *    '
- *   grid.scss 72:29  assert-ascending()
- *   grid.scss 77:1   root stylesheet */
+ *     ,
+ * 215 |     @include media($res)
+ *     |                    ^^^^
+ *     '
+ *   grid.scss 215:20  root stylesheet */
 
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
@@ -14,5 +13,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: "Error: Undefined variable.\a    \2577 \a 72 \2502    @include assert-ascending($map, $map-name);\a    \2502                              ^^^^\a    \2575 \a   grid.scss 72:29  assert-ascending()\a   grid.scss 77:1   root stylesheet";
+  content: "Error: Undefined variable.\a     \2577 \a 215 \2502      @include media($res)\a     \2502                     ^^^^\a     \2575 \a   grid.scss 215:20  root stylesheet";
 }
