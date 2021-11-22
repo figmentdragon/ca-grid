@@ -1,4 +1,4 @@
-$white: #e4edf4;
+$cjmt-white: #e4edf4;
 $cjmt-gray-100: #c0c0c0;
 $cjmt-gray-200: #9a9a9a;
 $cjmt-gray-300: #7b7b7b;
@@ -8,17 +8,17 @@ $cjmt-gray-600: #3e3e3e;
 $cjmt-gray-700: #323232;
 $cjmt-gray-800: #282828;
 $cjmt-gray-900: #1a1a1a;
-$black: #000100;
+$cjmt-black: #000100;
 
 $grays: (
-  100: $gray-100,
-  200: $gray-200,
-  300: $gray-300,
-  400: $gray-400,
-  500: $gray-500,
-  600: $gray-600,
-  700: $gray-700,
-  800: $gray-800,
+  100: $cjmt-gray-100,
+  200: $cjmt-gray-200,
+  300: $cjmt-gray-300,
+  400: $cjmt-gray-400,
+  500: $cjmt-gray-500,
+  600: $cjmt-gray-600,
+  700: $cjmt-gray-700,
+  800: $cjmt-gray-800,
   900: $cjmt-gray-900
 );
 
@@ -32,10 +32,10 @@ $yellow:  #ffc107;
 $green:   #198754;
 $teal:    #20c997;
 $cyan:    #0dcaf0;
-$brown: #623412;
-$cjmt-gray: $cjmt-gray-600;
-$dark: $cjmt-gray-900;
-$light: $cjmt-gray-100;
+$brown:   #623412;
+$gray:    $cjmt-gray-600;
+$black:   $cjmt-black;
+$white:   $cjmt-white;
 
 $colors: (
 'blue': $blue,
@@ -48,25 +48,25 @@ $colors: (
 'green': $green,
 'teal': $teal,
 'cyan': $cyan,
-'brown': $brown,
+'brown': $brown
 );
 
-$primary-color: $cyan;
-$secondary-color: $yellow;
-$accent-color: $teal;
+$primary-color:   $cyan;
+$secondary: $yellow;
+$accent:    $teal;
 $success:    $green;
 $info:       $blue;
 $warning:    $orange;
 $danger:     $red;
-$light:      $light;
-$dark:       $dark;
+$light:      $cjmt-gray-100;
+$dark:       $cjmt-gray-900;
 $text-muted: $cjmt-gray-500;
 
 
 $theme-colors: (
-  "primary":    $primary-color,
-  "secondary":  $secondary-color,
-  "accent":     $accent-color,
+  "primary-color":    $primary-color,
+  "secondary":  $secondary,
+  "accent":     $accent,
   "success":    $success,
   "info":       $info,
   "warning":    $warning,

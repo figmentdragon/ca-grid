@@ -1,26 +1,26 @@
 
-$gray-100-rgb: rgb(192,192,192);
-$gray-200-rgb: rgb(154, 154, 154);
-$gray-300-rgb: rgb(123, 123, 123);
-$gray-400-rgb: rgb(98, 98, 98);
-$gray-500-rgb: rgb(78,78,78);
-$gray-600-rgb: rgb(62,62,62);
-$gray-700-rgb: rgb(50,50,50);
-$gray-800-rgb: rgb(40,40,40);
-$gray-900-rgb: rgb(26,26,26);
-$white-rgb: rgb(228,237,244);
+$cjmt-gray-100-rgb: rgb(192,192,192);
+$cjmt-gray-200-rgb: rgb(154 154 154);
+$cjmt-gray-300-rgb: rgb(123, 123, 123);
+$cjmt-gray-400-rgb: rgb(98 98 98);
+$cjmt-gray-500-rgb: rgb(78,78,78);
+$cjmt-gray-600-rgb: rgb(62,62,62);
+$cjmt-gray-700-rgb: rgb(50,50,50);
+$cjmt-gray-800-rgb: rgb(40,40,40);
+$cjmt-gray-900-rgb: rgb(26,26,26);
 
-$gray-rgb: (
-gray-100-rgb: $gray-100-rgb,
-gray-200-rgb: $gray-200-rgb,
-gray-300-rgb: $gray-300-rgb,
-gray-400-rgb: $gray-400-rgb,
-gray-500-rgb: $gray-500-rgb,
-gray-600-rgb: $gray-600-rgb,
-gray-700-rgb: $gray-700-rgb,
-gray-800-rgb: $gray-800-rgb,
-gray-900-rgb: $gray-900-rgb
+$cjmt-gray-rgb: (
+cjmt-gray-100-rgb: $cjmt-gray-100-rgb,
+cjmt-gray-200-rgb: $cjmt-gray-200-rgb,
+cjmt-gray-300-rgb: $cjmt-gray-300-rgb,
+cjmt-gray-400-rgb: $cjmt-gray-400-rgb,
+cjmt-gray-500-rgb: $cjmt-gray-500-rgb,
+cjmt-gray-600-rgb: $cjmt-gray-600-rgb,
+cjmt-gray-700-rgb: $cjmt-gray-700-rgb,
+cjmt-gray-800-rgb: $cjmt-gray-800-rgb,
+cjmt-gray-900-rgb: $cjmt-gray-900-rgb
 );
+
 
 $blue-rgb:   rgb(13, 110, 253);
 $indigo-rgb:  rgb(102, 16, 242);
@@ -46,18 +46,18 @@ teal-rgb:  $teal-rgb,
 cyan-rgb:   $cyan-rgb
 );
 
-$primary-color-rgb: rgb(13, 202, 240);
-$secondary-color-rgb: rgb(255, 193, 7);
-$accent-color-rgb: rgb(32, 201, 151);
+$primary-rgb: rgb(13, 202, 240);
+$secondary-rgb: rgb(255, 193, 7);
+$accent-rgb: rgb(32, 201, 151);
 $success-rgb: rgb(25, 135, 84);
 $info-rgb: rgb(13, 110, 253);
 $warning-rgb: rgb(253, 126, 20);
 $danger-rgb: rgb(220, 53, 69);
 
 $theme-colors-rgb: (
-  "primary-rgb":    $primary-color-rgb,
-  "secondary-rgb":  $secondary-color-rgb,
-  "accent-rgb":     $accent-color-rgb,
+  "primary-rgb":    $primary-rgb,
+  "secondary-rgb":  $secondary-rgb,
+  "accent-rgb":     $accent-rgb,
   "success-rgb":    $success-rgb,
   "info-rgb":       $info-rgb,
   "warning-rgb":    $warning-rgb,

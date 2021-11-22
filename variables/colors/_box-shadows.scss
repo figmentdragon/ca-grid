@@ -1,15 +1,13 @@
 
-$shadow: $gray-700;
-$shadow-active: $gray-500;
-$shadow-hover: $gray-300;
-$shadow-focus: $gray-100;
-$shadow-inset: $white;
+$shadow: $cjmt-gray-700;
+$shadow-active: $cjmt-gray-500;
+$shadow-hover: $cjmt-gray-300;
+$shadow-focus: $cjmt-gray-100;
 
-$shadow-rgb: $gray-700-rgb;
-$shadow-active-rgb: $gray-500-rgb;
-$shadow-hover-rgb: $gray-300-rgb;
-$shadow-focus-rgb: $gray-100-rgb;
-$shadow-inset-rgb: $white-rgb;
+$shadow-rgb: $cjmt-gray-700-rgb;
+$shadow-active-rgb: $cjmt-gray-500-rgb;
+$shadow-hover-rgb: $cjmt-gray-300-rgb;
+$shadow-focus-rgb: $cjmt-gray-100-rgb;
 
 /* BOX SHADOW */
 $box-shadow: 1.75rem 1.5rem 1.75rem $shadow;

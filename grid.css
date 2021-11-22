@@ -1,19 +1,1323 @@
-/* Error: Undefined variable.
- *    ,
- * 14 |   100: $gray-100,
- *    |        ^^^^^^^^^
- *    '
- *   variables/colors/_grid-colors.scss 14:8  @import
- *   variables/_grid-variables.scss 4:3       @import
- *   grid.scss 36:9                           root stylesheet */
+/******************************************************************
+Site Name: The Creativity Architect
+Author: CJM Termini
 
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined variable.\a    \2577 \a 14 \2502    100: $gray-100,\a    \2502         ^^^^^^^^^\a    \2575 \a   variables/colors/_grid-colors.scss 14:8  @import\a   variables/_grid-variables.scss 4:3       @import\a   grid.scss 36:9                           root stylesheet";
+Stylesheet: CJMT Grid Stylesheet
+
+Be light and don't over style since everything here will be
+loaded by mobile devices. You want to keep it as minimal as
+possible. This is called at the top of the main stylsheet
+and will be used across all viewports.
+
+******************************************************************/
+/*Ascending*/
+/*Used to evaluate Sass maps like our grid breakpoints.*/
+/* BOX SHADOW */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/* Spacing */
+/* @see https://getbootstrap.com/docs/5.1/customize/options/ */
+/* 1.7525 = 26-29px */
+/* 2.5875 = 40-42px */
+/**
+ * ## Z-Index
+ =========================*/
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/* Grid breakpoints */
+/* Define the minimum dimensions at which your layout will change, adapting to different screen sizes, for use in media queries. */
+/* Grid columns */
+/* Set the number of columns and specify the width of the gutters. */
+/* @see https://getbootstrap.com/docs/5.1/layout/grid/#variables */
+/* Grid containers */
+/* Define the maximum width of `.container` for different screen sizes. */
+/* Container padding */
+.span-1 {
+  flex-basis: 6.25%;
 }
+
+.span-2 {
+  flex-basis: 12.5%;
+}
+
+.span-3 {
+  flex-basis: 18.75%;
+}
+
+.span-4 {
+  flex-basis: 25%;
+}
+
+.span-5 {
+  flex-basis: 31.25%;
+}
+
+.span-6 {
+  flex-basis: 37.5%;
+}
+
+.span-7 {
+  flex-basis: 43.75%;
+}
+
+.span-8 {
+  flex-basis: 50%;
+}
+
+.span-9 {
+  flex-basis: 56.25%;
+}
+
+.span-10 {
+  flex-basis: 62.5%;
+}
+
+.span-11 {
+  flex-basis: 68.75%;
+}
+
+.span-12 {
+  flex-basis: 75%;
+}
+
+.span-13 {
+  flex-basis: 81.25%;
+}
+
+.span-14 {
+  flex-basis: 87.5%;
+}
+
+.span-15 {
+  flex-basis: 93.75%;
+}
+
+.span-16 {
+  flex-basis: 100%;
+}
+
+.col-1 {
+  width: calc(divide(98%, 16) - 2% * divide(15, 16));
+}
+
+.col-2 {
+  width: calc(divide(98%, 2) - 2% * divide(14, 16));
+}
+
+.col-3 {
+  width: calc(divide(98%, 16 3) - 2% * divide(13, 16));
+}
+
+.col-4 {
+  width: calc(divide(98%, 4) - 2% * divide(12, 16));
+}
+
+.col-5 {
+  width: calc(divide(98%, 16, 5) - 2% * divide(11, 16));
+}
+
+.col-6 {
+  width: calc(divide(98%, 16, 6) - 2% * divide(10, 16));
+}
+
+.col-7 {
+  width: calc(divide(98%, 16, 7) - 2% * divide(9, 16));
+}
+
+.col-8 {
+  width: calc(divide(98%, 16, 8) - 2% * divide(8, 16));
+}
+
+.col-9 {
+  width: calc(divide(98%, 16, 9) - 2% * divide(7, 16));
+}
+
+.col-10 {
+  width: calc(divide(98%, 16, 10) - 2% * divide(6, 16));
+}
+
+.col-11 {
+  width: calc(divide(98%, 16, 11) - 2% * divide(5, 16));
+}
+
+.col-12 {
+  width: calc(divide(98%, 16, 12) - 2% * divide(4, 16));
+}
+
+.col-13 {
+  width: calc(divide(98%, 16, 13) - 2% * divide(4, 16));
+}
+
+.col-14 {
+  width: calc(divide(98%, 16, 14) - 2% * divide(4, 16));
+}
+
+.col-15 {
+  width: calc(divide(98%, 16, 15) - 2% * divide(4, 16));
+}
+
+.col-16 {
+  width: 98%;
+}
+
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/* You can also use a <br class="clear" /> to clear columns */
+.clear {
+  display: block;
+  visibility: hidden;
+  clear: both;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+}
+
+/* MEDIA QUERY */
+/*
+ * Media query to respond to a minimum size (mobile first)
+ */
+/* RESPONSIVE STYLES */
+/**
+ * Required Variables
+ */
+/**
+ * Repsonsive Styles
+ */
+/**
+ * Required Variables
+ */
+/* MEDIA QUERY */
+/*
+ * Media query to respond to a minimum size (mobile first)
+ */
+/* Grid system */
+/* Generate semantic grid columns with these mixins. */
+/* Row columns*/
+/* Specify on a parent element(e.g., .row) to force immediate children into NN numberof columns. Supports wrapping to new lines, but does not do a Masonry
+style grid.*/
+/* ##Columns generator## */
+:root {
+  --gridblue: #0d6efd;
+  --gridindigo: #6610f2;
+  --gridpurple: #6f42c1;
+  --gridpink: #d63384;
+  --gridred: #dc3545;
+  --gridorange: #fd7e14;
+  --gridyellow: #ffc107;
+  --gridgreen: #198754;
+  --gridteal: #20c997;
+  --gridcyan: #0dcaf0;
+  --gridbrown: #623412;
+  --gridprimary-color: #0dcaf0;
+  --gridsecondary: #ffc107;
+  --gridaccent: #20c997;
+  --gridsuccess: #198754;
+  --gridinfo: #0d6efd;
+  --gridwarning: #fd7e14;
+  --griddanger: #dc3545;
+  --gridlight: #c0c0c0;
+  --griddark: #1a1a1a;
+  --grid#0dcaf0100: #c0c0c0;
+  --grid#0dcaf0200: #9a9a9a;
+  --grid#0dcaf0300: #7b7b7b;
+  --grid#0dcaf0400: #626262;
+  --grid#0dcaf0500: #4e4e4e;
+  --grid#0dcaf0600: #3e3e3e;
+  --grid#0dcaf0700: #323232;
+  --grid#0dcaf0800: #282828;
+  --grid#0dcaf0900: #1a1a1a;
+  --gridprimary-color: #0dcaf0;
+  --gridsecondary: #ffc107;
+  --gridaccent: #20c997;
+  --gridsuccess: #198754;
+  --gridinfo: #0d6efd;
+  --gridwarning: #fd7e14;
+  --griddanger: #dc3545;
+  --gridlight: #c0c0c0;
+  --griddark: #1a1a1a;
+  --gridprimary-rgb-rgb: #0dcaf0;
+  --gridsecondary-rgb-rgb: #ffc107;
+  --gridaccent-rgb-rgb: #20c997;
+  --gridsuccess-rgb-rgb: #198754;
+  --gridinfo-rgb-rgb: #0d6efd;
+  --gridwarning-rgb-rgb: #fd7e14;
+  --griddanger-rgb-rgb: #dc3545;
+  --gridwhite-rgb: to-rgb(#e4edf4);
+  --gridblack-rgb: to-rgb(#000100);
+  --gridtext-rgb: to-rgb(#000100);
+  --gridbody-bg-rgb: to-rgb(#000100);
+  --gridfont-sans-serif: Euphorigenic, "Hand Typewriter", "Enjoy Writing", Avdira, Wanda "Glass Antiqua", "Love Ya Likes A Sister", Pompiere, "Hadley";
+  --gridfont-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --gridgradient: linear-gradient(-310deg, rgba(13, 202, 240, 0.55) 35%, rgba(255, 193, 7, 0.45) 45%, rgba(32, 201, 151, 0.35) 85%, transparent);
+  --gridbody-font-family: Euphorigenic, Hand Typewriter, Enjoy Writing, Avdira, Wanda Glass Antiqua, Love Ya Likes A Sister, Pompiere, Hadley;
+  --gridbody-font-size: 1.15;
+  --gridbody-font-weight: 400;
+  --gridline-height-body: line-height-md;
+  --gridtext: #000100;
+  --gridbody-bg: #000100;
+}
+
+/* You can also use a <br class="clear" /> to clear columns */
+.clear {
+  display: block;
+  visibility: hidden;
+  clear: both;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+}
+
+/* MEDIA QUERY */
+/*
+ * Media query to respond to a minimum size (mobile first)
+ */
+/* RESPONSIVE STYLES */
+/**
+ * Required Variables
+ */
+/**
+ * Repsonsive Styles
+ */
+/**
+ * Required Variables
+ */
+/* MEDIA QUERY */
+/*
+ * Media query to respond to a minimum size (mobile first)
+ */
+/* Grid system */
+/* Generate semantic grid columns with these mixins. */
+/* Row columns*/
+/* Specify on a parent element(e.g., .row) to force immediate children into NN numberof columns. Supports wrapping to new lines, but does not do a Masonry
+style grid.*/
+/* ##Columns generator## */
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+.center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.justify {
+  text-align: justify;
+}
+
+.hidden-sm {
+  display: none;
+}
+
+.level {
+  align-items: center;
+  justify-content: space-between;
+}
+.level code {
+  border-radius: 0.95rem;
+}
+.level img {
+  display: inline-block;
+  vertical-align: top;
+}
+.level.is-mobile {
+  display: flex;
+}
+.level.is-mobile .level-left,
+.level.is-mobile .level-right {
+  display: flex;
+}
+.level.is-mobile .level-left + .level-right {
+  margin-top: 0;
+}
+.level.is-mobile .level-item:not(:last-child) {
+  margin-bottom: 0;
+  margin-left: 0.75rem;
+}
+.level.is-mobile .level-item:not(.is-narrow) {
+  flex-grow: 1;
+}
+@media screen and (min-width: 1081px), print {
+  .level {
+    display: flex;
+  }
+  .level > .level-item:not(.is-narrow) {
+    flex-grow: 1;
+  }
+}
+
+.level-item {
+  align-items: center;
+  display: flex;
+  flex-basis: auto;
+  flex-grow: 0;
+  flex-shrink: 0;
+  justify-content: center;
+}
+.level-item .title,
+.level-item .subtitle {
+  margin-bottom: 0;
+}
+@media screen and (max-width: 1080px) {
+  .level-item:not(:last-child) {
+    margin-bottom: 0.75rem;
+  }
+}
+
+.level-left,
+.level-right {
+  flex-basis: auto;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+.level-left .level-item.is-flexible,
+.level-right .level-item.is-flexible {
+  flex-grow: 1;
+}
+@media screen and (min-width: 1081px), print {
+  .level-left .level-item:not(:last-child),
+.level-right .level-item:not(:last-child) {
+    margin-left: 0.75rem;
+  }
+}
+
+.level-left {
+  align-items: center;
+  justify-content: flex-start;
+}
+@media screen and (max-width: 1080px) {
+  .level-left + .level-right {
+    margin-top: 1.5rem;
+  }
+}
+@media screen and (min-width: 1081px), print {
+  .level-left {
+    display: flex;
+  }
+}
+
+.level-right {
+  align-items: center;
+  justify-content: flex-end;
+}
+@media screen and (min-width: 1081px), print {
+  .level-right {
+    display: flex;
+  }
+}
+
+.flex-fill {
+  flex: 1 1 auto !important;
+}
+
+.flex-row {
+  flex-direction: row !important;
+}
+
+.flex-column {
+  flex-direction: column !important;
+}
+
+.flex-row-reverse {
+  flex-direction: row-reverse !important;
+}
+
+.flex-column-reverse {
+  flex-direction: column-reverse !important;
+}
+
+.flex-grow-0 {
+  flex-grow: 0 !important;
+}
+
+.flex-grow-1 {
+  flex-grow: 1 !important;
+}
+
+.flex-shrink-0 {
+  flex-shrink: 0 !important;
+}
+
+.flex-shrink-1 {
+  flex-shrink: 1 !important;
+}
+
+.flex-wrap {
+  flex-wrap: wrap !important;
+}
+
+.flex-nowrap {
+  flex-wrap: nowrap !important;
+}
+
+.flex-wrap-reverse {
+  flex-wrap: wrap-reverse !important;
+}
+
+.clearfix .row,
+.clearfix .clearfix {
+  zoom: 1;
+}
+.clearfix .row .clearfix:before,
+.clearfix .row .clearfix:after,
+.clearfix .row .row:before,
+.clearfix .row .row:after,
+.clearfix .clearfix .clearfix:before,
+.clearfix .clearfix .clearfix:after,
+.clearfix .clearfix .row:before,
+.clearfix .clearfix .row:after {
+  display: block;
+  visibility: hidden;
+  clear: both;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  table-layout: fixed;
+  content: " ";
+}
+.clearfix .row .clearfix::after,
+.clearfix .row .row::after,
+.clearfix .clearfix .clearfix::after,
+.clearfix .clearfix .row::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+/**
+ * Root Media Query Variables
+ */
+/**
+ * Root Media Query Variables
+ */
+/**
+ * Extends
+ */
+.default-max-width {
+  max-width: calc(100vw - 33vh);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.wide-max-width {
+  max-width: calc(100vw - 4vh);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media only screen and (min-width: 576px) {
+  .full-max-width {
+    width: auto;
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+.fixed-top {
+  position: fixed;
+  z-index: 1030;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+.fixed-bottom {
+  position: fixed;
+  z-index: 1030;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.ratio {
+  position: relative;
+  width: 100%;
+}
+.ratio::before {
+  display: block;
+  padding-top: var(--gridaspect-ratio);
+  content: "";
+}
+.ratio > * {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.ratio-1x1 {
+  --gridaspect-ratio: 100%;
+}
+
+.ratio-4x3 {
+  --gridaspect-ratio: 75%;
+}
+
+.ratio-16x9 {
+  --gridaspect-ratio: 56.25%;
+}
+
+.ratio-21x9 {
+  --gridaspect-ratio: 42.8571428571%;
+}
+
+/* @media (min-width: $rfs-mq-value)
+{
+    @each $breakpoint in map-keys($grid-breakpoints)
+    {
+        $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+        @if (map-get($grid-breakpoints, $breakpoint) < $rfs-breakpoint)
+        {
+            // Loop over each utility property
+            @each $key, $utility in $utilities
+            {
+                // The utility can be disabled with `false`, thus check if the utility is a map first
+                // Only proceed if responsive media queries are enabled or if it's the base media query
+                @if type-of($utility) == 'map' and map-get($utility, rfs) and (map-get($utility, responsive) or $infix == '')
+                {
+                    @include generate-utility($utility, $infix, true);
+                }
+            }
+        }
+    }
+}
+*/
+@media print {
+  .d-print-inline {
+    display: inline !important;
+  }
+
+  .d-print-inline-block {
+    display: inline-block !important;
+  }
+
+  .d-print-block {
+    display: block !important;
+  }
+
+  .d-print-grid {
+    display: grid !important;
+  }
+
+  .d-print-table {
+    display: table !important;
+  }
+
+  .d-print-table-row {
+    display: table-row !important;
+  }
+
+  .d-print-table-cell {
+    display: table-cell !important;
+  }
+
+  .d-print-flex {
+    display: flex !important;
+  }
+
+  .d-print-inline-flex {
+    display: inline-flex !important;
+  }
+
+  .d-print-none {
+    display: none !important;
+  }
+}
+/*********************
+GENERAL STYLES
+*********************/
+html,
+body {
+  font-size: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+[class^=container-] {
+  border-width: medium;
+  border-style: solid;
+  border-color: #0dcaf0;
+  border-radius: 0.95rem;
+}
+
+.container {
+  position: relative;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: grid-inline;
+  float: left;
+  align-items: left;
+  justify-content: flex-start;
+  width: 100vw;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+
+.container-fluid {
+  zoom: 1;
+  padding-right: 20px;
+  padding-left: 20px;
+  position: relative;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: grid-inline;
+  float: left;
+  align-items: left;
+  justify-content: flex-start;
+  width: 100vw;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+@media screen and (1200px) {
+  .container-fluid {
+    max-width: 1814px;
+  }
+}
+@media screen and (max-width: 1215px) {
+  .container-fluid.is-widescreen:not(.is-max-desktop) {
+    max-width: 1206px;
+  }
+}
+@media screen and (max-width: 1407px) {
+  .container-fluid.is-fullhd:not(.is-max-desktop):not(.is-max-widescreen) {
+    max-width: 1398px;
+  }
+}
+@media screen and (min-width: 1216px) {
+  .container-fluid:not(.is-max-desktop) {
+    max-width: 1206px;
+  }
+}
+@media screen and (min-width: 1408px) {
+  .container-fluid:not(.is-max-desktop):not(.is-max-widescreen) {
+    max-width: 1398px;
+  }
+}
+.container-fluid .container-fluid:before,
+.container-fluid .container-fluid:after {
+  line-height: 0;
+  display: table;
+  content: "";
+}
+.container-fluid:after {
+  clear: both;
+}
+
+.grid {
+  display: inline-grid;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  grid-template-rows: repeat(16, 1fr);
+  grid-template-columns: repeat(16, 1fr);
+  gap: 5px;
+  grid-gap: 5px;
+  width: divide(98%, 16);
+  margin-left: 6.25;
+}
+.grid .col-1 {
+  flex-basis: calc(divide(1, 16) * 100);
+}
+.grid .col-2 {
+  flex-basis: calc(divide(2, 16) * 100);
+}
+.grid .col-3 {
+  flex-basis: calc(divide(3, 16) * 100);
+}
+.grid .col-4 {
+  flex-basis: calc(divide(4, 16) * 100);
+}
+.grid .col-5 {
+  flex-basis: calc(divide(5, 16) * 100);
+}
+.grid .col-6 {
+  flex-basis: calc(divide(6, 16) * 100);
+}
+.grid .col-7 {
+  flex-basis: calc(divide(7, 16) * 100);
+}
+.grid .col-8 {
+  flex-basis: calc(divide(8, 16) * 100);
+}
+.grid .col-9 {
+  flex-basis: calc(divide(9, 16) * 100);
+}
+.grid .col-10 {
+  flex-basis: calc(divide(10, 16) * 100);
+}
+.grid .col-11 {
+  flex-basis: calc(divide(11, 16) * 100);
+}
+.grid .col-12 {
+  flex-basis: calc(divide(12, 16) * 100);
+}
+.grid .col-13 {
+  flex-basis: calc(divide(13, 16) * 100);
+}
+.grid .col-14 {
+  flex-basis: calc(divide(14, 16) * 100);
+}
+.grid .col-15 {
+  flex-basis: calc(divide(15, 16) * 100);
+}
+.grid .col-16 {
+  flex-basis: calc(divide(16, 16) * 100);
+}
+.grid .row-flex {
+  float: none;
+  flex-basis: divide(98%, 16);
+  width: auto;
+  max-width: 100%;
+}
+@media screen and (min-width: 576px) {
+  .grid {
+    grid-gap: div(1.15, 2);
+  }
+}
+@media only screen and (0) {
+  .grid {
+    grid-template-columns: repeat(16, 1fr);
+  }
+}
+@media only screen and (576px) {
+  .grid {
+    grid-template-columns: repeat(16, 1fr);
+  }
+}
+@media only screen and (768px) {
+  .grid {
+    grid-template-columns: repeat(16, 1fr);
+  }
+}
+@media only screen and (992px) {
+  .grid {
+    grid-template-columns: repeat(16, 1fr);
+  }
+}
+@media only screen and (1200px) {
+  .grid {
+    grid-template-columns: repeat(16, 1fr);
+  }
+}
+@media only screen and (1400px) {
+  .grid {
+    grid-template-columns: repeat(16, 1fr);
+  }
+}
+.grid > * {
+  border-width: 2;
+  border-style: solid;
+  border-color: #9a9a9a;
+  position: relative;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: grid-inline;
+  float: left;
+  align-items: left;
+  justify-content: flex-start;
+  width: 100vw;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+
+.row {
+  list-style: none;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100vw;
+  margin-top: 10px;
+  margin-right: -6.25px;
+  margin-left: -6.25px;
+}
+.row:not(.row-fluid) .row,
+.row:not(.row-fluid) .clearfix {
+  zoom: 1;
+}
+.row:not(.row-fluid) .row .clearfix:before,
+.row:not(.row-fluid) .row .clearfix:after,
+.row:not(.row-fluid) .row .row:before,
+.row:not(.row-fluid) .row .row:after,
+.row:not(.row-fluid) .clearfix .clearfix:before,
+.row:not(.row-fluid) .clearfix .clearfix:after,
+.row:not(.row-fluid) .clearfix .row:before,
+.row:not(.row-fluid) .clearfix .row:after {
+  display: block;
+  visibility: hidden;
+  clear: both;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  table-layout: fixed;
+  content: " ";
+}
+.row:not(.row-fluid) .row .clearfix::after,
+.row:not(.row-fluid) .row .row::after,
+.row:not(.row-fluid) .clearfix .clearfix::after,
+.row:not(.row-fluid) .clearfix .row::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+.row.row-gutterless {
+  margin-left: 0;
+}
+.row.row-fluid {
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+.row::after {
+  display: table;
+  clear: both;
+  content: "";
+}
+.row > * {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+  margin-top: 0;
+  padding-right: 2.5px;
+  padding-left: 2.5px;
+}
+
+.row-fluid {
+  display: grid;
+  zoom: 1;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100vw;
+  margin-top: 10px;
+  margin-right: -6.25px;
+  margin-left: -6.25px;
+}
+.row-fluid:before, .row-fluid:after {
+  line-height: 0;
+  display: table;
+  content: "";
+}
+.row-fluid:after {
+  clear: both;
+}
+[class^=col] .row-fluid {
+  float: left;
+  min-height: 0.125rem;
+  margin: 0.5rem 2%;
+  padding: 10px 50px;
+}
+.row-fluid [class^=col] h2 {
+  text-align: left;
+}
+[class*=span] .row-fluid {
+  display: block;
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 30px;
+  margin-left: 2.5641025641%;
+  margin-left: 2.5109110747%;
+}
+[class*=span] .row-fluid:first-child {
+  margin-left: 0;
+}
+.row-fluid .controls-row [class*=span] + [class*=span] {
+  margin-left: 2.5641025641%;
+}
+
+.col {
+  float: left;
+  box-sizing: border-box;
+  width: divide(100%, 16);
+  padding-left: 5px;
+  flex-shrink: 0;
+  max-width: 100%;
+  margin-top: 5px;
+  padding-right: 6.25px;
+  padding-left: 6.25px;
+  flex: 0 0 auto;
+  width: divide(xs 0, 16);
+  width: divide(98%, 16);
+  margin-left: 6.25;
+  width: divide(98%, 16);
+  margin-left: 6.25;
+  width: divide(98%, 16);
+  margin-left: 6.25;
+  width: divide(98%, 16);
+  margin-left: 6.25;
+  width: divide(98%, 16);
+  margin-left: 6.25;
+  width: divide(98%, 16);
+  margin-left: 6.25;
+}
+.col .col-1 {
+  flex-basis: calc(divide(1, 16) * 100);
+}
+.col .col-2 {
+  flex-basis: calc(divide(2, 16) * 100);
+}
+.col .col-3 {
+  flex-basis: calc(divide(3, 16) * 100);
+}
+.col .col-4 {
+  flex-basis: calc(divide(4, 16) * 100);
+}
+.col .col-5 {
+  flex-basis: calc(divide(5, 16) * 100);
+}
+.col .col-6 {
+  flex-basis: calc(divide(6, 16) * 100);
+}
+.col .col-7 {
+  flex-basis: calc(divide(7, 16) * 100);
+}
+.col .col-8 {
+  flex-basis: calc(divide(8, 16) * 100);
+}
+.col .col-9 {
+  flex-basis: calc(divide(9, 16) * 100);
+}
+.col .col-10 {
+  flex-basis: calc(divide(10, 16) * 100);
+}
+.col .col-11 {
+  flex-basis: calc(divide(11, 16) * 100);
+}
+.col .col-12 {
+  flex-basis: calc(divide(12, 16) * 100);
+}
+.col .col-13 {
+  flex-basis: calc(divide(13, 16) * 100);
+}
+.col .col-14 {
+  flex-basis: calc(divide(14, 16) * 100);
+}
+.col .col-15 {
+  flex-basis: calc(divide(15, 16) * 100);
+}
+.col .col-16 {
+  flex-basis: calc(divide(16, 16) * 100);
+}
+.col .row-flex {
+  float: none;
+  flex-basis: divide(98%, 16);
+  width: auto;
+  max-width: 100%;
+}
+.col .col-1 {
+  flex-basis: calc(divide(1, 16) * 100);
+}
+.col .col-2 {
+  flex-basis: calc(divide(2, 16) * 100);
+}
+.col .col-3 {
+  flex-basis: calc(divide(3, 16) * 100);
+}
+.col .col-4 {
+  flex-basis: calc(divide(4, 16) * 100);
+}
+.col .col-5 {
+  flex-basis: calc(divide(5, 16) * 100);
+}
+.col .col-6 {
+  flex-basis: calc(divide(6, 16) * 100);
+}
+.col .col-7 {
+  flex-basis: calc(divide(7, 16) * 100);
+}
+.col .col-8 {
+  flex-basis: calc(divide(8, 16) * 100);
+}
+.col .col-9 {
+  flex-basis: calc(divide(9, 16) * 100);
+}
+.col .col-10 {
+  flex-basis: calc(divide(10, 16) * 100);
+}
+.col .col-11 {
+  flex-basis: calc(divide(11, 16) * 100);
+}
+.col .col-12 {
+  flex-basis: calc(divide(12, 16) * 100);
+}
+.col .col-13 {
+  flex-basis: calc(divide(13, 16) * 100);
+}
+.col .col-14 {
+  flex-basis: calc(divide(14, 16) * 100);
+}
+.col .col-15 {
+  flex-basis: calc(divide(15, 16) * 100);
+}
+.col .col-16 {
+  flex-basis: calc(divide(16, 16) * 100);
+}
+.col .row-flex {
+  float: none;
+  flex-basis: divide(98%, 16);
+  width: auto;
+  max-width: 100%;
+}
+.col .col-1 {
+  flex-basis: calc(divide(1, 16) * 100);
+}
+.col .col-2 {
+  flex-basis: calc(divide(2, 16) * 100);
+}
+.col .col-3 {
+  flex-basis: calc(divide(3, 16) * 100);
+}
+.col .col-4 {
+  flex-basis: calc(divide(4, 16) * 100);
+}
+.col .col-5 {
+  flex-basis: calc(divide(5, 16) * 100);
+}
+.col .col-6 {
+  flex-basis: calc(divide(6, 16) * 100);
+}
+.col .col-7 {
+  flex-basis: calc(divide(7, 16) * 100);
+}
+.col .col-8 {
+  flex-basis: calc(divide(8, 16) * 100);
+}
+.col .col-9 {
+  flex-basis: calc(divide(9, 16) * 100);
+}
+.col .col-10 {
+  flex-basis: calc(divide(10, 16) * 100);
+}
+.col .col-11 {
+  flex-basis: calc(divide(11, 16) * 100);
+}
+.col .col-12 {
+  flex-basis: calc(divide(12, 16) * 100);
+}
+.col .col-13 {
+  flex-basis: calc(divide(13, 16) * 100);
+}
+.col .col-14 {
+  flex-basis: calc(divide(14, 16) * 100);
+}
+.col .col-15 {
+  flex-basis: calc(divide(15, 16) * 100);
+}
+.col .col-16 {
+  flex-basis: calc(divide(16, 16) * 100);
+}
+.col .row-flex {
+  float: none;
+  flex-basis: divide(98%, 16);
+  width: auto;
+  max-width: 100%;
+}
+.col .col-1 {
+  flex-basis: calc(divide(1, 16) * 100);
+}
+.col .col-2 {
+  flex-basis: calc(divide(2, 16) * 100);
+}
+.col .col-3 {
+  flex-basis: calc(divide(3, 16) * 100);
+}
+.col .col-4 {
+  flex-basis: calc(divide(4, 16) * 100);
+}
+.col .col-5 {
+  flex-basis: calc(divide(5, 16) * 100);
+}
+.col .col-6 {
+  flex-basis: calc(divide(6, 16) * 100);
+}
+.col .col-7 {
+  flex-basis: calc(divide(7, 16) * 100);
+}
+.col .col-8 {
+  flex-basis: calc(divide(8, 16) * 100);
+}
+.col .col-9 {
+  flex-basis: calc(divide(9, 16) * 100);
+}
+.col .col-10 {
+  flex-basis: calc(divide(10, 16) * 100);
+}
+.col .col-11 {
+  flex-basis: calc(divide(11, 16) * 100);
+}
+.col .col-12 {
+  flex-basis: calc(divide(12, 16) * 100);
+}
+.col .col-13 {
+  flex-basis: calc(divide(13, 16) * 100);
+}
+.col .col-14 {
+  flex-basis: calc(divide(14, 16) * 100);
+}
+.col .col-15 {
+  flex-basis: calc(divide(15, 16) * 100);
+}
+.col .col-16 {
+  flex-basis: calc(divide(16, 16) * 100);
+}
+.col .row-flex {
+  float: none;
+  flex-basis: divide(98%, 16);
+  width: auto;
+  max-width: 100%;
+}
+.col .col-1 {
+  flex-basis: calc(divide(1, 16) * 100);
+}
+.col .col-2 {
+  flex-basis: calc(divide(2, 16) * 100);
+}
+.col .col-3 {
+  flex-basis: calc(divide(3, 16) * 100);
+}
+.col .col-4 {
+  flex-basis: calc(divide(4, 16) * 100);
+}
+.col .col-5 {
+  flex-basis: calc(divide(5, 16) * 100);
+}
+.col .col-6 {
+  flex-basis: calc(divide(6, 16) * 100);
+}
+.col .col-7 {
+  flex-basis: calc(divide(7, 16) * 100);
+}
+.col .col-8 {
+  flex-basis: calc(divide(8, 16) * 100);
+}
+.col .col-9 {
+  flex-basis: calc(divide(9, 16) * 100);
+}
+.col .col-10 {
+  flex-basis: calc(divide(10, 16) * 100);
+}
+.col .col-11 {
+  flex-basis: calc(divide(11, 16) * 100);
+}
+.col .col-12 {
+  flex-basis: calc(divide(12, 16) * 100);
+}
+.col .col-13 {
+  flex-basis: calc(divide(13, 16) * 100);
+}
+.col .col-14 {
+  flex-basis: calc(divide(14, 16) * 100);
+}
+.col .col-15 {
+  flex-basis: calc(divide(15, 16) * 100);
+}
+.col .col-16 {
+  flex-basis: calc(divide(16, 16) * 100);
+}
+.col .row-flex {
+  float: none;
+  flex-basis: divide(98%, 16);
+  width: auto;
+  max-width: 100%;
+}
+.col .col-1 {
+  flex-basis: calc(divide(1, 16) * 100);
+}
+.col .col-2 {
+  flex-basis: calc(divide(2, 16) * 100);
+}
+.col .col-3 {
+  flex-basis: calc(divide(3, 16) * 100);
+}
+.col .col-4 {
+  flex-basis: calc(divide(4, 16) * 100);
+}
+.col .col-5 {
+  flex-basis: calc(divide(5, 16) * 100);
+}
+.col .col-6 {
+  flex-basis: calc(divide(6, 16) * 100);
+}
+.col .col-7 {
+  flex-basis: calc(divide(7, 16) * 100);
+}
+.col .col-8 {
+  flex-basis: calc(divide(8, 16) * 100);
+}
+.col .col-9 {
+  flex-basis: calc(divide(9, 16) * 100);
+}
+.col .col-10 {
+  flex-basis: calc(divide(10, 16) * 100);
+}
+.col .col-11 {
+  flex-basis: calc(divide(11, 16) * 100);
+}
+.col .col-12 {
+  flex-basis: calc(divide(12, 16) * 100);
+}
+.col .col-13 {
+  flex-basis: calc(divide(13, 16) * 100);
+}
+.col .col-14 {
+  flex-basis: calc(divide(14, 16) * 100);
+}
+.col .col-15 {
+  flex-basis: calc(divide(15, 16) * 100);
+}
+.col .col-16 {
+  flex-basis: calc(divide(16, 16) * 100);
+}
+.col .row-flex {
+  float: none;
+  flex-basis: divide(98%, 16);
+  width: auto;
+  max-width: 100%;
+}
+.row-gutterless .col {
+  padding-left: 0;
+}
+.col .row-cols- {
+  float: left;
+  padding-right: 0.75em;
+}
+.col .row-cols- > * {
+  flex: 0 0 auto;
+  width: divide(100, 16);
+}
+
+.col-auto {
+  flex: 0 0 auto;
+  width: auto;
+}
+
+/*# sourceMappingURL=grid.css.map */

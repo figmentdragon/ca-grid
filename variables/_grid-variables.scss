@@ -9,8 +9,8 @@
 
 /* -------------------------------------------------------------------------- */
 
-  $utilities-bg-colors: $theme-colors;
-  $utilities-colors: $colors;
+$utilities-bg-colors: $theme-colors;
+$utilities-colors: $colors;
 
 /* -------------------------------------------------------------------------- */
 
@@ -52,7 +52,7 @@ $map-name: $breakpoint;
 
 @include assert-ascending($map, $map-name);
 @include assert-starts-at-zero($map, $map-name);
-@include assert-ascending($container-max-widths, "$container-max-widths");
+@include assert-ascending($container-max-widths, '$container-max-widths');
 
 /* -------------------------------------------------------------------------- */
 @import 'components';
@@ -62,38 +62,38 @@ $font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Co
 $cjmt-font-family: $cjmt-font-sans-serif;
 $font-code: 'Courier New';
 $font-size-root: null;
-$font-size-base:              1rem; // Assumes the browser default, typically `16px`
-$font-size-sm:                $font-size-base * .875;
-$font-size-lg:                $font-size-base * 1.25;
+$font-size-base: 1rem; // Assumes the browser default, typically `16px`
+$font-size-sm: $font-size-base * .875;
+$font-size-lg: $font-size-base * 1.25;
 
-$font-weight-lighter:         lighter;
-$font-weight-light:           300;
-$font-weight-normal:          400;
-$font-weight-bold:            700;
-$font-weight-bolder:          bolder;
+$font-weight-lighter: lighter;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+$font-weight-bolder: bolder;
 
-$font-weight-base:            $font-weight-normal;
+$font-weight-base: $font-weight-normal;
 
 $body-bg: #000100;
 $body-color: #e4edf4;
 $body-text-align: null;
 
-$line-height-base:            1.5;
-$line-height-sm:              1.25;
-$line-height-lg:              2;
+$line-height-base: 1.5;
+$line-height-sm: 1.25;
+$line-height-lg: 2;
 
-$h1-font-size:                $font-size-base * 2.5;
-$h2-font-size:                $font-size-base * 2;
-$h3-font-size:                $font-size-base * 1.75;
-$h4-font-size:                $font-size-base * 1.5;
-$h5-font-size:                $font-size-base * 1.25;
-$h6-font-size:                $font-size-base;
+$h1-font-size: $font-size-base * 2.5;
+$h2-font-size: $font-size-base * 2;
+$h3-font-size: $font-size-base * 1.75;
+$h4-font-size: $font-size-base * 1.5;
+$h5-font-size: $font-size-base * 1.25;
+$h6-font-size: $font-size-base;
 $colors: map-merge($colors, $theme-colors);
 
 $utilities-colors: map-merge(
   $utilities-colors,
   (
-    "body": to-rgb($body-color)
+    'body': to-rgb($body-color)
   )
 );
 

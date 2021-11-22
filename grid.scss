@@ -162,7 +162,7 @@ body
     {
         border-width: $border-width-md;
         border-style: solid;
-        border-color: $gray-200;
+        border-color: $cjmt-gray-200;
 
         @include make-container($gutter: $container-padding-x);
     }
