@@ -8,7 +8,8 @@
     "server": "serve --listen 3000",
     "compile:css": "node-sass --include-path node_modules --output-style compressed --source-map true --source-map-contents true --precision 6 scss -o assets/css/",
     "prefix:css": "postcss --replace assets/css/starter.css --use autoprefixer --map",
-    "start": "npm-run-all --parallel watch server"
+    "start": "npm-run-all --parallel watch:grid server",
+    "watch:grid": "sass --embed-sources grid.scss grid.css -w"
   },
   "repository": {
     "type": "git",

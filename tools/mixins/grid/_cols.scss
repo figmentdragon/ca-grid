@@ -1,0 +1,27 @@
+/* ##Columns generator## */
+@mixin make-col($size: $width, $columns: $grid-columns)
+{
+    flex-shrink: 0;
+
+    max-width: 100%;
+    margin-top: $gutter-y;
+    padding-right: calc($gutter-x * .5);
+    padding-left: calc($gutter-x * .5);
+
+    $name: nth($breakpoint, 1);
+    $declaration: nth($breakpoint, 2);
+    @if size
+    {
+        flex: 0 0 auto;
+
+        width: (divide($size, $columns));
+    }
+}
+
+@mixin make-col-offset($size, $columns: $grid-columns)
+{
+    width: divide($width, $grid-columns);
+    margin-left: 6.25;
+
+    $num: divide($size, $columns);
+}

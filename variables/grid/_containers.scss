@@ -11,3 +11,6 @@ xxl: 1320px
 /* Container padding */
 $container-padding-x: $grid-gutter * .5;
 $container-padding-y: $grid-gutter;
+
+$container-offset: (2 * $grid-gutter);
+$container-max-width: $fullhd;

@@ -1,13 +1,13 @@
 $white: #e4edf4;
-$gray-100: #c0c0c0;
-$gray-200: #9a9a9a;
-$gray-300: #7b7b7b;
-$gray-400: #626262;
-$gray-500: #4e4e4e;
-$gray-600: #3e3e3e;
-$gray-700: #323232;
-$gray-800: #282828;
-$gray-900: #1a1a1a;
+$cjmt-gray-100: #c0c0c0;
+$cjmt-gray-200: #9a9a9a;
+$cjmt-gray-300: #7b7b7b;
+$cjmt-gray-400: #626262;
+$cjmt-gray-500: #4e4e4e;
+$cjmt-gray-600: #3e3e3e;
+$cjmt-gray-700: #323232;
+$cjmt-gray-800: #282828;
+$cjmt-gray-900: #1a1a1a;
 $black: #000100;
 
 $grays: (
@@ -19,7 +19,7 @@ $grays: (
   600: $gray-600,
   700: $gray-700,
   800: $gray-800,
-  900: $gray-900
+  900: $cjmt-gray-900
 );
 
 $blue:    #0d6efd;
@@ -33,9 +33,9 @@ $green:   #198754;
 $teal:    #20c997;
 $cyan:    #0dcaf0;
 $brown: #623412;
-$gray: $gray-600;
-$dark: $gray-900;
-$light: $gray-100;
+$cjmt-gray: $cjmt-gray-600;
+$dark: $cjmt-gray-900;
+$light: $cjmt-gray-100;
 
 $colors: (
 'blue': $blue,
@@ -60,7 +60,7 @@ $warning:    $orange;
 $danger:     $red;
 $light:      $light;
 $dark:       $dark;
-$text-muted: $gray-500;
+$text-muted: $cjmt-gray-500;
 
 
 $theme-colors: (

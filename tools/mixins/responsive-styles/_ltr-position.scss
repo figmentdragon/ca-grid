@@ -1,0 +1,9 @@
+@mixin ltr-position($spacing, $right: true) {
+  $normal: if($right, 'right', 'left');
+  $opposite: if($right, 'left', 'right');
+  @if $rtl {
+    #{$opposite}: $spacing;
+  } @else {
+    #{$normal}: $spacing;
+  }
+}

@@ -1,0 +1,19 @@
+@mixin ltr-property($property, $spacing, $right: true) {
+  $normal: if($right, 'right', 'left');
+  $opposite: if($right, 'left', 'right');
+  @if rtl {
+    #{$property}-#{$opposite}: $spacing;
+  } @else {
+    #{$property}-#{$normal}: $spacing;
+  }
+}
+
+@mixin ltr-property($property: margin, $spacing: $level-item-spacing, $right: true) {
+  $normal: if($right, 'right', 'left');
+  $opposite: if($right, 'left', 'right');
+  @if rtl {
+    #{$property}-#{$opposite}: $spacing;
+  } @else {
+    #{$property}-#{$normal}: $spacing;
+  }
+}

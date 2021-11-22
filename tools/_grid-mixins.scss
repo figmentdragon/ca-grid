@@ -27,7 +27,7 @@
 // Layout
 @import
   'mixins/container',
-  'mixins/grid-breakpoint',
-  'mixins/grid',
+  'mixins/responsive-style',
   'mixins/media-query',
-  'mixins/responsive-style';
+  'mixins/grid',
+  'mixins/ltr';

@@ -1,7 +1,8 @@
 @use 'grid-mixins';
 
 @import
- 'helpers/clearfix',
- 'helpers/media-query',
- 'helpers/position',
- 'helpers/ratio';
+  'helpers/alignment',
+  'helpers/clearfix',
+  'helpers/media-query',
+  'helpers/position',
+  'helpers/ratio';
