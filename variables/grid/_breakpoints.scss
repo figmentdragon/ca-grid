@@ -18,6 +18,7 @@ $breakpoint-lg: 992px;
 $breakpoint-xl: 1200px;
 $breakpoint-xxl: 1400px;
 
+
 $breakpoint: (
     'xxl' '(min-width: ' + ($breakpoint-xl + 1) + ') and (max-width: ' + $breakpoint-xxl + ')',
     'xl' '(min-width: ' + ($breakpoint-lg + 1) + ') and (max-width: ' + $breakpoint-xl + ')',

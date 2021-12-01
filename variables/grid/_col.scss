@@ -18,7 +18,7 @@
 
 .col-1 { width: calc(divide($width, 16) - calc($gutter * divide(15, 16))); }
 .col-2 { width: calc(divide($width, 2) - calc($gutter * divide(14, 16))); }
-.col-3 { width: calc(divide($width, (16  3)) - calc($gutter * divide(13, 16))); }
+.col-3 { width: calc(divide($width, (16,  3)) - calc($gutter * divide(13, 16))); }
 .col-4 { width: calc(divide($width, 4) - calc($gutter * divide(12, 16))); }
 .col-5 { width: calc(divide($width, (16, 5)) - calc($gutter * divide(11, 16))); }
 .col-6 { width: calc(divide($width, (16, 6)) - calc($gutter * divide(10, 16))); }

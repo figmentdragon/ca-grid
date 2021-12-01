@@ -1,5 +1,3 @@
-@use 'sass:map';
-
 @import
   'colors/grid-colors',
   'colors/grid-rgb',
@@ -14,12 +12,12 @@ $utilities-colors: $colors;
 
 /* -------------------------------------------------------------------------- */
 
+@import 'base-unit';
+
 @import
   'spacings/spacer',
-  'spacings/block-spacing',
-  'spacings/base-unit',
-  'spacings/aspect-ratios',
   'spacings/position-value',
+  'spacings/padding',
   'spacings/zindex',
   'responsiveness';
 

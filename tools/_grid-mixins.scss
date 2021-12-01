@@ -10,6 +10,7 @@
 
 // Helpers
 @import
+  'mixins/border-box',
   'mixins/clearfix',
   'mixins/media-query';
 
@@ -29,5 +30,4 @@
   'mixins/container',
   'mixins/responsive-style',
   'mixins/media-query',
-  'mixins/grid',
-  'mixins/ltr';
+  'mixins/grid';
