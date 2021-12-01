@@ -6,7 +6,6 @@
 {
     display: grid;
 
-    box-sizing: if(variable-exists(include-column-box-sizing) and $include-column-box-sizing, border-box, null);
     width: 100%;
     height: 100%;
 
@@ -18,12 +17,12 @@
 
 
 @mixin grid-loop($name) {
-  @include make-col-ready($gutter: $grid-gutter-width);
+  @include make-col-ready($gutter: $grid-gutter);
   @if $size {
     flex: 0 0 auto;
-  @for $i from 1 through $grid-columns{
+    @for $i from 1 through $grid-columns{
     .col-#{$i} {
-        width: calc(divide($width, $columns) * $i);
+        width: calc(divide($width, $grid-columns) * $i);
     }
   }
   .row-flex {
@@ -32,4 +31,5 @@
     width: auto;
     max-width: 100%;
   }
+}
 }

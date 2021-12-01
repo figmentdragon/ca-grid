@@ -1,5 +1,3 @@
-@use 'sass:map';
-
 /******************************************************************
 Site Name: The Creativity Architect
 Author: CJM Termini
@@ -12,288 +10,218 @@ possible. This is called at the top of the main stylsheet
 and will be used across all viewports.
 
 ******************************************************************/
-$enable-caret: true;
-$enable-rounded: true;
-$enable-shadows: true;
-$enable-gradients: true;
-$enable-transitions: true;
-$enable-reduced-motion: true;
-$enable-smooth-scroll: true;
 $enable-grid-classes: true;
 $enable-container-classes: true;
 $enable-cssgrid: true;
-$enable-button-pointers: true;
 $enable-rfs: true;
-$enable-validation-icons: true;
-$enable-negative-margins: true;
-$enable-deprecation-messages: true;
 $enable-important-utilities: true;
-
 $include-column-box-sizing: true;
-$variable-prefix: grid;
-
+$variable-prefix: grid-;
 @import 'tools/grid-functions';
 @import 'variables/grid-variables';
 @import 'tools/grid-mixins';
 @import 'tools/root';
-
 @import 'tools/utils/utilities';
-
 @import 'tools/grid-helpers';
-
-@import
-  'tools/utils/api';
-
-
+@import 'tools/utils/api';
 /*********************
 GENERAL STYLES
 *********************/
-
-html,
-body
-{
-    font-size: 100%;
-
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-
-    overflow: hidden;
-
-    width: 100vw;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
+*,
+*::after,
+*::before,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+body,
+html {
+  font-size: 100%;
 
-[class^='container-']
-{
+  overflow: hidden;
+
+  height: 100vh;
+  margin: 0;
+  padding-left: 8vw;
+}
+
+.container,
+[class^='container-'],
+.container-fluid {
+  @include make-container($gutter: $container-padding-x);
+  border-width: medium;
+  border-style: solid;
+  border-color: red{$color: #dc3545};
+  border-radius: $border-radius;
+  zoom: 1;
+  padding-right: 20px;
+  padding-left: 20px;
+  @include desktop {
+    max-width: $desktop - $container-offset;
+  }
+  @include until-widescreen {
+    &.is-widescreen:not(.is-max-desktop) {
+      max-width: min($widescreen, $container-max-width) - $container-offset;
+    }
+  }
+  @include until-fullhd {
+    &.is-fullhd:not(.is-max-desktop):not(.is-max-widescreen) {
+      max-width: min($fullhd, $container-max-width) - $container-offset;
+    }
+  }
+  @include widescreen {
+    &:not(.is-max-desktop) {
+      max-width: min($widescreen, $container-max-width) - $container-offset;
+    }
+  }
+  @include fullhd {
+    &:not(.is-max-desktop):not(.is-max-widescreen) {
+      max-width: min($fullhd, $container-max-width) - $container-offset;
+    }
+  }
+
+  &:after,
+  &:before {
+    line-height: 0;
+    display: table;
+    content: '';
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+.grid {
+  @include make-grid();
+  @include grid-loop($name);
+  @include resp-min($breakpoint-sm) {
+    grid-gap: div($grid-gutter, 2);
+  }
+  @each $breakpoint in $grid-breakpoints {
+    $name: nth($breakpoint, 1);
+    $declaration: nth($breakpoint, 2);
+    @media only screen and ($declaration) {
+      grid-template-columns: repeat($grid-columns, 1fr);
+    }
+  }
+
+  > * {
     border-width: medium;
     border-style: solid;
-    border-color: $active;
-    border-radius: $border-radius;
-}
-
-.container
-{
+    border-color: blue{$color: #0d6efd};
     @include make-container($gutter: $container-padding-x);
+  }
 }
 
-.container-fluid
-{
-    zoom: 1;
+.row {
+  list-style: none;
+  @include make-row;
+  $gutter-x: $grid-gutter;
+  $gutter-y: 0;
 
-    padding-right: 20px;
-    padding-left: 20px;
+  &:not(.row-fluid) {
+    @include clearfix;
+  }
 
-    @include make-container($gutter: $container-padding-x);
-    @include desktop
-    {
-        max-width: $desktop - $container-offset;
-    }
-    @include until-widescreen
-    {
-        &.is-widescreen:not(.is-max-desktop)
-        {
-            max-width: min($widescreen, $container-max-width) - $container-offset;
-        }
-    }
-    @include until-fullhd
-    {
-        &.is-fullhd:not(.is-max-desktop):not(.is-max-widescreen)
-        {
-            max-width: min($fullhd, $container-max-width) - $container-offset;
-        }
-    }
-    @include widescreen
-    {
-        &:not(.is-max-desktop)
-        {
-            max-width: min($widescreen, $container-max-width) - $container-offset;
-        }
-    }
-    @include fullhd
-    {
-        &:not(.is-max-desktop):not(.is-max-widescreen)
-        {
-            max-width: min($fullhd, $container-max-width) - $container-offset;
-        }
-    }
+  &.row-gutterless {
+    margin-left: 0;
+  }
 
-    .container-fluid:before,
-    .container-fluid:after
-    {
-        line-height: 0;
+  &.row-fluid {
+    display: inline-flex;
+    flex-wrap: wrap;
+  }
 
-        display: table;
+  &::after {
+    display: table;
+    clear: both;
+    content: '';
+  }
 
-        content: '';
-    }
-    &:after
-    {
-        clear: both;
-    }
-}
-
-
-.grid
-{
-    @include make-grid();
-    @include grid-loop($name);
-    @include resp-min($breakpoint-sm)
-    {
-        grid-gap: div($base-unit, 2);
-    }
-
-    @each $breakpoint in $grid-breakpoints
-    {
-        $name: nth($breakpoint, 1);
-        $declaration: nth($breakpoint, 2);
-
-        @media only screen and ($declaration)
-        {
-            grid-template-columns: repeat($grid-columns,  1fr);
-        }
-    }
-    > *
-    {
-        border-width: $border-width-md;
-        border-style: solid;
-        border-color: $cjmt-gray-200;
-
-        @include make-container($gutter: $container-padding-x);
-    }
-}
-
-.row
-{
-    list-style: none;
-
-    @include make-row;
-    $gutter-x: $grid-gutter;
-    $gutter-y: 0;
-
-    &:not(.row-fluid)
-    {
-        @include clearfix;
-    }
-    &.row-gutterless
-    {
-        margin-left: 0;
-    }
-    &.row-fluid
-    {
-        display: inline-flex;
-        flex-wrap: wrap;
-    }
-    &::after
-    {
-        display: table;
-        clear: both;
-
-        content: '';
-    }
-    > *
-    {
-        flex-shrink: 0;
-
-        width: 100%;
-        max-width: 100%;
-        margin-top: $gutter-y;
-        padding-right: calc($gutter-x * .5);
-        padding-left: calc($gutter-x * .5);
-    }
-}
-
-.row-fluid
-{
-    display: grid;
-    zoom: 1;
-
+  > * {
+    flex-shrink: 0;
     width: 100%;
-
-    @include make-row;
-
-    &:before,
-    &:after
-    {
-        line-height: 0;
-
-        display: table;
-
-        content: '';
-    }
-    &:after
-    {
-        clear: both;
-    }
-    [class^='col'] &
-    {
-        float: left;
-
-        min-height: .125rem;
-        margin: .5rem 2%;
-        padding: 10px 50px;
-    }
-    [class^='col'] h2
-    {
-        text-align: left;
-    }
-    [class*='span'] &
-    {
-        display: block;
-        float: left;
-
-        -webkit-box-sizing: border-box;
-           -moz-box-sizing: border-box;
-                box-sizing: border-box;
-        width: 100%;
-        min-height: 30px;
-        margin-left: 2.564102564102564%;
-        margin-left: 2.5109110747408616%;
-
-        &:first-child
-        {
-            margin-left: 0;
-        }
-    }
-    & .controls-row [class*='span'] + [class*='span']
-    {
-        margin-left: 2.564102564102564%;
-    }
+    max-width: 100%;
+    margin-top: $gutter-y;
+    padding-right: calc($gutter-x * .5);
+    padding-left: calc($gutter-x * .5);
+  }
 }
 
+.row-fluid {
+  display: grid;
+  zoom: 1;
+  width: 100%;
+  @include make-row;
 
-.col
-{
+  &:after,
+  &:before {
+    line-height: 0;
+    display: table;
+    content: '';
+  }
+
+  &:after {
+    clear: both;
+  }
+
+  [class^='col'] & {
     float: left;
+    min-height: 0.125rem;
+    margin: 0.5rem 2%;
+    padding: 10px 50px;
+  }
 
+  [class^='col'] h2 {
+    text-align: left;
+  }
+
+  [class*='span'] & {
+    display: block;
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
-    width: divide(100%, $grid-columns);
-    padding-left: $grid-gutter;
+    width: 100%;
+    min-height: 30px;
+    margin-left: 2.564102564102564%;
+    margin-left: 2.5109110747408616%;
 
-    @include make-col($size, $columns: $grid-columns);
-    @each $breakpoint in $grid-breakpoints
-    {
-        $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
-        @include grid-loop($name);
+    &:first-child {
+      margin-left: 0;
     }
-    .row-gutterless &
-    {
-        padding-left: 0;
-    }
-    .row-cols-
-    {
-        @include row-cols;
-    }
+  }
+
+  & .controls-row [class*='span'] + [class*='span'] {
+    margin-left: 2.564102564102564%;
+  }
 }
 
-.col-auto
-{
-    flex: 0 0 auto;
+.col {
+  float: left;
+  box-sizing: border-box;
+  width: divide(100%, $grid-columns);
+  padding-left: $grid-gutter;
+  @include make-col($size, $columns: $grid-columns);
+  @each $breakpoint in $grid-breakpoints {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+    @include grid-loop($name);
+  }
 
-    width: auto;
+  .row-gutterless & {
+    padding-left: 0;
+  }
+
+  .row-cols- {
+    @include row-cols;
+  }
+}
+
+.col-auto {
+  flex: 0 0 auto;
+  width: auto;
 }

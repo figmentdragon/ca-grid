@@ -1,5 +1,5 @@
 /* ##Columns generator## */
-@mixin make-col-ready($gutter: $grid-gutter-width) {
+@mixin make-col-ready($gutter: $grid-gutter) {
   /* Add box sizing if only the grid is loaded*/
   box-sizing: if(variable-exists(include-column-box-sizing) and $include-column-box-sizing, border-box, null);
   /* Prevent columns from becoming too narrow when at smaller grid tiers by always setting `width: 100%;`. This works because we set the width later on to override this initial width. */
@@ -16,7 +16,9 @@
 @mixin make-col($size: false, $columns: $grid-columns) {
   @if $size {
     flex: 0 0 auto;
-    width: divide($size, $columns);
+    @for $i from 1 through $grid-columns {
+    width: calc(divide($width, $columns));
+  }
   } @else {
     flex: 1 1 0;
     max-width: 100%;

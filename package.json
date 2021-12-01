@@ -1,0 +1,33 @@
+{
+  "name": "cjmt_grid",
+  "version": "2.0.0",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {
+    "bootstrap": "^5.1.3",
+    "bulma": "^0.9.3",
+    "purgecss": "^4.1.3",
+    "sass": "^1.44.0",
+    "scss": "^0.2.4",
+    "serve": "^13.0.2"
+  },
+  "scripts": {
+    "test": "tst",
+    "watch": "sass --embed-sources --embed-source-map grid.scss grid.css -w",
+    "server": "serve --listen 3000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/figmentdragon/cjmt_grid.git"
+  },
+  "author": "cjmt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/figmentdragon/cjmt_grid/issues"
+  },
+  "homepage": "https://github.com/figmentdragon/cjmt_grid#readme",
+  "dependencies": {
+    "css": "^3.0.0",
+    "flexbox": "^0.0.3"
+  }
+}

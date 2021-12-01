@@ -5,21 +5,11 @@
   right: 0;
   bottom: 0;
   left: 0;
-  display: grid-inline;
-  float: left;
+  display: inline-grid;
   align-items: left;
   justify-content: flex-start;
-  width: 95%;
-  max-width: $grid-max-width;
-  margin: 0;
+  width: $grid-max-width;
+  margin: auto;
   padding-top: $gutter-y * 2;
   padding-bottom: $gutter-y;
-  border-radius: $border-radius-md;
-}
-@mixin make-container-style() {
-  border-width: $border-width-focus;
-  border-style: solid;
-  border-style: hidden;
-  border-color: $border-color;
-  border-radius: $border-radius;
 }

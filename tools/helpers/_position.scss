@@ -3,7 +3,7 @@
 .fixed-top
 {
     position: fixed;
-    z-index: $zindex-fixed;
+    z-index: $z-index-fixed;
     top: 0;
     right: 0;
     left: 0;
@@ -12,7 +12,7 @@
 .fixed-bottom
 {
     position: fixed;
-    z-index: $zindex-fixed;
+    z-index: $z-index-fixed;
     right: 0;
     bottom: 0;
     left: 0;
