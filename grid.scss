@@ -27,6 +27,8 @@ $variable-prefix: grid-;
 @import 'tools/utils/utilities';
 @import 'tools/grid-helpers';
 @import 'tools/utils/api';
+
+@import 'production';
 /*********************
 GENERAL STYLES
 *********************/
@@ -43,25 +45,26 @@ GENERAL STYLES
 body,
 html {
   font-size: 100%;
-
   overflow: hidden;
-
   height: 100vh;
+  margin: 0
+}
+
+.page {
+  display: grid;
+  width: 100%;
+  height: 100%;
   margin: 0;
-  padding-left: 8vw;
+  padding: 0.25rem 1rem;
 }
 
 .container,
 [class^='container-'],
 .container-fluid {
   @include make-container($gutter: $container-padding-x);
-  border-width: medium;
-  border-style: solid;
-  border-color: red{$color: #dc3545};
-  border-radius: $border-radius;
-  zoom: 1;
-  padding-right: 20px;
-  padding-left: 20px;
+  height: 100%;
+  padding-right: 2rem;
+  padding-left: 3rem;
   @include desktop {
     max-width: $desktop - $container-offset;
   }

@@ -14,7 +14,8 @@
   "scripts": {
     "test": "tst",
     "watch": "sass --embed-sources --embed-source-map grid.scss grid.css -w",
-    "server": "serve --listen 3000"
+    "server": "serve --listen 3000",
+    "grid": "sass --embed-sources --embed-source-map grid.scss grid.css -w"
   },
   "repository": {
     "type": "git",

@@ -1,0 +1,41 @@
+@mixin production-border() {
+  border-width: medium;
+  border-style: solid;
+  border-radius: .75rem;
+}
+
+@mixin make-masthead-grid() {
+  grid-template-columns: repeat($grid-columns, 1fr);
+  grid-auto-rows: 1;
+}
+
+.page {
+  @include production-border();
+  border-color: $red;
+}
+
+.container,
+[class^='container-'],
+.container-fluid {
+  @include production-border();
+  border-color: $orange;
+  background: $cjmt-gray-700;
+}
+
+.grid {
+  @include production-border();
+  border-color: $yellow;
+  background: $cjmt-gray-500
+}
+
+.row {
+  @include production-border();
+  border-color: $green;
+  background: $cjmt-gray-300
+}
+
+.col {
+  @include production-border();
+  border-color: $blue;
+  background: $cjmt-gray-100
+}
