@@ -10,19 +10,20 @@ possible. This is called at the top of the main stylsheet
 and will be used across all viewports.
 
 ******************************************************************/
-$enable-grid-classes: true;
-$enable-container-classes: true;
-$enable-cssgrid: true;
-$enable-rfs: true;
-$enable-important-utilities: true;
-$include-column-box-sizing: true;
-$variable-prefix: grid-;
+
 @import 'tools/functions/breakpoint';
 @import 'variables/colors/colors';
-@import 'variables/grid/breakpoints', 'variables/grid/variables', 'variables/grid/containers';
-@import 'tools/grid-mixins';
-@import 'tools/grid-helpers';
-@import 'tools/utils/rfs';
+@import 'variables/grid/breakpoints';
+@import 'variables/grid/variables';
+@import 'variables/grid/containers';
+@import 'tools/mixins/media-breakpoint';
+@import 'tools/mixins/border-box';
+@import 'tools/mixins/clearfix';
+@import 'tools/mixins/container';
+@import 'tools/mixins/grid/grid';
+@import 'tools/mixins/grid/cols';
+@import 'tools/mixins/grid/rows';
+@import 'tools/mixins/grid/grid-breakpoint';
 @import 'production';
 $size: nth($grid-breakpoints, 1);
 $name: nth($grid-breakpoints, 1);
@@ -87,6 +88,7 @@ html {
     border-width: medium;
     border-style: solid;
   }
+  @include grid-breakpoint();
 }
 
 .row {

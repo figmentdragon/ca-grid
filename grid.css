@@ -28,167 +28,11 @@ and will be used across all viewports.
   height: 0;
 }
 
-/**
- * Repsonsive Styles
- */
-/**
- * Required Variables
- */
 /* Grid system */
 /* Generate semantic grid columns with these mixins. */
+/* ##Columns generator## */
 /* Row columns*/
 /* Specify on a parent element(e.g., .row) to force immediate children into NN numberof columns. Supports wrapping to new lines, but does not do a Masonry style grid.*/
-/* ##Columns generator## */
-/* You can also use a <br class="clear" /> to clear columns */
-.clear {
-  display: block;
-  visibility: hidden;
-  clear: both;
-  overflow: hidden;
-  width: 0;
-  height: 0;
-}
-
-/**
- * Repsonsive Styles
- */
-/**
- * Required Variables
- */
-/* Grid system */
-/* Generate semantic grid columns with these mixins. */
-/* Row columns*/
-/* Specify on a parent element(e.g., .row) to force immediate children into NN numberof columns. Supports wrapping to new lines, but does not do a Masonry style grid.*/
-/* ##Columns generator## */
-.left {
-  text-align: left;
-}
-
-.right {
-  text-align: right;
-}
-
-.center {
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.justify {
-  text-align: justify;
-}
-
-.hidden-sm {
-  display: none;
-}
-
-.flex-fill {
-  flex: 1 1 auto !important;
-}
-
-.flex-row {
-  flex-direction: row !important;
-}
-
-.flex-column {
-  flex-direction: column !important;
-}
-
-.flex-row-reverse {
-  flex-direction: row-reverse !important;
-}
-
-.flex-column-reverse {
-  flex-direction: column-reverse !important;
-}
-
-.flex-grow-0 {
-  flex-grow: 0 !important;
-}
-
-.flex-grow-1 {
-  flex-grow: 1 !important;
-}
-
-.flex-shrink-0 {
-  flex-shrink: 0 !important;
-}
-
-.flex-shrink-1 {
-  flex-shrink: 1 !important;
-}
-
-.flex-wrap {
-  flex-wrap: wrap !important;
-}
-
-.flex-nowrap {
-  flex-wrap: nowrap !important;
-}
-
-.flex-wrap-reverse {
-  flex-wrap: wrap-reverse !important;
-}
-
-.clearfix .row,
-.clearfix .clearfix {
-  zoom: 1;
-}
-.clearfix .row .clearfix:before,
-.clearfix .row .clearfix:after,
-.clearfix .row .row:before,
-.clearfix .row .row:after,
-.clearfix .clearfix .clearfix:before,
-.clearfix .clearfix .clearfix:after,
-.clearfix .clearfix .row:before,
-.clearfix .clearfix .row:after {
-  display: block;
-  visibility: hidden;
-  clear: both;
-  overflow: hidden;
-  width: 0;
-  height: 0;
-  table-layout: fixed;
-  content: " ";
-}
-.clearfix .row .clearfix::after,
-.clearfix .row .row::after,
-.clearfix .clearfix .clearfix::after,
-.clearfix .clearfix .row::after {
-  display: block;
-  clear: both;
-  content: "";
-}
-
-/**
- * Root Media Query Variables
- */
-/**
- * Root Media Query Variables
- */
-/**
- * Extends
- */
-.default-max-width {
-  max-width: calc(100vw - 33vh);
-  margin-right: auto;
-  margin-left: auto;
-}
-
-.wide-max-width {
-  max-width: calc(100vw - 4vh);
-  margin-right: auto;
-  margin-left: auto;
-}
-
-@media only screen and (min-width: 576px) {
-  .full-max-width {
-    width: auto;
-    max-width: 100%;
-    margin-right: auto;
-    margin-left: auto;
-  }
-}
 .page {
   border-width: medium;
   border-style: solid;
@@ -198,7 +42,12 @@ and will be used across all viewports.
 
 .container,
 [class^=container-],
-.container-fluid {
+.container-fluid,
+.grid .container-xxl,
+.grid .container-xl,
+.grid .container-lg,
+.grid .container-md,
+.grid .container-sm {
   border-width: medium;
   border-style: solid;
   border-radius: 0.75rem;
@@ -265,7 +114,12 @@ html {
 
 .container,
 [class^=container-],
-.container-fluid {
+.container-fluid,
+.grid .container-xxl,
+.grid .container-xl,
+.grid .container-lg,
+.grid .container-md,
+.grid .container-sm {
   display: inline;
   align-items: left;
   justify-content: flex-start;
@@ -284,14 +138,29 @@ html {
 [class^=container-]:after,
 [class^=container-]:before,
 .container-fluid:after,
-.container-fluid:before {
+.grid .container-xxl:after,
+.grid .container-xl:after,
+.grid .container-lg:after,
+.grid .container-md:after,
+.grid .container-sm:after,
+.container-fluid:before,
+.grid .container-xxl:before,
+.grid .container-xl:before,
+.grid .container-lg:before,
+.grid .container-md:before,
+.grid .container-sm:before {
   line-height: 0;
   display: table;
   content: "";
 }
 .container:after,
 [class^=container-]:after,
-.container-fluid:after {
+.container-fluid:after,
+.grid .container-xxl:after,
+.grid .container-xl:after,
+.grid .container-lg:after,
+.grid .container-md:after,
+.grid .container-sm:after {
   clear: both;
 }
 
@@ -309,7 +178,21 @@ html {
   border-width: medium;
   border-style: solid;
 }
-
+.grid .containersm- sm, .grid sm {
+  max-width: 576px;
+}
+.grid .containermd- md, .grid md {
+  max-width: 768px;
+}
+.grid .containerlg- lg, .grid lg {
+  max-width: 992px;
+}
+.grid .containerxl- xl, .grid xl {
+  max-width: 1200px;
+}
+.grid .containerxxl- xxl, .grid xxl {
+  max-width: 1400px;
+}
 .row {
   list-style: none;
   margin-left: -1rem;
@@ -418,7 +301,7 @@ html {
   }
   .col .row-flex {
     float: none;
-    flex-basis: 6.25;
+    flex-basis: divide(100, 16);
     width: auto;
     max-width: 100%;
   }
@@ -474,7 +357,7 @@ html {
   }
   .col .row-flex {
     float: none;
-    flex-basis: 6.25;
+    flex-basis: divide(100, 16);
     width: auto;
     max-width: 100%;
   }
@@ -530,7 +413,7 @@ html {
   }
   .col .row-flex {
     float: none;
-    flex-basis: 6.25;
+    flex-basis: divide(100, 16);
     width: auto;
     max-width: 100%;
   }
@@ -586,7 +469,7 @@ html {
   }
   .col .row-flex {
     float: none;
-    flex-basis: 6.25;
+    flex-basis: divide(100, 16);
     width: auto;
     max-width: 100%;
   }
@@ -642,7 +525,7 @@ html {
   }
   .col .row-flex {
     float: none;
-    flex-basis: 6.25;
+    flex-basis: divide(100, 16);
     width: auto;
     max-width: 100%;
   }
@@ -698,10 +581,10 @@ html {
   }
   .col .row-flex {
     float: none;
-    flex-basis: 6.25;
+    flex-basis: divide(100, 16);
     width: auto;
     max-width: 100%;
   }
 }
 
-/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22grid.scss%22,%22variables/grid/_breakpoints.scss%22,%22variables/grid/_variables.scss%22,%22variables/grid/_containers.scss%22,%22tools/mixins/_clearfix.scss%22,%22tools/mixins/_responsive-style.scss%22,%22tools/mixins/grid/_grid.scss%22,%22tools/mixins/grid/_rows.scss%22,%22tools/mixins/grid/_cols.scss%22,%22tools/helpers/alignments/_alignments.scss%22,%22tools/helpers/alignments/_flex.scss%22,%22tools/helpers/_media-query.scss%22,%22production.scss%22,%22variables/colors/_colors.scss%22,%22tools/mixins/_border-box.scss%22,%22tools/mixins/_container.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAAA;AAAA;AAAA;;AAAA;;AAAA;AAAA;AAAA;AAAA;;AAAA;ACEA;AACA;ACHA;AACA;AACA;ACFA;AACA;AASA;AC4BA;AACA;EAEI;EACA;EACA;EACA;EAEA;EACA;;;AC/CJ;AAAA;AAAA;AAIA;AAAA;AAAA;ACJA;AACA;ACaA;AACA;ACfA;AJsCA;AACA;EAEI;EACA;EACA;EACA;EAEA;EACA;;;AC/CJ;AAAA;AAAA;AAIA;AAAA;AAAA;ACJA;AACA;ACaA;AACA;ACfA;ACCA;EACE;;;AAGF;EACE;;;AAGF;EACE;EACA;EACA;;;AAGF;EACE;;;AAGF;EACE;;;ACpBF;EACE;;;AAGF;EACE;;;AAGF;EACE;;;AAGF;EACE;;;AAGF;EACE;;;AAGF;EACE;;;AAGF;EACE;;;AAGF;EACE;;;AAGF;EACE;;;AAGF;EACE;;;AAGF;EACE;;;AAGF;EACE;;;AN1CE;AAAA;EAGI;;AAEA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;EAKI;EACA;EACA;EACA;EAEA;EACA;EAEA;EAEA;;AAGJ;AAAA;AAAA;AAAA;EAGI;EACA;EAEA;;;AOhCZ;AAAA;AAAA;AAWA;AAAA;AAAA;AAoCA;AAAA;AAAA;AAGA;EAEI;EACA;EACA;;;AAGJ;EAEI;EACA;EACA;;;AN/BF;EM4CE;IAEI;IACA;IACA;IACA;;;ACpER;EAVE;EACA;EACA;EAUA,cCeQ;;;ADZV;AAAA;AAAA;EAfE;EACA;EACA;EAiBA,cCSQ;EDRR,YCdS;;;ADiBX;EAvBE;EACA;EACA;EAuBA,cCIQ;EDHR,YCtBS;;;ADyBX;AAAA;EA7BE;EACA;EACA;EA8BA,cCFQ;EDGR,YC/BS;;;ADkCX;EApCE;EACA;EACA;EAoCA,cCfQ;EDgBR,YCvCS;;;Ab6BX;AAAA;AAAA;AAGA;AAAA;AAAA;AAAA;AAAA;EAKE;EACA;EctCE;EACA;EACA;;;AdwCJ;AAAA;EAEE;EACA;EACA;EACA;EACA;;;AAGF;EACE;EACA;EACA;EACA;EACA;;;AAGF;AAAA;AAAA;Ee1DE;EACA;EACA;EACA;EACA;EACA,gBbHY;EaIZ;EACA;EfuDA;EACA;EACA;EACA;EACA;;AAEA;AAAA;AAAA;AAAA;AAAA;EAEE;EACA;EACA;;AAGF;AAAA;AAAA;EACE;;;AAIJ;EM/EE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AN2EA;EACE;EACA;;;AAIJ;EACE;EACA;EOxFA;EOJE;EACA;EACA;EPIF;EACA;EACA;EACA;;AHPE;AAAA;EAGI;;AAEA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;EAKI;EACA;EACA;EACA;EAEA;EACA;EAEA;EAEA;;AAGJ;AAAA;AAAA;AAAA;EAGI;EACA;EAEA;;AJmEV;EACE;;AAGF;EACE;EACA;;;AAIJ;EACE;EACA,cE3GY;EF4GZ;;AAEA;EACE;;AAOA;EQrGE;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EFRJ;IACE;IACA;IACA;IACA;;;ANwGF;EQrGE;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EFRJ;IACE;IACA;IACA;IACA;;;ANwGF;EQrGE;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EFRJ;IACE;IACA;IACA;IACA;;;ANwGF;EQrGE;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EFRJ;IACE;IACA;IACA;IACA;;;ANwGF;EQrGE;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EFRJ;IACE;IACA;IACA;IACA;;;ANwGF;EQrGE;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EFRJ;IACE;IACA;IACA;IACA%22,%22file%22:%22grid.css%22,%22sourcesContent%22:%5B%22/******************************************************************%5CnSite%20Name:%20The%20Creativity%20Architect%5CnAuthor:%20CJM%20Termini%5Cn%5CnStylesheet:%20CJMT%20Grid%20Stylesheet%5Cn%5CnBe%20light%20and%20don't%20over%20style%20since%20everything%20here%20will%20be%5Cnloaded%20by%20mobile%20devices.%20You%20want%20to%20keep%20it%20as%20minimal%20as%5Cnpossible.%20This%20is%20called%20at%20the%20top%20of%20the%20main%20stylsheet%5Cnand%20will%20be%20used%20across%20all%20viewports.%5Cn%5Cn******************************************************************/%5Cn$enable-grid-classes:%20true;%5Cn$enable-container-classes:%20true;%5Cn$enable-cssgrid:%20true;%5Cn$enable-rfs:%20true;%5Cn$enable-important-utilities:%20true;%5Cn$include-column-box-sizing:%20true;%5Cn$variable-prefix:%20grid-;%5Cn@import%20'tools/functions/breakpoint';%5Cn@import%20'variables/colors/colors';%5Cn@import%20'variables/grid/breakpoints',%20'variables/grid/variables',%20'variables/grid/containers';%5Cn@import%20'tools/grid-mixins';%5Cn@import%20'tools/grid-helpers';%5Cn@import%20'tools/utils/rfs';%5Cn@import%20'production';%5Cn$size:%20nth($grid-breakpoints,%201);%5Cn$name:%20nth($grid-breakpoints,%201);%5Cn%5Cn$infix:%20breakpoint-infix($breakpoint,%20$grid-breakpoints);%5Cn/*********************%5CnGENERAL%20STYLES%5Cn*********************/%5Cn*,%5Cn*::after,%5Cn*::before,%5Cn*:after,%5Cn*:before%20%7B%5Cn%20%20margin:%200;%5Cn%20%20padding:%200;%5Cn%20%20@include%20border-box();%5Cn%7D%5Cn%5Cnbody,%5Cnhtml%20%7B%5Cn%20%20font-size:%20100%25;%5Cn%20%20overflow:%20hidden;%5Cn%20%20margin:%200;%5Cn%20%20height:%20100%25;%5Cn%20%20width:%20100%25;%5Cn%7D%5Cn%5Cn.page%20%7B%5Cn%20%20display:%20grid;%5Cn%20%20width:%20100%25;%5Cn%20%20height:%20100%25;%5Cn%20%20margin:%200;%5Cn%20%20padding:%200.25rem;%5Cn%7D%5Cn%5Cn.container,%5Cn%5Bclass%5E='container-'%5D,%5Cn.container-fluid%20%7B%5Cn%20%20@include%20make-container($gutter:%20$container-padding-x);%5Cn%20%20height:%20100%25;%5Cn%20%20padding-right:%201rem;%5Cn%20%20padding-left:%201rem;%5Cn%20%20overflow:%20hidden;%5Cn%20%20box-sizing:%20border-box;%5Cn%5Cn%20%20&:after,%5Cn%20%20&:before%20%7B%5Cn%20%20%20%20line-height:%200;%5Cn%20%20%20%20display:%20table;%5Cn%20%20%20%20content:%20'';%5Cn%20%20%7D%5Cn%5Cn%20%20&:after%20%7B%5Cn%20%20%20%20clear:%20both;%5Cn%20%20%7D%5Cn%7D%5Cn%5Cn.grid%20%7B%5Cn%20%20@include%20make-grid();%5Cn%5Cn%20%20%3E%20*%20%7B%5Cn%20%20%20%20border-width:%20medium;%5Cn%20%20%20%20border-style:%20solid;%5Cn%20%20%7D%5Cn%7D%5Cn%5Cn.row%20%7B%5Cn%20%20list-style:%20none;%5Cn%20%20margin-left:%20-$grid-gutter;%5Cn%20%20@include%20make-row($gutter:%20$grid-gutter);%5Cn%20%20&:not(.row--flex)%20%7B%5Cn%20%20%20%20@include%20clearfix;%5Cn%20%20%7D%5Cn%5Cn%20%20&.row--gutterless%20%7B%5Cn%20%20%20%20margin-left:%200;%5Cn%20%20%7D%5Cn%5Cn%20%20&.row--flex%20%7B%5Cn%20%20%20%20display:%20flex;%5Cn%20%20%20%20flex-wrap:%20wrap;%5Cn%20%20%7D%5Cn%7D%5Cn%5Cn.col%20%7B%5Cn%20%20float:%20left;%5Cn%20%20padding-left:%20$grid-gutter;%5Cn%20%20box-sizing:%20border-box;%5Cn%5Cn%20%20.row--gutterless%20&%20%7B%5Cn%20%20%20%20padding-left:%200;%5Cn%20%20%7D%5Cn%5Cn@each%20$breakpoint%20in%20$breakpoints%20%7B%5Cn%20%20%20%20$name:%20nth($breakpoint,%201);%5Cn%20%20%20%20$declaration:%20nth($breakpoint,%202);%5Cn%5Cn%20%20%20%20@media%20only%20screen%20and%20%23%7B$declaration%7D%20%7B%5Cn%20%20%20%20%20%20%20%20@include%20grid-loop($name);%5Cn%20%20%20%20%7D%5Cn%20%20%7D%5Cn%7D%5Cn%22,%22@use%20'sass:map';%5Cn%5Cn/*%20Grid%20breakpoints%20*/%5Cn/*%20Define%20the%20minimum%20dimensions%20at%20which%20your%20layout%20will%20change,%20adapting%20to%20different%20screen%20sizes,%20for%20use%20in%20media%20queries.%20*/%5Cn$grid-breakpoints:%20(%5Cnxs:%200,%5Cnsm:%20560px,%5Cnmd:%20752px,%5Cnlg:%20976px,%5Cnxl:%201184px,%5Cnxxl:%201384px%5Cn);%5Cn%5Cn$breakpoint-xs:%200;%5Cn$breakpoint-sm:%20576px;%5Cn$breakpoint-md:%20768px;%5Cn$breakpoint-lg:%20992px;%5Cn$breakpoint-xl:%201200px;%5Cn$breakpoint-xxl:%201400px;%5Cn%5Cn$breakpoint:%20(%5Cn%20%20xs:%200,%5Cn%20%20sm:%20576px,%5Cn%20%20md:%20768px,%5Cn%20%20lg:%20992px,%5Cn%20%20xl:%201200px,%5Cn%20%20xxl:%201400px%5Cn);%5Cn%5Cn$breakpoints:%20(%5Cn%20%20%20%20'xxl'%20'(min-width:%20'%20+%20($breakpoint-xl%20+%201)%20+%20')%20and%20(max-width:%20'%20+%20$breakpoint-xxl%20+%20')',%5Cn%20%20%20%20'xl'%20'(min-width:%20'%20+%20($breakpoint-lg%20+%201)%20+%20')%20and%20(max-width:%20'%20+%20$breakpoint-xl%20+%20')',%5Cn%20%20%20%20'lg'%20'(min-width:%20'%20+%20($breakpoint-md%20+%201)%20+%20')%20and%20(max-width:%20'%20+%20$breakpoint-lg%20+%20')',%5Cn%20%20%20%20'md'%20'(min-width:%20'%20+%20($breakpoint-sm%20+%201)%20+%20')%20and%20(max-width:%20'%20+%20$breakpoint-md%20+%20')',%5Cn%20%20%20%20'sm'%20'(min-width:%20'%20+%20($breakpoint-xs%20+%201)%20+%20')%20and%20(max-width:'%20%20+%20$breakpoint-sm%20+%20')',%5Cn%20%20%20%20'xs'%20'(max-width:%20'%20+%20$breakpoint-xs%20+%20')'%5Cn);%5Cn%22,%22/*%20Grid%20columns%20*/%5Cn/*%20Set%20the%20number%20of%20columns%20and%20specify%20the%20width%20of%20the%20gutters.%20*/%5Cn/*%20@see%20https://getbootstrap.com/docs/5.1/layout/grid/%23variables%20*/%5Cn$grid-columns:%2016;%5Cn$grid-gutter:%201rem;%5Cn$grid-row-columns:%2016;%5Cn%5Cn$width:%20100;%5Cn$gutter:%2016px;%5Cn%5Cn$gutter-x:%20$grid-gutter%20*%202.5;%5Cn$gutter-y:%20$grid-gutter;%5Cn%5Cn$grid-max-width:%201368px%20+%20($gutter%20*%202);%5Cn%5Cn$default-width:%20610px;%5Cn$content-max-width:%201320px;%5Cn%22,%22/*%20Grid%20containers%20*/%5Cn/*%20Define%20the%20maximum%20width%20of%20%60.container%60%20for%20different%20screen%20sizes.%20*/%5Cn$container-max-widths:%20(%5Cnsm:%20576px,%5Cnmd:%20768px,%5Cnlg:%20992px,%5Cnxl:%201200px,%5Cnxxl:%201400px%5Cn);%5Cn%5Cn/*%20Container%20padding%20*/%5Cn$container-padding-x:%20$grid-gutter%20*%20.5;%5Cn$container-padding-y:%20$grid-gutter;%5Cn%5Cn$container-offset:%20(2%20*%20$grid-gutter);%5Cn%22,%22//%20scss-docs-start%20clearfix%5Cn@mixin%20clearfix%5Cn%7B%5Cn%20%20%20%20.row,%5Cn%20%20%20%20.clearfix%5Cn%20%20%20%20%7B%5Cn%20%20%20%20%20%20%20%20zoom:%201;%5Cn%5Cn%20%20%20%20%20%20%20%20.clearfix:before,%5Cn%20%20%20%20%20%20%20%20.clearfix:after,%5Cn%20%20%20%20%20%20%20%20.row:before,%5Cn%20%20%20%20%20%20%20%20.row:after%5Cn%20%20%20%20%20%20%20%20%7B%5Cn%20%20%20%20%20%20%20%20%20%20%20%20display:%20block;%5Cn%20%20%20%20%20%20%20%20%20%20%20%20visibility:%20hidden;%5Cn%20%20%20%20%20%20%20%20%20%20%20%20clear:%20both;%5Cn%20%20%20%20%20%20%20%20%20%20%20%20overflow:%20hidden;%5Cn%5Cn%20%20%20%20%20%20%20%20%20%20%20%20width:%200;%5Cn%20%20%20%20%20%20%20%20%20%20%20%20height:%200;%5Cn%5Cn%20%20%20%20%20%20%20%20%20%20%20%20table-layout:%20fixed;%5Cn%5Cn%20%20%20%20%20%20%20%20%20%20%20%20content:%20'%20';%5Cn%20%20%20%20%20%20%20%20%7D%5Cn%5Cn%20%20%20%20%20%20%20%20.clearfix::after,%5Cn%20%20%20%20%20%20%20%20.row::after%5Cn%20%20%20%20%20%20%20%20%7B%5Cn%20%20%20%20%20%20%20%20%20%20%20%20display:%20block;%5Cn%20%20%20%20%20%20%20%20%20%20%20%20clear:%20both;%5Cn%5Cn%20%20%20%20%20%20%20%20%20%20%20%20content:%20'';%5Cn%20%20%20%20%20%20%20%20%7D%5Cn%20%20%20%20%7D%5Cn%7D%5Cn%5Cn%5Cn/*%20You%20can%20also%20use%20a%20%3Cbr%20class=%5C%22clear%5C%22%20/%3E%20to%20clear%20columns%20*/%5Cn.clear%5Cn%7B%5Cn%20%20%20%20display:%20block;%5Cn%20%20%20%20visibility:%20hidden;%5Cn%20%20%20%20clear:%20both;%5Cn%20%20%20%20overflow:%20hidden;%5Cn%5Cn%20%20%20%20width:%200;%5Cn%20%20%20%20height:%200;%5Cn%7D%5Cn%22,%22/**%5Cn%20*%20Repsonsive%20Styles%5Cn%20*/%5Cn%5Cn/**%5Cn%20*%20Required%20Variables%5Cn%20*/%5Cn%5Cn$default-width:%20610px;%5Cn$max-content-width:%201240px;%5Cn%5Cn$tablet:%201225px;%5Cn$desktop:%201824px;%5Cn%5Cn$breakpoint-sm:%20576px;%5Cn$breakpoint-md:%20768px;%5Cn$breakpoint-lg:%20992px;%5Cn$breakpoint-xl:%201200px;%5Cn$breakpoint-xxl:%201400px;%5Cn%5Cn//%20Responsive%20breakpoints%20mixin%5Cn@mixin%20media($res)%20%7B%5Cn%5Cn%5Ct@if%20mobile-only%20==%20$res%20%7B%5Cn%5Ct%5Ct@media%20only%20screen%20and%20(max-width:%20%23%7B$breakpoint-sm%20-%201%7D)%20%7B%5Cn%5Ct%5Ct%5Ct@content;%5Cn%5Ct%5Ct%7D%5Cn%5Ct%7D%5Cn%5Cn%5Ct@if%20mobile%20==%20$res%20%7B%5Cn%5Ct%5Ct@media%20only%20screen%20and%20(min-width:%20%23%7B$breakpoint-sm%7D)%20%7B%5Cn%5Ct%5Ct%5Ct@content;%5Cn%5Ct%5Ct%7D%5Cn%5Ct%7D%5Cn%5Cn%5Ct@if%20tablet-only%20==%20$res%20%7B%5Cn%5Ct%5Ct@media%20only%20screen%20and%20(max-width:%20%23%7B$breakpoint-md%20-%201%7D)%20%7B%5Cn%5Ct%5Ct%5Ct@content;%5Cn%5Ct%5Ct%7D%5Cn%5Ct%7D%5Cn%5Cn%5Ct@if%20tablet%20==%20$res%20%7B%5Cn%5Ct%5Ct@media%20only%20screen%20and%20(min-width:%20%23%7B$breakpoint-md%7D)%20%7B%5Cn%5Ct%5Ct%5Ct@content;%5Cn%5Ct%5Ct%7D%5Cn%5Ct%7D%5Cn%5Cn%5Ct@if%20laptop-only%20==%20$res%20%7B%5Cn%5Ct%5Ct@media%20only%20screen%20and%20(max-width:%20%23%7B$breakpoint-lg%20-%201%7D)%20%7B%5Cn%5Ct%5Ct%5Ct@content;%5Cn%5Ct%5Ct%7D%5Cn%5Ct%7D%5Cn%5Cn%5Ct@if%20laptop%20==%20$res%20%7B%5Cn%5Ct%5Ct@media%20only%20screen%20and%20(min-width:%20%23%7B$breakpoint-lg%7D)%20%7B%5Cn%5Ct%5Ct%5Ct@content;%5Cn%5Ct%5Ct%7D%5Cn%5Ct%7D%5Cn%5Cn%5Ct@if%20desktop-only%20==%20$res%20%7B%5Cn%5Ct%5Ct@media%20only%20screen%20and%20(max-width:%20%23%7B$breakpoint-xl%20-%201%7D)%20%7B%5Cn%5Ct%5Ct%5Ct@content;%5Cn%5Ct%5Ct%7D%5Cn%5Ct%7D%5Cn%5Cn%5Ct@if%20desktop%20==%20$res%20%7B%5Cn%5Ct%5Ct@media%20only%20screen%20and%20(min-width:%20%23%7B$breakpoint-xl%7D)%20%7B%5Cn%5Ct%5Ct%5Ct@content;%5Cn%5Ct%5Ct%7D%5Cn%5Ct%7D%5Cn%5Cn%5Ct@if%20wide-only%20==%20$res%20%7B%5Cn%5Ct%5Ct@media%20only%20screen%20and%20(max-width:%20%23%7B$breakpoint-xxl%20-%201%7D)%20%7B%5Cn%5Ct%5Ct%5Ct@content;%5Cn%5Ct%5Ct%7D%5Cn%5Ct%7D%5Cn%5Cn%5Ct@if%20wide%20==%20$res%20%7B%5Cn%5Ct%5Ct@media%20only%20screen%20and%20(min-width:%20%23%7B$breakpoint-xxl%7D)%20%7B%5Cn%5Ct%5Ct%5Ct@content;%5Cn%5Ct%5Ct%7D%5Cn%5Ct%7D%5Cn%7D%5Cn%22,%22/*%20Grid%20system%20*/%5Cn/*%20Generate%20semantic%20grid%20columns%20with%20these%20mixins.%20*/%5Cn@mixin%20make-grid()%20%7B%5Cn%20%20display:%20grid;%5Cn%20%20width:%20100%25;%5Cn%20%20height:%20100%25;%5Cn%20%20grid-template-columns:%20repeat(16,%201fr);%5Cn%20%20grid-template-rows:%20repeat(16,%201fr);%5Cn%20%20grid-auto-rows:%20repeat($grid-row-columns,%201fr);%5Cn%20%20gap:%200px%200px;%5Cn%20%20grid-auto-flow:%20column%20dense;%5Cn%7D%5Cn@mixin%20grid-loop($name)%20%7B%5Cn%20%20@include%20make-col($size:%20true,%20$columns:%20$grid-columns);%5Cn%20%20%20%20.row-flex%20%7B%5Cn%20%20%20%20%20%20float:%20none;%5Cn%20%20%20%20%20%20flex-basis:%20divide($width,%20$grid-columns);%5Cn%20%20%20%20%20%20width:%20auto;%5Cn%20%20%20%20%20%20max-width:%20100%25;%5Cn%20%20%20%20%7D%5Cn%20%20%7D%5Cn%22,%22//%20Grid%20system%5Cn//%5Cn//%20Generate%20semantic%20grid%20columns%20with%20these%20mixins.%5Cn%5Cn@mixin%20make-row($gutter:%20$grid-gutter)%20%7B%5Cn%20%20display:%20flex;%5Cn%20%20@include%20border-box();%5Cn%20%20min-width:%20100%25;%5Cn%20%20margin-top:%20calc(-1%20*%20$gutter-y);%5Cn%20%20margin-right:%20calc(-.5%20*%20$gutter-x);%20//%5Cn%20%20margin-left:%20calc(-.5%20*%20$gutter-x);%5Cn%7D%5Cn%5Cn%5Cn/*%20Row%20columns*/%5Cn/*%20Specify%20on%20a%20parent%20element(e.g.,%20.row)%20to%20force%20immediate%20children%20into%20NN%20numberof%20columns.%20Supports%20wrapping%20to%20new%20lines,%20but%20does%20not%20do%20a%20Masonry%20style%20grid.*/%5Cn@mixin%20row-cols($name)%20%7B%5Cn%20%20@for%20$i%20from%200%20through%20$grid-columns%20%7B%5Cn%20%20@if%20$i%20!=%200%20%7B%5Cn%20%20%20%20.row-col-%23%7B$i%7D%20%7B%5Cn%20%20%20%20float:%20left;%5Cn%20%20%20%20width:%20calc(divide($width,%20$grid-columns)%20*%20$i);%5Cn%20%20%20%20padding-right:%20.75em;%5Cn%20%20%20%20%3E%20*%5Cn%20%20%20%20%7B%5Cn%20%20%20%20%20%20%20%20flex:%200%200%20auto;%5Cn%20%20%20%20%20%20%20%20width:%20divide(100%25,%20$grid-columns);%5Cn%20%20%20%20%7D%5Cn%20%20%7D%5Cn%7D%5Cn%7D%7D%5Cn%22,%22/*%20%23%23Columns%20generator%23%23%20*/%5Cn%5Cn%5Cn%5Cn@mixin%20make-col-ready()%20%7B%5Cn%20%20//%20Add%20box%20sizing%20if%20only%20the%20grid%20is%20loaded%5Cn%20%20box-sizing:%20if(variable-exists(include-column-box-sizing)%20and%20$include-column-box-sizing,%20border-box,%20null);%5Cn%20%20//%20Prevent%20columns%20from%20becoming%20too%20narrow%20when%20at%20smaller%20grid%20tiers%20by%5Cn%20%20//%20always%20setting%20%60width:%20100%25;%60.%20This%20works%20because%20we%20set%20the%20width%5Cn%20%20//%20later%20on%20to%20override%20this%20initial%20width.%5Cn%20%20flex-shrink:%200;%5Cn%20%20width:%20100%25;%5Cn%20%20max-width:%20100%25;%20//%20Prevent%20%60.col-auto%60,%20%60.col%60%20(&%20responsive%20variants)%20from%20breaking%20out%20the%20grid%5Cn%20%20padding-right:%20calc($gutter-x%20*%20.5);%20//%20stylelint-disable-line%20function-disallowed-list%5Cn%20%20padding-left:%20calc($gutter-x%20*%20.5);%20//%20stylelint-disable-line%20function-disallowed-list%5Cn%20%20margin-top:%20$gutter-y;%5Cn%7D%5Cn%5Cn@mixin%20make-col($size:%20false,%20$columns:%20$grid-columns)%20%7B%5Cn%20%20@if%20$size%20%7B%5Cn%20%20%20%20@for%20$i%20from%201%20through%20$grid-columns%20%7B%5Cn%20%20%20%20%20%20.col-%23%7B$size%7D-%23%7B$i%7D%20%7B%5Cn%20%20%20%20%20%20%20%20width:%20calc(divide($width,%20$columns)%20*%20%23%7B$i%7D);%5Cn%20%20%20%20%20%20%7D%5Cn%20%20%20%20%7D%5Cn%20%20%7D%20@else%20%7B%5Cn%20%20%20%20flex:%201%201%200;%5Cn%20%20%20%20max-width:%20100%25;%5Cn%20%20%7D%5Cn%7D%5Cn@mixin%20make-col-offset($size,%20$columns:%20$grid-columns)%20%7B%5Cn%20%20$num:%20divide($size,%20$columns);%5Cn%20%20margin-left:%20if($num%20==%200,%200,%20percentage($num));%5Cn%7D%5Cn@mixin%20make-col-auto()%20%7B%5Cn%20%20flex:%200%200%20auto;%5Cn%20%20width:%20auto;%5Cn%7D%5Cn%22,%22%5Cn.left%20%7B%5Cn%20%20text-align:%20left;%5Cn%7D%5Cn%5Cn.right%20%7B%5Cn%20%20text-align:%20right;%5Cn%7D%5Cn%5Cn.center%20%7B%5Cn%20%20text-align:%20center;%5Cn%20%20margin-left:%20auto;%5Cn%20%20margin-right:%20auto;%5Cn%7D%5Cn%5Cn.justify%20%7B%5Cn%20%20text-align:%20justify;%5Cn%7D%5Cn%5Cn.hidden-sm%20%7B%5Cn%20%20display:%20none;%5Cn%7D%5Cn%22,%22.flex-fill%20%7B%5Cn%20%20flex:%201%201%20auto%20!important;%5Cn%7D%5Cn%5Cn.flex-row%20%7B%5Cn%20%20flex-direction:%20row%20!important;%5Cn%7D%5Cn%5Cn.flex-column%20%7B%5Cn%20%20flex-direction:%20column%20!important;%5Cn%7D%5Cn%5Cn.flex-row-reverse%20%7B%5Cn%20%20flex-direction:%20row-reverse%20!important;%5Cn%7D%5Cn%5Cn.flex-column-reverse%20%7B%5Cn%20%20flex-direction:%20column-reverse%20!important;%5Cn%7D%5Cn%5Cn.flex-grow-0%20%7B%5Cn%20%20flex-grow:%200%20!important;%5Cn%7D%5Cn%5Cn.flex-grow-1%20%7B%5Cn%20%20flex-grow:%201%20!important;%5Cn%7D%5Cn%5Cn.flex-shrink-0%20%7B%5Cn%20%20flex-shrink:%200%20!important;%5Cn%7D%5Cn%5Cn.flex-shrink-1%20%7B%5Cn%20%20flex-shrink:%201%20!important;%5Cn%7D%5Cn%5Cn.flex-wrap%20%7B%5Cn%20%20flex-wrap:%20wrap%20!important;%5Cn%7D%5Cn%5Cn.flex-nowrap%20%7B%5Cn%20%20flex-wrap:%20nowrap%20!important;%5Cn%7D%5Cn%5Cn.flex-wrap-reverse%20%7B%5Cn%20%20flex-wrap:%20wrap-reverse%20!important;%5Cn%7D%5Cn%22,%22/**%5Cn%20*%20Root%20Media%20Query%20Variables%5Cn%20*/%5Cn%5Cn$default-width:%2038.125rem;%5Cn$max-content-width:%201240px;%5Cn$responsive-horizontal-spacing:%201.05vw;%5Cn$responsive-aligndefault-width:%20subtract(100vw%20-%20$responsive-horizontal-spacing);%5Cn$responsive-alignwide-width:%20subtract(100vw%20-%20$responsive-horizontal-spacing);%5Cn$responsive-alignfull-width:%20100vw;%5Cn%5Cn/**%5Cn%20*%20Root%20Media%20Query%20Variables%5Cn%20*/%5Cn:root%5Cn%7B%5Cn%20%20%20%20$spacing-horizontal:%201.05vh;%5Cn%20%20%20%20$responsive-spacing-horizontal:%20calc((2%20*%20$spacing-horizontal)%20*%20.6);%5Cn%20%20%20%20$responsive-aligndefault-width:%20subtract(100vw,%20$responsive-spacing-horizontal);%5Cn%20%20%20%20$responsive-alignwide-width:%20subtract(100vw,%20$responsive-spacing-horizontal);%5Cn%20%20%20%20$responsive-alignfull-width:%20100%25;%5Cn%20%20%20%20$responsive-alignright-margin:%20$spacing-horizontal;%5Cn%20%20%20%20$responsive-alignleft-margin:%20$spacing-horizontal;%5Cn%7D%5Cn%5Cn@include%20media(mobile)%5Cn%7B%5Cn%20%20%20%20:root%5Cn%20%20%20%20%7B%5Cn%20%20%20%20%20%20%20%20$spacing-horizontal:%201vh;%5Cn%20%20%20%20%20%20%20%20$responsive-aligndefault-width:%20subtract(calc((100vw%20-%204%20*%20$spacing-horizontal)),%20$default-width);%5Cn%20%20%20%20%20%20%20%20$responsive-alignwide-width:%20calc(100vw%20-%204%20*%20$spacing-horizontal);%5Cn%20%20%20%20%20%20%20%20$responsive-alignright-margin:%20calc(.5%20*%20(100vw%20-%2033vw));%5Cn%20%20%20%20%20%20%20%20$responsive-alignleft-margin:%20calc(.5%20*%20(100vw%20-%2033vw));%5Cn%20%20%20%20%7D%5Cn%7D%5Cn%5Cn@include%20media(desktop)%5Cn%7B%5Cn%20%20%20%20:root%5Cn%20%20%20%20%7B%5Cn%20%20%20%20%20%20%20%20$spacing-horizontal:%201vh;%5Cn%20%20%20%20%20%20%20%20$responsive-aligndefault-width:%20subtract(calc(100vw%20-%208%20*%20$spacing-horizontal),%20$default-width);%5Cn%20%20%20%20%20%20%20%20$responsive-alignwide-width:%20subtract(calc(100vw%20-%208%20*%20$spacing-horizontal),%20$max-content-width);%5Cn%20%20%20%20%7D%5Cn%7D%5Cn%5Cn/**%5Cn%20*%20Extends%5Cn%20*/%5Cn%25responsive-aligndefault-width%5Cn%7B%5Cn%20%20%20%20max-width:%20calc(100vw%20-%2033vh);%5Cn%20%20%20%20margin-right:%20auto;%5Cn%20%20%20%20margin-left:%20auto;%5Cn%7D%5Cn%5Cn%25responsive-alignwide-width%5Cn%7B%5Cn%20%20%20%20max-width:%20calc(100vw%20-%204%20*%201vh);%5Cn%20%20%20%20margin-right:%20auto;%5Cn%20%20%20%20margin-left:%20auto;%5Cn%7D%5Cn%5Cn%25responsive-alignfull-width-mobile%5Cn%7B%5Cn%20%20%20%20width:%20100%25;%5Cn%20%20%20%20max-width:%20100%25;%5Cn%20%20%20%20margin-right:%20auto;%5Cn%20%20%20%20margin-left:%20auto;%5Cn%7D%5Cn%5Cn@include%20media(mobile)%5Cn%7B%5Cn%20%20%20%20%25responsive-alignfull-width%5Cn%20%20%20%20%7B%5Cn%20%20%20%20%20%20%20%20width:%20auto;%5Cn%20%20%20%20%20%20%20%20max-width:%20100%25;%5Cn%20%20%20%20%20%20%20%20margin-right:%20auto;%5Cn%20%20%20%20%20%20%20%20margin-left:%20auto;%5Cn%20%20%20%20%7D%5Cn%7D%5Cn%5Cn%25responsive-alignwide-width-nested%5Cn%7B%5Cn%20%20%20%20width:%20100%25;%5Cn%20%20%20%20max-width:%20100%25;%5Cn%20%20%20%20margin-right:%20auto;%5Cn%20%20%20%20margin-left:%20auto;%5Cn%7D%5Cn%5Cn%25responsive-alignfull-width-nested%5Cn%7B%5Cn%20%20%20%20width:%20calc(100vw)%20-%20calc(2%20*%2033vw);%5Cn%20%20%20%20max-width:%20100%25;%5Cn%20%20%20%20margin-right:%20auto;%5Cn%20%20%20%20margin-left:%20auto;%5Cn%7D%5Cn%5Cn@include%20media(desktop)%5Cn%7B%5Cn%20%20%20%20%25responsive-alignfull-width-nested%5Cn%20%20%20%20%7B%5Cn%20%20%20%20%20%20%20%20width:%20calc(100vw)%20-%20calc(4%20*%2033vw);%5Cn%20%20%20%20%20%20%20%20max-width:%20100%25;%5Cn%20%20%20%20%20%20%20%20margin-right:%20auto;%5Cn%20%20%20%20%20%20%20%20margin-left:%20auto;%5Cn%20%20%20%20%7D%5Cn%7D%5Cn%5Cn%5Cn%25responsive-alignleft-mobile%5Cn%7B%5Cn%20%20%20%20/*rtl:ignore*/%5Cn%20%20%20%20margin-right:%2033vw;%5Cn%20%20%20%20/*rtl:ignore*/%5Cn%20%20%20%20margin-left:%200;%5Cn%7D%5Cn%5Cn@include%20media(mobile)%5Cn%7B%5Cn%20%20%20%20%25responsive-alignleft%5Cn%20%20%20%20%7B%5Cn%20%20%20%20%20%20%20%20/*rtl:ignore*/%5Cn%20%20%20%20%20%20%20%20margin-right:%201vh;%5Cn%20%20%20%20%20%20%20%20/*rtl:ignore*/%5Cn%20%20%20%20%20%20%20%20margin-left:%201vw;%5Cn%20%20%20%20%7D%5Cn%7D%5Cn%5Cn%25responsive-alignright-mobile%5Cn%7B%5Cn%20%20%20%20/*rtl:ignore*/%5Cn%20%20%20%20margin-right:%200;%5Cn%20%20%20%20/*rtl:ignore*/%5Cn%20%20%20%20margin-left:%2033vw;%5Cn%7D%5Cn%5Cn@include%20media(mobile)%5Cn%7B%5Cn%20%20%20%20%25responsive-alignright%5Cn%20%20%20%20%7B%5Cn%20%20%20%20%20%20%20%20/*rtl:ignore*/%5Cn%20%20%20%20%20%20%20%20margin-right:%201vw;%5Cn%20%20%20%20%20%20%20%20/*rtl:ignore*/%5Cn%20%20%20%20%20%20%20%20margin-left:%201vh;%5Cn%20%20%20%20%7D%5Cn%7D%5Cn%5Cn//%20Output%5Cn.default-max-width%5Cn%7B%5Cn%20%20%20%20@extend%20%25responsive-aligndefault-width;%5Cn%7D%5Cn%5Cn.wide-max-width%5Cn%7B%5Cn%20%20%20%20@extend%20%25responsive-alignwide-width;%5Cn%7D%5Cn%5Cn.full-max-width%5Cn%7B%5Cn%20%20%20%20@extend%20%25responsive-alignfull-width;%5Cn%7D%5Cn%22,%22@mixin%20production-border()%20%7B%5Cn%20%20border-width:%20medium;%5Cn%20%20border-style:%20solid;%5Cn%20%20border-radius:%20.75rem;%5Cn%7D%5Cn%5Cn@mixin%20make-masthead-grid()%20%7B%5Cn%20%20grid-template-columns:%20repeat($grid-columns,%201fr);%5Cn%20%20grid-auto-rows:%201;%5Cn%7D%5Cn%5Cn.page%20%7B%5Cn%20%20@include%20production-border();%5Cn%20%20border-color:%20$red;%5Cn%7D%5Cn%5Cn.container,%5Cn%5Bclass%5E='container-'%5D,%5Cn.container-fluid%20%7B%5Cn%20%20@include%20production-border();%5Cn%20%20border-color:%20$orange;%5Cn%20%20background:%20$gray-700;%5Cn%7D%5Cn%5Cn.grid%20%7B%5Cn%20%20@include%20production-border();%5Cn%20%20border-color:%20$yellow;%5Cn%20%20background:%20$gray-500%5Cn%7D%5Cn%5Cn.row,%5Cn.row-fluid%20%7B%5Cn%20%20@include%20production-border();%5Cn%20%20border-color:%20$green;%5Cn%20%20background:%20$gray-300%5Cn%7D%5Cn%5Cn.col%20%7B%5Cn%20%20@include%20production-border();%5Cn%20%20border-color:%20$blue;%5Cn%20%20background:%20$gray-100%5Cn%7D%5Cn%22,%22$white:%20%23e4edf4;%5Cn$gray-100:%20%23c0c0c0;%5Cn$gray-200:%20%239a9a9a;%5Cn$gray-300:%20%237b7b7b;%5Cn$gray-400:%20%23626262;%5Cn$gray-500:%20%234e4e4e;%5Cn$gray-600:%20%233e3e3e;%5Cn$gray-700:%20%23323232;%5Cn$gray-800:%20%23282828;%5Cn$gray-900:%20%231a1a1a;%5Cn$black:%20%23000100;%5Cn%5Cn$grays:%20(%5Cn%20%20100:%20$gray-100,%5Cn%20%20200:%20$gray-200,%5Cn%20%20300:%20$gray-300,%5Cn%20%20400:%20$gray-400,%5Cn%20%20500:%20$gray-500,%5Cn%20%20600:%20$gray-600,%5Cn%20%20700:%20$gray-700,%5Cn%20%20800:%20$gray-800,%5Cn%20%20900:%20$gray-900%5Cn);%5Cn%5Cn$blue:%20%20%20%20%230d6efd;%5Cn$indigo:%20%20%236610f2;%5Cn$purple:%20%20%236f42c1;%5Cn$pink:%20%20%20%20%23d63384;%5Cn$red:%20%20%20%20%20%23dc3545;%5Cn$orange:%20%20%23fd7e14;%5Cn$yellow:%20%20%23ffc107;%5Cn$green:%20%20%20%23198754;%5Cn$teal:%20%20%20%20%2320c997;%5Cn$cyan:%20%20%20%20%230dcaf0;%5Cn$gray:%20%20%20%20$gray-600;%5Cn%5Cn$colors:%20(%5Cn'blue':%20$blue,%5Cn'indigo':%20$indigo,%5Cn'purple':%20$purple,%5Cn'pink':%20$pink,%5Cn'red':%20$red,%5Cn'orange':%20$orange,%5Cn'yellow':%20$yellow,%5Cn'green':%20$green,%5Cn'teal':%20$teal,%5Cn'cyan':%20$cyan%5Cn);%5Cn%5Cn//$theme-colors-rgb:%20map-loop($theme-colors,%20to-rgb,%20%5C%22$value%5C%22);%5Cn%22,%22@mixin%20border-box%20%7B%5Cn%20%20%20%20-webkit-box-sizing:%20border-box;%5Cn%20%20%20%20-moz-box-sizing:%20border-box;%5Cn%20%20%20%20box-sizing:%20border-box;%5Cn%20%20%20%20%7D%5Cn%22,%22//%20container%20mixins%5Cn@mixin%20make-container($gutter:%20$container-padding-x)%20%7B%5Cn%20%20display:%20inline;%5Cn%20%20align-items:%20left;%5Cn%20%20justify-content:%20flex-start;%5Cn%20%20margin:%20auto;%5Cn%20%20padding-top:%20$gutter-y%20*%202;%5Cn%20%20padding-bottom:%20$gutter-y;%5Cn%20%20width:%20100%25;%5Cn%20%20height:%20auto;%5Cn%7D%5Cn%22%5D%7D */
+/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22grid.scss%22,%22variables/grid/_breakpoints.scss%22,%22variables/grid/_variables.scss%22,%22variables/grid/_containers.scss%22,%22tools/mixins/_clearfix.scss%22,%22tools/mixins/grid/_grid.scss%22,%22tools/mixins/grid/_cols.scss%22,%22tools/mixins/grid/_rows.scss%22,%22production.scss%22,%22variables/colors/_colors.scss%22,%22tools/mixins/_border-box.scss%22,%22tools/mixins/_container.scss%22,%22tools/mixins/grid/_grid-breakpoint.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAAA;AAAA;AAAA;;AAAA;;AAAA;AAAA;AAAA;AAAA;;AAAA;ACEA;AACA;ACHA;AACA;AACA;ACFA;AACA;AASA;AC4BA;AACA;EAEI;EACA;EACA;EACA;EAEA;EACA;;;AC/CJ;AACA;ACDA;ACcA;AACA;ACJA;EAVE;EACA;EACA;EAUA,cCeQ;;;ADZV;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;EAfE;EACA;EACA;EAiBA,cCSQ;EDRR,YCdS;;;ADiBX;EAvBE;EACA;EACA;EAuBA,cCIQ;EDHR,YCtBS;;;ADyBX;AAAA;EA7BE;EACA;EACA;EA8BA,cCFQ;EDGR,YC/BS;;;ADkCX;EApCE;EACA;EACA;EAoCA,cCfQ;EDgBR,YCvCS;;;AT8BX;AAAA;AAAA;AAGA;AAAA;AAAA;AAAA;AAAA;EAKE;EACA;EUvCE;EACA;EACA;;;AVyCJ;AAAA;EAEE;EACA;EACA;EACA;EACA;;;AAGF;EACE;EACA;EACA;EACA;EACA;;;AAGF;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;EW3DE;EACA;EACA;EACA;EACA;EACA,gBTHY;ESIZ;EACA;EXwDA;EACA;EACA;EACA;EACA;;AAEA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;EAEE;EACA;EACA;;AAGF;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;EACE;;;AAIJ;EKhFE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AL4EA;EACE;EACA;;AYhFQ;EAEI,WTRO;;ASMX;EAEI,WTRO;;ASMX;EAEI,WTRO;;ASMX;EAEI,WTRO;;ASMX;EAEI,WTRO;;AH2FvB;EACE;EACA;EO1FA;EGJE;EACA;EACA;EHIF;EACA;EACA;EACA;;AHPE;AAAA;EAGI;;AAEA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;EAKI;EACA;EACA;EACA;EAEA;EACA;EAEA;EAEA;;AAGJ;AAAA;AAAA;AAAA;EAGI;EACA;EAEA;;AJqEV;EACE;;AAGF;EACE;EACA;;;AAIJ;EACE;EACA,cE7GY;EF8GZ;;AAEA;EACE;;AAOA;EMvGE;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EDRJ;IACE;IACA;IACA;IACA;;;AL0GF;EMvGE;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EDRJ;IACE;IACA;IACA;IACA;;;AL0GF;EMvGE;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EDRJ;IACE;IACA;IACA;IACA;;;AL0GF;EMvGE;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EDRJ;IACE;IACA;IACA;IACA;;;AL0GF;EMvGE;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EDRJ;IACE;IACA;IACA;IACA;;;AL0GF;EMvGE;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EADF;IACE;;EDRJ;IACE;IACA;IACA;IACA%22,%22file%22:%22grid.css%22,%22sourcesContent%22:%5B%22/******************************************************************%5CnSite%20Name:%20The%20Creativity%20Architect%5CnAuthor:%20CJM%20Termini%5Cn%5CnStylesheet:%20CJMT%20Grid%20Stylesheet%5Cn%5CnBe%20light%20and%20don't%20over%20style%20since%20everything%20here%20will%20be%5Cnloaded%20by%20mobile%20devices.%20You%20want%20to%20keep%20it%20as%20minimal%20as%5Cnpossible.%20This%20is%20called%20at%20the%20top%20of%20the%20main%20stylsheet%5Cnand%20will%20be%20used%20across%20all%20viewports.%5Cn%5Cn******************************************************************/%5Cn%5Cn@import%20'tools/functions/breakpoint';%5Cn@import%20'variables/colors/colors';%5Cn@import%20'variables/grid/breakpoints';%5Cn@import%20'variables/grid/variables';%5Cn@import%20'variables/grid/containers';%5Cn@import%20'tools/mixins/media-breakpoint';%5Cn@import%20'tools/mixins/border-box';%5Cn@import%20'tools/mixins/clearfix';%5Cn@import%20'tools/mixins/container';%5Cn@import%20'tools/mixins/grid/grid';%5Cn@import%20'tools/mixins/grid/cols';%5Cn@import%20'tools/mixins/grid/rows';%5Cn@import%20'tools/mixins/grid/grid-breakpoint';%5Cn@import%20'production';%5Cn$size:%20nth($grid-breakpoints,%201);%5Cn$name:%20nth($grid-breakpoints,%201);%5Cn%5Cn$infix:%20breakpoint-infix($breakpoint,%20$grid-breakpoints);%5Cn/*********************%5CnGENERAL%20STYLES%5Cn*********************/%5Cn*,%5Cn*::after,%5Cn*::before,%5Cn*:after,%5Cn*:before%20%7B%5Cn%20%20margin:%200;%5Cn%20%20padding:%200;%5Cn%20%20@include%20border-box();%5Cn%7D%5Cn%5Cnbody,%5Cnhtml%20%7B%5Cn%20%20font-size:%20100%25;%5Cn%20%20overflow:%20hidden;%5Cn%20%20margin:%200;%5Cn%20%20height:%20100%25;%5Cn%20%20width:%20100%25;%5Cn%7D%5Cn%5Cn.page%20%7B%5Cn%20%20display:%20grid;%5Cn%20%20width:%20100%25;%5Cn%20%20height:%20100%25;%5Cn%20%20margin:%200;%5Cn%20%20padding:%200.25rem;%5Cn%7D%5Cn%5Cn.container,%5Cn%5Bclass%5E='container-'%5D,%5Cn.container-fluid%20%7B%5Cn%20%20@include%20make-container($gutter:%20$container-padding-x);%5Cn%20%20height:%20100%25;%5Cn%20%20padding-right:%201rem;%5Cn%20%20padding-left:%201rem;%5Cn%20%20overflow:%20hidden;%5Cn%20%20box-sizing:%20border-box;%5Cn%5Cn%20%20&:after,%5Cn%20%20&:before%20%7B%5Cn%20%20%20%20line-height:%200;%5Cn%20%20%20%20display:%20table;%5Cn%20%20%20%20content:%20'';%5Cn%20%20%7D%5Cn%5Cn%20%20&:after%20%7B%5Cn%20%20%20%20clear:%20both;%5Cn%20%20%7D%5Cn%7D%5Cn%5Cn.grid%20%7B%5Cn%20%20@include%20make-grid();%5Cn%5Cn%20%20%3E%20*%20%7B%5Cn%20%20%20%20border-width:%20medium;%5Cn%20%20%20%20border-style:%20solid;%5Cn%20%20%7D%5Cn%20%20@include%20grid-breakpoint();%5Cn%7D%5Cn%5Cn.row%20%7B%5Cn%20%20list-style:%20none;%5Cn%20%20margin-left:%20-$grid-gutter;%5Cn%20%20@include%20make-row($gutter:%20$grid-gutter);%5Cn%20%20&:not(.row--flex)%20%7B%5Cn%20%20%20%20@include%20clearfix;%5Cn%20%20%7D%5Cn%5Cn%20%20&.row--gutterless%20%7B%5Cn%20%20%20%20margin-left:%200;%5Cn%20%20%7D%5Cn%5Cn%20%20&.row--flex%20%7B%5Cn%20%20%20%20display:%20flex;%5Cn%20%20%20%20flex-wrap:%20wrap;%5Cn%20%20%7D%5Cn%7D%5Cn%5Cn.col%20%7B%5Cn%20%20float:%20left;%5Cn%20%20padding-left:%20$grid-gutter;%5Cn%20%20box-sizing:%20border-box;%5Cn%5Cn%20%20.row--gutterless%20&%20%7B%5Cn%20%20%20%20padding-left:%200;%5Cn%20%20%7D%5Cn%5Cn@each%20$breakpoint%20in%20$breakpoints%20%7B%5Cn%20%20%20%20$name:%20nth($breakpoint,%201);%5Cn%20%20%20%20$declaration:%20nth($breakpoint,%202);%5Cn%5Cn%20%20%20%20@media%20only%20screen%20and%20%23%7B$declaration%7D%20%7B%5Cn%20%20%20%20%20%20%20%20@include%20grid-loop($name);%5Cn%20%20%20%20%7D%5Cn%20%20%7D%5Cn%7D%5Cn%22,%22@use%20'sass:map';%5Cn%5Cn/*%20Grid%20breakpoints%20*/%5Cn/*%20Define%20the%20minimum%20dimensions%20at%20which%20your%20layout%20will%20change,%20adapting%20to%20different%20screen%20sizes,%20for%20use%20in%20media%20queries.%20*/%5Cn$grid-breakpoints:%20(%5Cnxs:%200,%5Cnsm:%20560px,%5Cnmd:%20752px,%5Cnlg:%20976px,%5Cnxl:%201184px,%5Cnxxl:%201384px%5Cn);%5Cn%5Cn$breakpoint-xs:%200;%5Cn$breakpoint-sm:%20576px;%5Cn$breakpoint-md:%20768px;%5Cn$breakpoint-lg:%20992px;%5Cn$breakpoint-xl:%201200px;%5Cn$breakpoint-xxl:%201400px;%5Cn%5Cn$breakpoint:%20(%5Cn%20%20xs:%200,%5Cn%20%20sm:%20576px,%5Cn%20%20md:%20768px,%5Cn%20%20lg:%20992px,%5Cn%20%20xl:%201200px,%5Cn%20%20xxl:%201400px%5Cn);%5Cn%5Cn$breakpoints:%20(%5Cn%20%20%20%20'xxl'%20'(min-width:%20'%20+%20($breakpoint-xl%20+%201)%20+%20')%20and%20(max-width:%20'%20+%20$breakpoint-xxl%20+%20')',%5Cn%20%20%20%20'xl'%20'(min-width:%20'%20+%20($breakpoint-lg%20+%201)%20+%20')%20and%20(max-width:%20'%20+%20$breakpoint-xl%20+%20')',%5Cn%20%20%20%20'lg'%20'(min-width:%20'%20+%20($breakpoint-md%20+%201)%20+%20')%20and%20(max-width:%20'%20+%20$breakpoint-lg%20+%20')',%5Cn%20%20%20%20'md'%20'(min-width:%20'%20+%20($breakpoint-sm%20+%201)%20+%20')%20and%20(max-width:%20'%20+%20$breakpoint-md%20+%20')',%5Cn%20%20%20%20'sm'%20'(min-width:%20'%20+%20($breakpoint-xs%20+%201)%20+%20')%20and%20(max-width:'%20%20+%20$breakpoint-sm%20+%20')',%5Cn%20%20%20%20'xs'%20'(max-width:%20'%20+%20$breakpoint-xs%20+%20')'%5Cn);%5Cn%22,%22/*%20Grid%20columns%20*/%5Cn/*%20Set%20the%20number%20of%20columns%20and%20specify%20the%20width%20of%20the%20gutters.%20*/%5Cn/*%20@see%20https://getbootstrap.com/docs/5.1/layout/grid/%23variables%20*/%5Cn$grid-columns:%2016;%5Cn$grid-gutter:%201rem;%5Cn$grid-row-columns:%2016;%5Cn%5Cn$width:%20100;%5Cn$gutter:%2016px;%5Cn%5Cn$gutter-x:%20$grid-gutter%20*%202.5;%5Cn$gutter-y:%20$grid-gutter;%5Cn%5Cn$grid-max-width:%201368px%20+%20($gutter%20*%202);%5Cn%5Cn$default-width:%20610px;%5Cn$content-max-width:%201320px;%5Cn%22,%22/*%20Grid%20containers%20*/%5Cn/*%20Define%20the%20maximum%20width%20of%20%60.container%60%20for%20different%20screen%20sizes.%20*/%5Cn$container-max-widths:%20(%5Cnsm:%20576px,%5Cnmd:%20768px,%5Cnlg:%20992px,%5Cnxl:%201200px,%5Cnxxl:%201400px%5Cn);%5Cn%5Cn/*%20Container%20padding%20*/%5Cn$container-padding-x:%20$grid-gutter%20*%20.5;%5Cn$container-padding-y:%20$grid-gutter;%5Cn%5Cn$container-offset:%20(2%20*%20$grid-gutter);%5Cn%22,%22//%20scss-docs-start%20clearfix%5Cn@mixin%20clearfix%5Cn%7B%5Cn%20%20%20%20.row,%5Cn%20%20%20%20.clearfix%5Cn%20%20%20%20%7B%5Cn%20%20%20%20%20%20%20%20zoom:%201;%5Cn%5Cn%20%20%20%20%20%20%20%20.clearfix:before,%5Cn%20%20%20%20%20%20%20%20.clearfix:after,%5Cn%20%20%20%20%20%20%20%20.row:before,%5Cn%20%20%20%20%20%20%20%20.row:after%5Cn%20%20%20%20%20%20%20%20%7B%5Cn%20%20%20%20%20%20%20%20%20%20%20%20display:%20block;%5Cn%20%20%20%20%20%20%20%20%20%20%20%20visibility:%20hidden;%5Cn%20%20%20%20%20%20%20%20%20%20%20%20clear:%20both;%5Cn%20%20%20%20%20%20%20%20%20%20%20%20overflow:%20hidden;%5Cn%5Cn%20%20%20%20%20%20%20%20%20%20%20%20width:%200;%5Cn%20%20%20%20%20%20%20%20%20%20%20%20height:%200;%5Cn%5Cn%20%20%20%20%20%20%20%20%20%20%20%20table-layout:%20fixed;%5Cn%5Cn%20%20%20%20%20%20%20%20%20%20%20%20content:%20'%20';%5Cn%20%20%20%20%20%20%20%20%7D%5Cn%5Cn%20%20%20%20%20%20%20%20.clearfix::after,%5Cn%20%20%20%20%20%20%20%20.row::after%5Cn%20%20%20%20%20%20%20%20%7B%5Cn%20%20%20%20%20%20%20%20%20%20%20%20display:%20block;%5Cn%20%20%20%20%20%20%20%20%20%20%20%20clear:%20both;%5Cn%5Cn%20%20%20%20%20%20%20%20%20%20%20%20content:%20'';%5Cn%20%20%20%20%20%20%20%20%7D%5Cn%20%20%20%20%7D%5Cn%7D%5Cn%5Cn%5Cn/*%20You%20can%20also%20use%20a%20%3Cbr%20class=%5C%22clear%5C%22%20/%3E%20to%20clear%20columns%20*/%5Cn.clear%5Cn%7B%5Cn%20%20%20%20display:%20block;%5Cn%20%20%20%20visibility:%20hidden;%5Cn%20%20%20%20clear:%20both;%5Cn%20%20%20%20overflow:%20hidden;%5Cn%5Cn%20%20%20%20width:%200;%5Cn%20%20%20%20height:%200;%5Cn%7D%5Cn%22,%22/*%20Grid%20system%20*/%5Cn/*%20Generate%20semantic%20grid%20columns%20with%20these%20mixins.%20*/%5Cn@mixin%20make-grid()%20%7B%5Cn%20%20display:%20grid;%5Cn%20%20width:%20100%25;%5Cn%20%20height:%20100%25;%5Cn%20%20grid-template-columns:%20repeat(16,%201fr);%5Cn%20%20grid-template-rows:%20repeat(16,%201fr);%5Cn%20%20grid-auto-rows:%20repeat($grid-row-columns,%201fr);%5Cn%20%20gap:%200px%200px;%5Cn%20%20grid-auto-flow:%20column%20dense;%5Cn%7D%5Cn@mixin%20grid-loop($name)%20%7B%5Cn%20%20@include%20make-col($size:%20true,%20$columns:%20$grid-columns);%5Cn%20%20%20%20.row-flex%20%7B%5Cn%20%20%20%20%20%20float:%20none;%5Cn%20%20%20%20%20%20flex-basis:%20divide($width,%20$grid-columns);%5Cn%20%20%20%20%20%20width:%20auto;%5Cn%20%20%20%20%20%20max-width:%20100%25;%5Cn%20%20%20%20%7D%5Cn%20%20%7D%5Cn%22,%22/*%20%23%23Columns%20generator%23%23%20*/%5Cn%5Cn%5Cn%5Cn@mixin%20make-col-ready()%20%7B%5Cn%20%20//%20Add%20box%20sizing%20if%20only%20the%20grid%20is%20loaded%5Cn%20%20box-sizing:%20if(variable-exists(include-column-box-sizing)%20and%20$include-column-box-sizing,%20border-box,%20null);%5Cn%20%20//%20Prevent%20columns%20from%20becoming%20too%20narrow%20when%20at%20smaller%20grid%20tiers%20by%5Cn%20%20//%20always%20setting%20%60width:%20100%25;%60.%20This%20works%20because%20we%20set%20the%20width%5Cn%20%20//%20later%20on%20to%20override%20this%20initial%20width.%5Cn%20%20flex-shrink:%200;%5Cn%20%20width:%20100%25;%5Cn%20%20max-width:%20100%25;%20//%20Prevent%20%60.col-auto%60,%20%60.col%60%20(&%20responsive%20variants)%20from%20breaking%20out%20the%20grid%5Cn%20%20padding-right:%20calc($gutter-x%20*%20.5);%20//%20stylelint-disable-line%20function-disallowed-list%5Cn%20%20padding-left:%20calc($gutter-x%20*%20.5);%20//%20stylelint-disable-line%20function-disallowed-list%5Cn%20%20margin-top:%20$gutter-y;%5Cn%7D%5Cn%5Cn@mixin%20make-col($size:%20false,%20$columns:%20$grid-columns)%20%7B%5Cn%20%20@if%20$size%20%7B%5Cn%20%20%20%20@for%20$i%20from%201%20through%20$grid-columns%20%7B%5Cn%20%20%20%20%20%20.col-%23%7B$size%7D-%23%7B$i%7D%20%7B%5Cn%20%20%20%20%20%20%20%20width:%20calc(divide($width,%20$columns)%20*%20%23%7B$i%7D);%5Cn%20%20%20%20%20%20%7D%5Cn%20%20%20%20%7D%5Cn%20%20%7D%20@else%20%7B%5Cn%20%20%20%20flex:%201%201%200;%5Cn%20%20%20%20max-width:%20100%25;%5Cn%20%20%7D%5Cn%7D%5Cn@mixin%20make-col-offset($size,%20$columns:%20$grid-columns)%20%7B%5Cn%20%20$num:%20divide($size,%20$columns);%5Cn%20%20margin-left:%20if($num%20==%200,%200,%20percentage($num));%5Cn%7D%5Cn@mixin%20make-col-auto()%20%7B%5Cn%20%20flex:%200%200%20auto;%5Cn%20%20width:%20auto;%5Cn%7D%5Cn%22,%22//%20Grid%20system%5Cn//%5Cn//%20Generate%20semantic%20grid%20columns%20with%20these%20mixins.%5Cn%5Cn@mixin%20make-row($gutter:%20$grid-gutter)%20%7B%5Cn%20%20display:%20flex;%5Cn%20%20@include%20border-box();%5Cn%20%20min-width:%20100%25;%5Cn%20%20margin-top:%20calc(-1%20*%20$gutter-y);%5Cn%20%20margin-right:%20calc(-.5%20*%20$gutter-x);%20//%5Cn%20%20margin-left:%20calc(-.5%20*%20$gutter-x);%5Cn%7D%5Cn%5Cn%5Cn/*%20Row%20columns*/%5Cn/*%20Specify%20on%20a%20parent%20element(e.g.,%20.row)%20to%20force%20immediate%20children%20into%20NN%20numberof%20columns.%20Supports%20wrapping%20to%20new%20lines,%20but%20does%20not%20do%20a%20Masonry%20style%20grid.*/%5Cn@mixin%20row-cols($name)%20%7B%5Cn%20%20@for%20$i%20from%200%20through%20$grid-columns%20%7B%5Cn%20%20@if%20$i%20!=%200%20%7B%5Cn%20%20%20%20.row-col-%23%7B$i%7D%20%7B%5Cn%20%20%20%20float:%20left;%5Cn%20%20%20%20width:%20calc(divide($width,%20$grid-columns)%20*%20$i);%5Cn%20%20%20%20padding-right:%20.75em;%5Cn%20%20%20%20%3E%20*%5Cn%20%20%20%20%7B%5Cn%20%20%20%20%20%20%20%20flex:%200%200%20auto;%5Cn%20%20%20%20%20%20%20%20width:%20divide(100%25,%20$grid-columns);%5Cn%20%20%20%20%7D%5Cn%20%20%7D%5Cn%7D%5Cn%7D%7D%5Cn%22,%22@mixin%20production-border()%20%7B%5Cn%20%20border-width:%20medium;%5Cn%20%20border-style:%20solid;%5Cn%20%20border-radius:%20.75rem;%5Cn%7D%5Cn%5Cn@mixin%20make-masthead-grid()%20%7B%5Cn%20%20grid-template-columns:%20repeat($grid-columns,%201fr);%5Cn%20%20grid-auto-rows:%201;%5Cn%7D%5Cn%5Cn.page%20%7B%5Cn%20%20@include%20production-border();%5Cn%20%20border-color:%20$red;%5Cn%7D%5Cn%5Cn.container,%5Cn%5Bclass%5E='container-'%5D,%5Cn.container-fluid%20%7B%5Cn%20%20@include%20production-border();%5Cn%20%20border-color:%20$orange;%5Cn%20%20background:%20$gray-700;%5Cn%7D%5Cn%5Cn.grid%20%7B%5Cn%20%20@include%20production-border();%5Cn%20%20border-color:%20$yellow;%5Cn%20%20background:%20$gray-500%5Cn%7D%5Cn%5Cn.row,%5Cn.row-fluid%20%7B%5Cn%20%20@include%20production-border();%5Cn%20%20border-color:%20$green;%5Cn%20%20background:%20$gray-300%5Cn%7D%5Cn%5Cn.col%20%7B%5Cn%20%20@include%20production-border();%5Cn%20%20border-color:%20$blue;%5Cn%20%20background:%20$gray-100%5Cn%7D%5Cn%22,%22$white:%20%23e4edf4;%5Cn$gray-100:%20%23c0c0c0;%5Cn$gray-200:%20%239a9a9a;%5Cn$gray-300:%20%237b7b7b;%5Cn$gray-400:%20%23626262;%5Cn$gray-500:%20%234e4e4e;%5Cn$gray-600:%20%233e3e3e;%5Cn$gray-700:%20%23323232;%5Cn$gray-800:%20%23282828;%5Cn$gray-900:%20%231a1a1a;%5Cn$black:%20%23000100;%5Cn%5Cn$grays:%20(%5Cn%20%20100:%20$gray-100,%5Cn%20%20200:%20$gray-200,%5Cn%20%20300:%20$gray-300,%5Cn%20%20400:%20$gray-400,%5Cn%20%20500:%20$gray-500,%5Cn%20%20600:%20$gray-600,%5Cn%20%20700:%20$gray-700,%5Cn%20%20800:%20$gray-800,%5Cn%20%20900:%20$gray-900%5Cn);%5Cn%5Cn$blue:%20%20%20%20%230d6efd;%5Cn$indigo:%20%20%236610f2;%5Cn$purple:%20%20%236f42c1;%5Cn$pink:%20%20%20%20%23d63384;%5Cn$red:%20%20%20%20%20%23dc3545;%5Cn$orange:%20%20%23fd7e14;%5Cn$yellow:%20%20%23ffc107;%5Cn$green:%20%20%20%23198754;%5Cn$teal:%20%20%20%20%2320c997;%5Cn$cyan:%20%20%20%20%230dcaf0;%5Cn$gray:%20%20%20%20$gray-600;%5Cn%5Cn$colors:%20(%5Cn'blue':%20$blue,%5Cn'indigo':%20$indigo,%5Cn'purple':%20$purple,%5Cn'pink':%20$pink,%5Cn'red':%20$red,%5Cn'orange':%20$orange,%5Cn'yellow':%20$yellow,%5Cn'green':%20$green,%5Cn'teal':%20$teal,%5Cn'cyan':%20$cyan%5Cn);%5Cn%5Cn//$theme-colors-rgb:%20map-loop($theme-colors,%20to-rgb,%20%5C%22$value%5C%22);%5Cn%22,%22@mixin%20border-box%20%7B%5Cn%20%20%20%20-webkit-box-sizing:%20border-box;%5Cn%20%20%20%20-moz-box-sizing:%20border-box;%5Cn%20%20%20%20box-sizing:%20border-box;%5Cn%20%20%20%20%7D%5Cn%22,%22//%20container%20mixins%5Cn@mixin%20make-container($gutter:%20$container-padding-x)%20%7B%5Cn%20%20display:%20inline;%5Cn%20%20align-items:%20left;%5Cn%20%20justify-content:%20flex-start;%5Cn%20%20margin:%20auto;%5Cn%20%20padding-top:%20$gutter-y%20*%202;%5Cn%20%20padding-bottom:%20$gutter-y;%5Cn%20%20width:%20100%25;%5Cn%20%20height:%20auto;%5Cn%7D%5Cn%22,%22@mixin%20grid-breakpoint()%5Cn%7B%5Cn%20%20%20%20@each%20$grid-breakpoint,%20$container-max-width%20in%20$container-max-widths%5Cn%20%20%20%20%7B%5Cn%20%20%20%20%20%20%20%20@include%20media-breakpoint-up($name,%20$breakpoints:%20$grid-breakpoints)%5Cn%20%20%20%20%20%20%20%20%7B%5Cn%20%20%20%20%20%20%20%20%20%20%20%20//%20Extend%20each%20grid-breakpoint%20which%20is%20smaller%20or%20equal%20to%20the%20current%20grid-breakpoint%5Cn%20%20%20%20%20%20%20%20%20%20%20%20$extend-grid-breakpoint:%20true;%5Cn%20%20%20%20%20%20%20%20%20%20%20%20%25responsive-container-%23%7B$grid-breakpoint%7D%5Cn%20%20%20%20%20%20%20%20%20%20%20%20%7B%5Cn%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20max-width:%20$container-max-width;%5Cn%20%20%20%20%20%20%20%20%20%20%20%20%7D%5Cn%5Cn%20%20%20%20%20%20%20%20%20%20%20%20@each%20$name,%20$width%20in%20$grid-breakpoint%5Cn%20%20%20%20%20%20%20%20%20%20%20%20%7B%5Cn%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20@if%20($extend-grid-breakpoint)%5Cn%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7B%5Cn%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20.container%23%7B$grid-breakpoint%7D-%23%7B$infix($name,%20$grid-breakpoint)%7D%5Cn%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7B%5Cn%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20@extend%20%25responsive-container-%23%7B$grid-breakpoint%7D;%5Cn%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%5Cn%5Cn%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20//%20Once%20the%20current%20grid-breakpoint%20is%20reached,%20stop%20extending%5Cn%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20@if%20($grid-breakpoint%20==%20$name)%5Cn%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7B%5Cn%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20$extend-grid-breakpoint:%20false;%5Cn%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%5Cn%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%5Cn%20%20%20%20%20%20%20%20%20%20%20%20%7D%5Cn%20%20%20%20%20%20%20%20%7D%5Cn%20%20%20%20%20%20%20%20.container-%23%7B$grid-breakpoint%7D%5Cn%20%20%20%20%20%20%20%20%7B%5Cn%20%20%20%20%20%20%20%20%20%20%20%20@extend%20.container-fluid;%5Cn%20%20%20%20%20%20%20%20%7D%5Cn%20%20%20%20%7D%5Cn%7D%5Cn%22%5D%7D */

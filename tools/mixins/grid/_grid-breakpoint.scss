@@ -1,8 +1,8 @@
-@mixin grid-breakpoint
+@mixin grid-breakpoint()
 {
     @each $grid-breakpoint, $container-max-width in $container-max-widths
     {
-        @include media-grid-breakpoint-up($grid-breakpoint, $grid-breakpoint)
+        @include media-breakpoint-up($name, $breakpoints: $grid-breakpoints)
         {
             // Extend each grid-breakpoint which is smaller or equal to the current grid-breakpoint
             $extend-grid-breakpoint: true;
@@ -15,7 +15,7 @@
             {
                 @if ($extend-grid-breakpoint)
                 {
-                    .container#{grid-breakpoint-infix($name, $grid-breakpoint)}
+                    .container#{$grid-breakpoint}-#{$infix($name, $grid-breakpoint)}
                     {
                         @extend %responsive-container-#{$grid-breakpoint};
                     }
