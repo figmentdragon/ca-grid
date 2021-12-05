@@ -13,7 +13,7 @@
   /* stylelint-disable-line function-disallowed-list */
   margin-top: $gutter-y;
 }
-@mixin make-col($size: false, $columns: $grid-columns) {
+@mixin make-col($size: true, $columns: $grid-columns) {
   @if $size {
     flex: 0 0 auto;
     @for $i from 1 through $grid-columns {

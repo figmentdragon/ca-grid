@@ -1,35 +1,36 @@
 /* Grid system */
-
 /* Generate semantic grid columns with these mixins. */
-
-@mixin make-grid()
-{
-    display: grid;
-
-    width: 100%;
-    height: 100%;
-
-    grid-template-rows: repeat($grid-row-columns, 1fr);
-    grid-template-columns: repeat($grid-columns, 1fr);
-    gap: $grid-gutter;
-    grid-gap: $grid-gutter;
+@mixin make-grid() {
+  position: relative;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: grid;
+  width: auto;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: repeat(16, 1fr);
+  grid-auto-rows: repeat($grid-row-columns, 1fr);
+  gap: 0px 0px;
+  grid-auto-flow: column dense;
 }
-
-
 @mixin grid-loop($name) {
   @include make-col-ready($gutter: $grid-gutter);
   @if $size {
     flex: 0 0 auto;
-    @for $i from 1 through $grid-columns{
-    .col-#{$i} {
+    @for $i from 1 through $grid-columns {
+
         width: calc(divide($width, $grid-columns) * $i);
+
+    }
+
+    .row-flex {
+      float: none;
+      flex-basis: divide($width, $grid-columns);
+      width: auto;
+      max-width: 100%;
     }
   }
-  .row-flex {
-    float:none;
-    flex-basis: divide($width, $grid-columns);
-    width: auto;
-    max-width: 100%;
-  }
-}
 }

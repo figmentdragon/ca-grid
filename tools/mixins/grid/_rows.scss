@@ -4,15 +4,17 @@
 
 @mixin make-row($gutter: $grid-gutter)
 {
-    position: relative;
     grid-auto-flow: row;
     display: flex;
+    width: 100%;
+    height: auto;
     flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
 
-    width: auto;
     margin-top: calc(2 * $gutter-y);
-    margin-right: calc(-.5 * $gutter-x); //
-    margin-left: calc(-.5 * $gutter-x);
+    margin-right: calc(.5 * $gutter-x); //
+    margin-left: calc(.5 * $gutter-x);
 }
 
 

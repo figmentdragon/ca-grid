@@ -17,9 +17,6 @@ $enable-rfs: true;
 $enable-important-utilities: true;
 $include-column-box-sizing: true;
 $variable-prefix: grid-;
-
-
-
 @import 'tools/grid-functions';
 @import 'variables/grid-variables';
 @import 'tools/grid-mixins';
@@ -27,7 +24,6 @@ $variable-prefix: grid-;
 @import 'tools/utils/utilities';
 @import 'tools/grid-helpers';
 @import 'tools/utils/api';
-
 @import 'production';
 /*********************
 GENERAL STYLES
@@ -47,7 +43,7 @@ html {
   font-size: 100%;
   overflow: hidden;
   height: 100vh;
-  margin: 0
+  margin: 0;
 }
 
 .page {
@@ -63,31 +59,10 @@ html {
 .container-fluid {
   @include make-container($gutter: $container-padding-x);
   height: 100%;
-  padding-right: 2rem;
-  padding-left: 3rem;
-  @include desktop {
-    max-width: $desktop - $container-offset;
-  }
-  @include until-widescreen {
-    &.is-widescreen:not(.is-max-desktop) {
-      max-width: min($widescreen, $container-max-width) - $container-offset;
-    }
-  }
-  @include until-fullhd {
-    &.is-fullhd:not(.is-max-desktop):not(.is-max-widescreen) {
-      max-width: min($fullhd, $container-max-width) - $container-offset;
-    }
-  }
-  @include widescreen {
-    &:not(.is-max-desktop) {
-      max-width: min($widescreen, $container-max-width) - $container-offset;
-    }
-  }
-  @include fullhd {
-    &:not(.is-max-desktop):not(.is-max-widescreen) {
-      max-width: min($fullhd, $container-max-width) - $container-offset;
-    }
-  }
+  padding-right: 1rem;
+  padding-left: 1rem;
+  overflow: hidden;
+  box-sizing: border-box;
 
   &:after,
   &:before {
@@ -103,23 +78,16 @@ html {
 
 .grid {
   @include make-grid();
+  @include make-col($size: true, $columns: $grid-columns);
   @include grid-loop($name);
-  @include resp-min($breakpoint-sm) {
-    grid-gap: div($grid-gutter, 2);
-  }
-  @each $breakpoint in $grid-breakpoints {
-    $name: nth($breakpoint, 1);
-    $declaration: nth($breakpoint, 2);
-    @media only screen and ($declaration) {
-      grid-template-columns: repeat($grid-columns, 1fr);
-    }
-  }
-
   > * {
     border-width: medium;
     border-style: solid;
-    border-color: blue{$color: #0d6efd};
-    @include make-container($gutter: $container-padding-x);
+
+    border-color:blue {
+      $color: #0d6efd;
+    }
+    @include make-row()
   }
 }
 
@@ -160,7 +128,6 @@ html {
 
 .row-fluid {
   display: grid;
-  zoom: 1;
   width: 100%;
   @include make-row;
 
@@ -208,15 +175,10 @@ html {
 }
 
 .col {
+  @include make-col-ready($gutter: $grid-gutter);
   float: left;
   box-sizing: border-box;
-  width: divide(100%, $grid-columns);
-  padding-left: $grid-gutter;
-  @include make-col($size, $columns: $grid-columns);
-  @each $breakpoint in $grid-breakpoints {
-    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
-    @include grid-loop($name);
-  }
+  @include make-col($size: false, $columns: $grid-columns);
 
   .row-gutterless & {
     padding-left: 0;
