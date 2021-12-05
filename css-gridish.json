@@ -1,0 +1,52 @@
+{
+  "prefix": "gridish", // Custom prefix for all classes and filenames
+  "breakpoints": {
+    // Class name for a breakpoint
+    "xs": {
+      "breakpoint": 0, // Min-width for media query (number in rem)
+      "columns": 0, // Quantity of columns (number)
+      "gutter": "1rem", // Space between columns (rem string, px string, vw string or 0)
+      "margin": "0" // Horizontal margin of grid container (rem string, px string, vw string or 0)
+    },
+    "sm": {
+      "breakpoint": 36, // Min-width for media query (number in rem)
+      "columns": 16, // Quantity of columns (number)
+      "gutter": "1rem", // Space between columns (rem string, px string, vw string or 0)
+      "margin": "0" // Horizontal margin of grid container (rem string, px string, vw string or 0)
+    },
+    "md": {
+      "breakpoint": 48, // Min-width for media query (number in rem)
+      "columns": 16, // Quantity of columns (number)
+      "gutter": "1rem", // Space between columns (rem string, px string, vw string or 0)
+      "margin": "0" // Horizontal margin of grid container (rem string, px string, vw string or 0)
+    },
+    "lg": {
+      "breakpoint": 62, // Min-width for media query (number in rem)
+      "columns": 16, // Quantity of columns (number)
+      "gutter": "1rem", // Space between columns (rem string, px string, vw string or 0)
+      "margin": "0" // Horizontal margin of grid container (rem string, px string, vw string or 0)
+    },
+    "xl": {
+      "breakpoint": 72, // Min-width for media query (number in rem)
+      "columns": 16, // Quantity of columns (number)
+      "gutter": "1rem", // Space between columns (rem string, px string, vw string or 0)
+      "margin": "0" // Horizontal margin of grid container (rem string, px string, vw string or 0)
+    },
+    "xxl": {
+      "breakpoint": 87,
+      "columns": 16,
+      "gutter": "1rem",
+      "margin": "0"
+    }
+  },
+  "extraArtboards": {
+    "xlg": 100 // Additional breakpoint for the Sketch file (number in rem)
+  },
+  "rem": 16, // Base rem unit for all measurements (number in px)
+  "rowHeight": 0.5, // Height of a fixed row (number in rem)
+  "rows": 16, // Quantity of row variables (number)
+  "paths": {
+    "route": "css-gridish", // Route that files save in from project root (optional, use `""` for project root, `"css-gridish"` is default)
+    "intro": "intro.md" // Path to any markdown you want inserted at the top of your README.md documentation (optional)
+  }
+}

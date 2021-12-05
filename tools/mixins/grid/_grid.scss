@@ -1,15 +1,18 @@
 /* Grid system */
 /* Generate semantic grid columns with these mixins. */
 @mixin make-grid() {
-  display: grid;
   width: 100%;
   height: 100%;
+  display: grid;
   grid-template-columns: repeat(16, 1fr);
   grid-template-rows: repeat(16, 1fr);
-  grid-auto-rows: repeat($grid-row-columns, 1fr);
-  gap: 0px 0px;
+  grid-auto-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-auto-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 16px 16px;
+  justify-items: start;
   grid-auto-flow: column dense;
 }
+
 @mixin grid-loop($name) {
   @include make-col($size: true, $columns: $grid-columns);
     .row-flex {
