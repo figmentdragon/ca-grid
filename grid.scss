@@ -99,11 +99,7 @@ html {
     @include clearfix;
   }
 
-  &.row--gutterless {
-    margin-left: 0;
-  }
-
-  &.row--flex {
+  &.row-flex {
     display: flex;
     flex-wrap: wrap;
   }
