@@ -1,33 +1,12 @@
-// Toggles
-//
-// Used in conjunction with global variables to enable certain theme features.
-
-// Vendor
-//@import 'utils/rfs';
-
-// Deprecate
-//@import 'mixins/deprecate';
 
 // Helpers
 @import
   'mixins/border-box',
   'mixins/clearfix',
-  'mixins/media-query';
-
-// Utilities
-@import 'mixins/utilities';
-
-// Components
-@import
-  'mixins/lists';
-
-// Skins
-@import
-  'mixins/border-radius';
+  'mixins/media-breakpoint';
 
 // Layout
 @import
   'mixins/container',
   'mixins/responsive-style',
-  'mixins/media-query',
   'mixins/grid';

@@ -17,14 +17,17 @@ $enable-rfs: true;
 $enable-important-utilities: true;
 $include-column-box-sizing: true;
 $variable-prefix: grid-;
-@import 'tools/grid-functions';
-@import 'variables/grid-variables';
+@import 'tools/functions/breakpoint';
+@import 'variables/colors/colors';
+@import 'variables/grid/breakpoints', 'variables/grid/variables', 'variables/grid/containers';
 @import 'tools/grid-mixins';
-@import 'tools/root';
-@import 'tools/utils/utilities';
 @import 'tools/grid-helpers';
-@import 'tools/utils/api';
+@import 'tools/utils/rfs';
 @import 'production';
+$size: nth($grid-breakpoints, 1);
+$name: nth($grid-breakpoints, 1);
+
+$infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 /*********************
 GENERAL STYLES
 *********************/
@@ -35,15 +38,16 @@ GENERAL STYLES
 *:before {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  @include border-box();
 }
 
 body,
 html {
   font-size: 100%;
   overflow: hidden;
-  height: 100vh;
   margin: 0;
+  height: 100%;
+  width: 100%;
 }
 
 .page {
@@ -51,7 +55,7 @@ html {
   width: 100%;
   height: 100%;
   margin: 0;
-  padding: 0.25rem 1rem;
+  padding: 0.25rem;
 }
 
 .container,
@@ -78,118 +82,46 @@ html {
 
 .grid {
   @include make-grid();
-  @include make-col($size: true, $columns: $grid-columns);
-  @include grid-loop($name);
+
   > * {
     border-width: medium;
     border-style: solid;
-
-    border-color:blue {
-      $color: #0d6efd;
-    }
-    @include make-row()
   }
 }
 
 .row {
   list-style: none;
-  @include make-row;
-  $gutter-x: $grid-gutter;
-  $gutter-y: 0;
-
-  &:not(.row-fluid) {
+  margin-left: -$grid-gutter;
+  @include make-row($gutter: $grid-gutter);
+  &:not(.row--flex) {
     @include clearfix;
   }
 
-  &.row-gutterless {
+  &.row--gutterless {
     margin-left: 0;
   }
 
-  &.row-fluid {
-    display: inline-flex;
+  &.row--flex {
+    display: flex;
     flex-wrap: wrap;
-  }
-
-  &::after {
-    display: table;
-    clear: both;
-    content: '';
-  }
-
-  > * {
-    flex-shrink: 0;
-    width: 100%;
-    max-width: 100%;
-    margin-top: $gutter-y;
-    padding-right: calc($gutter-x * .5);
-    padding-left: calc($gutter-x * .5);
-  }
-}
-
-.row-fluid {
-  display: grid;
-  width: 100%;
-  @include make-row;
-
-  &:after,
-  &:before {
-    line-height: 0;
-    display: table;
-    content: '';
-  }
-
-  &:after {
-    clear: both;
-  }
-
-  [class^='col'] & {
-    float: left;
-    min-height: 0.125rem;
-    margin: 0.5rem 2%;
-    padding: 10px 50px;
-  }
-
-  [class^='col'] h2 {
-    text-align: left;
-  }
-
-  [class*='span'] & {
-    display: block;
-    float: left;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    width: 100%;
-    min-height: 30px;
-    margin-left: 2.564102564102564%;
-    margin-left: 2.5109110747408616%;
-
-    &:first-child {
-      margin-left: 0;
-    }
-  }
-
-  & .controls-row [class*='span'] + [class*='span'] {
-    margin-left: 2.564102564102564%;
   }
 }
 
 .col {
-  @include make-col-ready($gutter: $grid-gutter);
   float: left;
+  padding-left: $grid-gutter;
   box-sizing: border-box;
-  @include make-col($size: false, $columns: $grid-columns);
 
-  .row-gutterless & {
+  .row--gutterless & {
     padding-left: 0;
   }
 
-  .row-cols- {
-    @include row-cols;
-  }
-}
+@each $breakpoint in $breakpoints {
+    $name: nth($breakpoint, 1);
+    $declaration: nth($breakpoint, 2);
 
-.col-auto {
-  flex: 0 0 auto;
-  width: auto;
+    @media only screen and #{$declaration} {
+        @include grid-loop($name);
+    }
+  }
 }

@@ -19,7 +19,7 @@ $breakpoint-xl: 1200px;
 $breakpoint-xxl: 1400px;
 
 // Responsive breakpoints mixin
-@mixin media( $res ) {
+@mixin media($res) {
 
 	@if mobile-only == $res {
 		@media only screen and (max-width: #{$breakpoint-sm - 1}) {

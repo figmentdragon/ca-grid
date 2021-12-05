@@ -19,23 +19,24 @@
 .container-fluid {
   @include production-border();
   border-color: $orange;
-  background: $cjmt-gray-700;
+  background: $gray-700;
 }
 
 .grid {
   @include production-border();
   border-color: $yellow;
-  background: $cjmt-gray-500
+  background: $gray-500
 }
 
-.row {
+.row,
+.row-fluid {
   @include production-border();
   border-color: $green;
-  background: $cjmt-gray-300
+  background: $gray-300
 }
 
 .col {
   @include production-border();
   border-color: $blue;
-  background: $cjmt-gray-100
+  background: $gray-100
 }

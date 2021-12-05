@@ -2,32 +2,30 @@
 //
 // Generate semantic grid columns with these mixins.
 
-@mixin make-row($gutter: $grid-gutter)
-{
-    grid-auto-flow: row;
-    display: flex;
-    width: 100%;
-    height: auto;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    justify-content: space-between;
-
-    margin-top: calc(2 * $gutter-y);
-    margin-right: calc(.5 * $gutter-x); //
-    margin-left: calc(.5 * $gutter-x);
+@mixin make-row($gutter: $grid-gutter) {
+  display: flex;
+  @include border-box();
+  min-width: 100%;
+  margin-top: calc(-1 * $gutter-y);
+  margin-right: calc(-.5 * $gutter-x); //
+  margin-left: calc(-.5 * $gutter-x);
 }
 
 
 /* Row columns*/
 /* Specify on a parent element(e.g., .row) to force immediate children into NN numberof columns. Supports wrapping to new lines, but does not do a Masonry style grid.*/
-@mixin row-cols($count:$width)
-{
+@mixin row-cols($name) {
+  @for $i from 0 through $grid-columns {
+  @if $i != 0 {
+    .row-col-#{$i} {
     float: left;
-
+    width: calc(divide($width, $grid-columns) * $i);
     padding-right: .75em;
     > *
     {
         flex: 0 0 auto;
-        width: divide(100%, $count);
+        width: divide(100%, $grid-columns);
     }
+  }
 }
+}}

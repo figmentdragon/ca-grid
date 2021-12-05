@@ -4,11 +4,11 @@
 /* Define the minimum dimensions at which your layout will change, adapting to different screen sizes, for use in media queries. */
 $grid-breakpoints: (
 xs: 0,
-sm: 576px,
-md: 768px,
-lg: 992px,
-xl: 1200px,
-xxl: 1400px
+sm: 560px,
+md: 752px,
+lg: 976px,
+xl: 1184px,
+xxl: 1384px
 );
 
 $breakpoint-xs: 0;
@@ -18,8 +18,16 @@ $breakpoint-lg: 992px;
 $breakpoint-xl: 1200px;
 $breakpoint-xxl: 1400px;
 
-
 $breakpoint: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
+$breakpoints: (
     'xxl' '(min-width: ' + ($breakpoint-xl + 1) + ') and (max-width: ' + $breakpoint-xxl + ')',
     'xl' '(min-width: ' + ($breakpoint-lg + 1) + ') and (max-width: ' + $breakpoint-xl + ')',
     'lg' '(min-width: ' + ($breakpoint-md + 1) + ') and (max-width: ' + $breakpoint-lg + ')',
