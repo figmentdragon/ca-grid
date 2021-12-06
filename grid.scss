@@ -95,6 +95,7 @@ html {
   list-style: none;
   margin-left: -$grid-gutter;
   @include make-row($gutter: $grid-gutter);
+
   &:not(.row--flex) {
     @include clearfix;
   }
@@ -113,13 +114,11 @@ html {
   .row--gutterless & {
     padding-left: 0;
   }
-
-@each $breakpoint in $breakpoints {
+  @each $breakpoint in $breakpoints {
     $name: nth($breakpoint, 1);
     $declaration: nth($breakpoint, 2);
-
     @media only screen and #{$declaration} {
-        @include grid-loop($name);
+      @include grid-loop($name);
     }
   }
 }

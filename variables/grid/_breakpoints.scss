@@ -35,3 +35,8 @@ $breakpoints: (
     'sm' '(min-width: ' + ($breakpoint-xs + 1) + ') and (max-width:'  + $breakpoint-sm + ')',
     'xs' '(max-width: ' + $breakpoint-xs + ')'
 );
+
+$size: nth($grid-breakpoints, 1);
+$name: nth($grid-breakpoints, 1);
+
+$infix: breakpoint-infix($breakpoint, $grid-breakpoints);
