@@ -1,0 +1,48 @@
+/* Grid system */
+/* Generate semantic grid columns with these mixins. */
+@mixin make-grid() {
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+    gap: 0px 0px;
+    grid-auto-flow: row dense;
+    justify-content: start;
+    align-content: stretch;
+    justify-items: start;
+    align-items: stretch;
+    grid-template-areas:
+      "site-header site-header . . . . . . . . . . . . . ."
+      "site-header site-header . . . . . . . . . . . . . ."
+      "site-header site-header . . . . . . . . . . . . . ."
+      "site-header site-header . . . . . . . . . . . . . ."
+      "site-header site-header . . . . . . . . . . . . . ."
+      "site-header site-header . . . . . . . . . . . . . ."
+      "site-header site-header . . . . . . . . . . . . . ."
+      "site-header site-header . . . . . . . . . . . . . ."
+      "site-header site-header . . . . . . . . . . . . . ."
+      "site-header site-header . . . . . . . . . . . . . ."
+      "site-header site-header . . . . . . . . . . . . . ."
+      "site-header site-header . . . . . . . . . . . . . ."
+      "site-header site-header . . . . . . . . . . . . . ."
+      "site-header site-header . . . . . . . . . . . . . ."
+      "site-header site-header . . . . . . . . . . . . . ."
+      "site-header site-header f f f f f f f f f f f f f f";
+
+  .site-header {
+
+    justify-self: start;
+    align-self: stretch;
+    grid-area: site-header;
+    height: 100%;
+  }
+}
+
+@mixin grid-loop($name) {
+  @include make-col($size: true, $columns: $grid-columns);
+    .row-flex {
+      float: none;
+      flex-basis: divide($width, $grid-columns);
+      width: auto;
+      max-width: 100%;
+    }
+  }
