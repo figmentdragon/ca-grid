@@ -6,8 +6,7 @@
     "css-gridish": "^2.0.0",
     "natives": "^1.1.6",
     "sass": "^1.44.0",
-    "serve": "^13.0.2",
-    "vinyl-fs": "^0.3.14"
+    "serve": "^13.0.2"
   },
   "scripts": {
     "test": "tst",
